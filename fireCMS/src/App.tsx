@@ -4,7 +4,7 @@ import appConfig from "./index";
 
 function App() {
     return <FireCMSCloudApp
-        projectId={"hw-base-template-41212"}
+        projectId={"tulsacustomwebsites"}
         appConfig={appConfig}
     />;
 }
