@@ -1,0 +1,195 @@
+---
+import Header from '../components/shared/Header';
+import Footer from '../components/shared/Footer';
+import { ViewTransitions } from 'astro:transitions';
+import { getData } from '../firebase';
+import { navs } from '../navMenu';
+
+export interface Item {
+  type: string;
+  value: any;
+}
+
+interface Props {
+  title: string;
+  metaDescription: string;
+}
+
+const { title, metaDescription } = Astro.props;
+
+const businessInformation = await getData('business_information');
+---
+
+<!doctype html>
+<html
+  lang='en'
+  class='scroller dark bg-neutral-9 font-sans font-light text-neutral-9'
+>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content={metaDescription} />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='32x32'
+      href={businessInformation[0].favicon.favicon_32_x32}
+    />
+    <title>
+      {
+        title
+          ? `${title} - ${businessInformation[0].business_name}`
+          : businessInformation[0].business_name
+      }
+    </title>
+    <ViewTransitions />
+    <!-- TODO structed data -->
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "AutoRepair",
+        "image": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
+        "url": "https://zarn-site.web.app/",
+        "sameAs": [
+          "https://www.instagram.com/nzdiagnostics/?hl=en",
+          "https://www.youtube.com/channel/UCUX944rcFj1I2AvTuFL04Aw"
+        ],
+        "logo": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
+        "name": "Zarn Automotive",
+        "description": "Zarn Automotive is a locally owned auto repair shop in Broken Arrow, OK, offering expert services for luxury and import vehicles. Our experienced technicians provide comprehensive care, including AC services, battery replacements, and more.",
+        "telephone": "(918) 940-7800",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "(918) 940-7800",
+          "contactType": "Customer Service"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2003 N Yellowood Ave ste f",
+          "addressLocality": "Broken Arrow",
+          "addressRegion": "OK",
+          "postalCode": "74012",
+          "addressCountry": "US"
+        },
+        "openingHours": ["Mo-Sa 09:00-17:00"],
+        "hasMap": "https://maps.app.goo.gl/s5gvjEPDHAo22F4y9",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "36.071981305212354",
+          "longitude": "-95.83970962507328"
+        },
+        "priceRange": "Call for quote",
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Broken Arrow"
+          },
+          {
+            "@type": "Place",
+            "name": "Tulsa"
+          },
+          {
+            "@type": "Place",
+            "name": "Bixby"
+          },
+          {
+            "@type": "Place",
+            "name": "Owasso"
+          },
+          {
+            "@type": "Place",
+            "name": "Jenks"
+          },
+          {
+            "@type": "Place",
+            "name": "Coweta"
+          },
+          {
+            "@type": "Place",
+            "name": "Wagoner"
+          },
+          {
+            "@type": "Place",
+            "name": "Catoosa"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <Header
+      phone={businessInformation[0].business_phone}
+      address={businessInformation[0].business_address}
+      addressLink={businessInformation[0].google_maps_link}
+      email={businessInformation[0].business_contact_email}
+      socials={businessInformation[0].socials}
+      navs={navs.filter((nav) => nav.link !== '/')}
+      logo={businessInformation[0].business_logo}
+      client:load
+    />
+    <main class='bg-neutral-8'>
+      <slot />
+    </main>
+    <Footer
+      address={businessInformation[0].business_address}
+      copyright=`${businessInformation[0].business_name} 2024`
+      email={businessInformation[0].business_contact_email}
+      navs={navs}
+      phone={businessInformation[0].business_phone}
+      socials={businessInformation[0].socials}
+    />
+    <style is:global>
+      :root {
+        --primary-hue: 180;
+        --primary-saturation: 92;
+        --neutral-hue: 240;
+        --neutral-saturation: 5;
+      }
+
+      body {
+        @apply text-neutral-9 dark:text-neutral-1;
+      }
+
+      a {
+        @apply transition-transform duration-fast ease-in-out;
+      }
+
+      a:hover {
+        @apply scale-md;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+
+      h1 {
+        @apply text-3xl font-semibold lg:text-4xl;
+      }
+
+      h2 {
+        @apply text-2xl font-semibold lg:text-3xl;
+      }
+
+      h3 {
+        @apply text-xl font-semibold lg:text-2xl;
+      }
+
+      h4 {
+        @apply text-lg font-semibold lg:text-xl;
+      }
+
+      h5 {
+        @apply text-base font-semibold lg:text-lg;
+      }
+
+      h6 {
+        @apply text-base font-semibold lg:text-lg;
+      }
+
+      p {
+        @apply text-base leading-loose lg:text-lg lg:leading-loose;
+      }
+    </style>
+  </body><!-- custom animation keyframes and other global stuffs -->
+</html>
