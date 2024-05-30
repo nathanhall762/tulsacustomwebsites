@@ -23,13 +23,16 @@ const businessInformation = await getData('business_information');
 <!doctype html>
 <html
   lang='en'
-  class='dark bg-neutral-9 font-mono font-light text-neutral-9 scroller'
+  class='dark bg-neutral-9 text-neutral-9 scroller'
 >
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={metaDescription} />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link
       rel='icon'
       type='image/png'
@@ -46,75 +49,75 @@ const businessInformation = await getData('business_information');
     <ViewTransitions />
     <!-- TODO structed data -->
     <script type='application/ld+json'>
-      {
-        "@context": "http://schema.org",
-        "@type": "AutoRepair",
-        "image": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
-        "url": "https://zarn-site.web.app/",
-        "sameAs": [
-          "https://www.instagram.com/nzdiagnostics/?hl=en",
-          "https://www.youtube.com/channel/UCUX944rcFj1I2AvTuFL04Aw"
-        ],
-        "logo": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
-        "name": "Zarn Automotive",
-        "description": "Zarn Automotive is a locally owned auto repair shop in Broken Arrow, OK, offering expert services for luxury and import vehicles. Our experienced technicians provide comprehensive care, including AC services, battery replacements, and more.",
-        "telephone": "(918) 940-7800",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "(918) 940-7800",
-          "contactType": "Customer Service"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2003 N Yellowood Ave ste f",
-          "addressLocality": "Broken Arrow",
-          "addressRegion": "OK",
-          "postalCode": "74012",
-          "addressCountry": "US"
-        },
-        "openingHours": ["Mo-Sa 09:00-17:00"],
-        "hasMap": "https://maps.app.goo.gl/s5gvjEPDHAo22F4y9",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "36.071981305212354",
-          "longitude": "-95.83970962507328"
-        },
-        "priceRange": "Call for quote",
-        "areaServed": [
-          {
-            "@type": "Place",
-            "name": "Broken Arrow"
-          },
-          {
-            "@type": "Place",
-            "name": "Tulsa"
-          },
-          {
-            "@type": "Place",
-            "name": "Bixby"
-          },
-          {
-            "@type": "Place",
-            "name": "Owasso"
-          },
-          {
-            "@type": "Place",
-            "name": "Jenks"
-          },
-          {
-            "@type": "Place",
-            "name": "Coweta"
-          },
-          {
-            "@type": "Place",
-            "name": "Wagoner"
-          },
-          {
-            "@type": "Place",
-            "name": "Catoosa"
-          }
-        ]
-      }
+      // {
+      //   "@context": "http://schema.org",
+      //   "@type": "AutoRepair",
+      //   "image": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
+      //   "url": "https://zarn-site.web.app/",
+      //   "sameAs": [
+      //     "https://www.instagram.com/nzdiagnostics/?hl=en",
+      //     "https://www.youtube.com/channel/UCUX944rcFj1I2AvTuFL04Aw"
+      //   ],
+      //   "logo": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
+      //   "name": "Zarn Automotive",
+      //   "description": "Zarn Automotive is a locally owned auto repair shop in Broken Arrow, OK, offering expert services for luxury and import vehicles. Our experienced technicians provide comprehensive care, including AC services, battery replacements, and more.",
+      //   "telephone": "(918) 940-7800",
+      //   "contactPoint": {
+      //     "@type": "ContactPoint",
+      //     "telephone": "(918) 940-7800",
+      //     "contactType": "Customer Service"
+      //   },
+      //   "address": {
+      //     "@type": "PostalAddress",
+      //     "streetAddress": "2003 N Yellowood Ave ste f",
+      //     "addressLocality": "Broken Arrow",
+      //     "addressRegion": "OK",
+      //     "postalCode": "74012",
+      //     "addressCountry": "US"
+      //   },
+      //   "openingHours": ["Mo-Sa 09:00-17:00"],
+      //   "hasMap": "https://maps.app.goo.gl/s5gvjEPDHAo22F4y9",
+      //   "geo": {
+      //     "@type": "GeoCoordinates",
+      //     "latitude": "36.071981305212354",
+      //     "longitude": "-95.83970962507328"
+      //   },
+      //   "priceRange": "Call for quote",
+      //   "areaServed": [
+      //     {
+      //       "@type": "Place",
+      //       "name": "Broken Arrow"
+      //     },
+      //     {
+      //       "@type": "Place",
+      //       "name": "Tulsa"
+      //     },
+      //     {
+      //       "@type": "Place",
+      //       "name": "Bixby"
+      //     },
+      //     {
+      //       "@type": "Place",
+      //       "name": "Owasso"
+      //     },
+      //     {
+      //       "@type": "Place",
+      //       "name": "Jenks"
+      //     },
+      //     {
+      //       "@type": "Place",
+      //       "name": "Coweta"
+      //     },
+      //     {
+      //       "@type": "Place",
+      //       "name": "Wagoner"
+      //     },
+      //     {
+      //       "@type": "Place",
+      //       "name": "Catoosa"
+      //     }
+      //   ]
+      // }
     </script>
   </head>
   <body>
@@ -161,10 +164,6 @@ const businessInformation = await getData('business_information');
           }
         }
 
-        ul {
-          @apply ms-8 list-disc text-base leading-loose lg:text-lg lg:leading-loose;
-        }
-
         @keyframes slide {
           0% {
             transform: translateX(0);
@@ -209,8 +208,12 @@ const businessInformation = await getData('business_information');
       }
 
       body {
-        @layer text-neutral-9 dark:text-neutral-1;
+        @layer text-neutral-9 dark:text-neutral-1 font-body;
       }
+
+      ul {
+          @apply ms-8 list-disc text-base leading-loose lg:text-lg lg:leading-loose;
+        }
 
       a {
         @apply transition-transform duration-fast ease-in-out;
@@ -225,27 +228,27 @@ const businessInformation = await getData('business_information');
       }
 
       h1 {
-        @apply text-3xl font-semibold lg:text-4xl;
+        @apply text-4xl lg:text-8xl font-display font-normal;
       }
 
       h2 {
-        @apply text-2xl font-semibold lg:text-3xl;
+        @apply text-2xl lg:text-7xl font-display font-light;
       }
 
       h3 {
-        @apply text-xl font-semibold lg:text-2xl;
+        @apply text-xl lg:text-4xl font-display font-light;
       }
 
       h4 {
-        @apply text-lg font-semibold lg:text-xl;
+        @apply text-lg lg:text-3xl font-display font-light;
       }
 
       h5 {
-        @apply text-base font-semibold lg:text-lg;
+        @apply text-base lg:text-2xl font-display font-light;
       }
 
       h6 {
-        @apply text-base font-semibold lg:text-lg;
+        @apply text-base lg:text-xl font-display font-light;
       }
 
       p {

@@ -5,9 +5,9 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     fontFamily: {
-      sans: ['Calibre', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-      mono: ['Menlo', 'monospace'],
+      display: ['Teko', 'ui-monospace', 'sans-serif'],
+      // serif: ['Merriweather', 'serif'],
+      body: ['Ubuntu Sans Mono', 'monospace'],
     },
     colors: {
       transparent: 'transparent',

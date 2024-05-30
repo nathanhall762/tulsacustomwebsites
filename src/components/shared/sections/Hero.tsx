@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <div className='bg-neutral-8 relative h-[92vh] shadow-inner'>
+    <div className='relative h-[92vh] bg-neutral-8 shadow-inner'>
       {/* {backgroundImages.map((image, index) => (
         <div
           key={image}
@@ -51,25 +51,25 @@ const Hero: React.FC<HeroProps> = ({
         />
       ))} */}
       {/* <div className='absolute inset-0 h-full w-full bg-black opacity-30'></div> */}
-      <div className='relative z-10 flex h-full flex-col justify-end text-center lg:text-left'>
-        <div className='fade-in-up  bg-opacity-80  px-4 py-16 shadow-md lg:px-32'>
-          <h1 className='text-shadow-outline text-neutral-1 lg:text-neutral-1 pb-2 text-2xl font-normal drop-shadow-xl lg:text-7xl'>
+      <div className='relative z-10 flex h-full flex-col justify-center text-center lg:text-left'>
+        <div className='px-4 py-16 lg:px-32'>
+          <h1 className='text-shadow-outline pb-2 text-neutral-1 drop-shadow-xl lg:text-neutral-1'>
             Tulsa{' '}
-            <em className='text-transparent from-secondary-dk2 to-secondary-md2 bg-gradient-to-r bg-clip-text pr-1'>
+            <em className='bg-gradient-to-r from-secondary-dk2 to-secondary-md2 bg-clip-text pr-2 text-transparent'>
               Custom
             </em>{' '}
             Websites
           </h1>
-          <h2 className='text-shadow-outline text-neutral-2 pb-24 text-center text-xl font-bold lg:pb-48 lg:text-left lg:text-2xl'>
+          <h2 className='text-shadow-outline pb-24 text-center text-xl text-neutral-2 lg:pb-48 lg:text-left lg:text-4xl'>
             {tagline}
           </h2>
           <div className='flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-16'>
             <a href='#contact' className=''>
-              <button className='bg-other text-neutral-2 transform rounded-xl bg-primary-lt1 px-12 py-4 text-lg transition duration-300 ease-in-out hover:scale-110  hover:bg-primary-lt2'>
+              <button className='bg-other transform rounded-xl bg-primary-lt1 px-12 py-4 text-lg text-neutral-2 transition duration-300 ease-in-out hover:scale-110  hover:bg-primary-lt2'>
                 {call_to_action_text}
               </button>
             </a>
-            <p className='text-neutral-2 text-base lg:text-lg'>
+            <p className='text-base text-neutral-2 lg:text-lg'>
               <a href='tel:9189407800'>Call: (918) 940-7800</a>
             </p>
           </div>

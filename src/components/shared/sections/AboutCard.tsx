@@ -25,10 +25,10 @@ const AboutCard: React.FC<AboutCardProps> = ({
             components={{
               p(props) {
                 const { node, ...rest } = props;
-                return <h3 className='mb-4' {...rest} />;
+                return <h2 className='mb-4' {...rest} />;
               },
             }}
-            className='text-neutral-1 mb-4 text-lg font-bold lg:text-3xl'
+            className='text-neutral-1 mb-4 text-lg lg:text-3xl'
           >
             {aboutTitle}
           </ReactMarkdown>
