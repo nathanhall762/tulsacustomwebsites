@@ -48,7 +48,7 @@ const InfoCardList: React.FC<Props> = ({
               >
                 <div className='flex h-[45%] flex-col bg-neutral-9 bg-opacity-70 px-2 py-4 backdrop-blur-sm transition-all duration-1000'>
                   <div className='size-full overflow-clip text-ellipsis pb-4'>
-                    <h3 className='pb-4 text-xl'>{card.heading}</h3>
+                    <h3 className='pb-4'>{card.heading}</h3>
                     <p className='text-base'>{card.body_text}</p>
                   </div>
                 </div>
