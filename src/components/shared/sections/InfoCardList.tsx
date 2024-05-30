@@ -1,4 +1,4 @@
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from 'react-markdown';
 
 interface Props {
   content: {
@@ -14,24 +14,33 @@ interface Props {
   };
 }
 
-const InfoCardList: React.FC<Props> = ({ content: { heading, body_text, card } }) => {
+const InfoCardList: React.FC<Props> = ({
+  content: { heading, body_text, card },
+}) => {
   return (
     <>
       <div className='flex flex-col px-4 py-16 text-center'>
         <div className='items-center pb-4'>
-          <h2 className='pb-4 text-2xl font-bold text-neutral-1 lg:text-3xl'>
-            {heading}
-          </h2>
+          <h2 className='pb-4 text-neutral-1'>{heading}</h2>
           <div className='mx-auto h-[2px] w-[40%] max-w-2xl bg-primary-md1'></div>
         </div>
-        <ReactMarkdown components={{
+        <ReactMarkdown
+          components={{
             p(props) {
-            const { node, ...rest } = props;
-            return <p className='mb-4' {...rest} />;
-          }}} className='mb-4 text-lg font-bold lg:text-3xl'>{body_text}</ReactMarkdown>
+              const { node, ...rest } = props;
+              return <p className='mb-4' {...rest} />;
+            },
+          }}
+          className='mb-4 text-lg font-bold lg:text-3xl'
+        >
+          {body_text}
+        </ReactMarkdown>
         <div className='flex flex-col items-center justify-center gap-16 px-4 py-8 lg:flex-row lg:gap-16'>
           {card.map((card) => (
-            <a href={card.link} className="group flex aspect-[2/3] w-full max-w-2xl transform cursor-pointer flex-col justify-end bg-cover shadow-2xl transition-transform hover:scale-105 hover:shadow-none">
+            <a
+              href={card.link}
+              className='group flex aspect-[2/3] w-full max-w-2xl transform cursor-pointer flex-col justify-end bg-cover shadow-2xl transition-transform hover:scale-105 hover:shadow-none'
+            >
               <div
                 style={{ backgroundImage: `url('${card.image}')` }}
                 aria-label={card.alt_image_text}

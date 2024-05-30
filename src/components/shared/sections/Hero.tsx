@@ -60,9 +60,9 @@ const Hero: React.FC<HeroProps> = ({
             </em>{' '}
             Websites
           </h1>
-          <h2 className='text-shadow-outline pb-24 text-center text-xl text-neutral-2 lg:pb-48 lg:text-left lg:text-4xl'>
+          <h3 className='text-shadow-outline pb-24 text-center text-xl text-neutral-2 lg:pb-48 lg:text-left lg:text-4xl'>
             {tagline}
-          </h2>
+          </h3>
           <div className='flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-16'>
             <a href='#contact' className=''>
               <button className='bg-other transform rounded-xl bg-primary-lt1 px-12 py-4 text-lg text-neutral-2 transition duration-300 ease-in-out hover:scale-110  hover:bg-primary-lt2'>

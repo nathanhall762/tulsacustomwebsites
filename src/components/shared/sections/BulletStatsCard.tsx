@@ -21,12 +21,18 @@ const BulletStatsCard: React.FC<Props> = ({
       <div
         className={`flex h-full max-w-6xl flex-col items-center justify-center bg-neutral-8 bg-opacity-50 px-8 py-8 shadow-md backdrop-blur-sm backdrop-brightness-[.25] lg:bg-opacity-90 lg:px-16 lg:backdrop-brightness-100`}
       >
-        <ReactMarkdown components={{
+        <ReactMarkdown
+          components={{
             p(props) {
-            const { node, ...rest } = props;
-            return <h3 className='mb-4' {...rest} />;
-          }}} className='mb-4 text-lg text-center font-bold lg:text-3xl'>{title}</ReactMarkdown>
-          <div className='mb-8 h-[2px] w-full max-w-2xl bg-primary-md1'></div>
+              const { node, ...rest } = props;
+              return <h2 className='mb-4' {...rest} />;
+            },
+          }}
+          className='mb-4 text-center text-lg font-bold lg:text-3xl'
+        >
+          {title}
+        </ReactMarkdown>
+        <div className='mb-8 h-[2px] w-full max-w-2xl bg-primary-md1'></div>
         <div className='w-full text-center'>
           <ReactMarkdown
             className='py-2 text-left text-base lg:text-lg'
@@ -34,10 +40,7 @@ const BulletStatsCard: React.FC<Props> = ({
               ul(props) {
                 const { node, ...rest } = props;
                 return (
-                  <ul
-                    className=' grid lg:grid-cols-2 gap-x-8 py-4'
-                    {...rest}
-                  />
+                  <ul className=' grid gap-x-8 py-4 lg:grid-cols-2' {...rest} />
                 );
               },
             }}
