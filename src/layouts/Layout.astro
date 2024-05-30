@@ -6,6 +6,7 @@ import type { Review } from '../components/ReviewCards';
 import { getData } from '../firebase';
 import PageBuilder from '../components/shared/PageBuilder.astro';
 import BaseLayout from './BaseLayout.astro';
+import ColorView from '../components/ColorView';
 
 export interface Item {
   type: string;
@@ -25,10 +26,13 @@ const { title, metaDescription, pageData } = Astro.props;
 const testReview: Review = {
   name: 'Customer Name',
   authorAttribution: { displayName: 'Customer Name', photoUri: '', uri: '' },
-  originalText: { languageCode: 'en', text: 'The customer\'s review will go here' },
+  originalText: {
+    languageCode: 'en',
+    text: "The customer's review will go here",
+  },
   publishTime: 'publish time',
   rating: 5,
-  text: { languageCode: 'en', text: 'The customer\'s review will go here' },
+  text: { languageCode: 'en', text: "The customer's review will go here" },
   relativePublishTimeDescription: 'thsi is great',
 };
 
@@ -46,6 +50,7 @@ const currentPath = Astro.url.pathname;
 <BaseLayout title={title} metaDescription={metaDescription}>
   <PageBuilder pageData={pageData} />
   <slot />
+  <ColorView client:load />
   <ReviewCards heading='Reviews' reviews={reviews} />
   <ContactSection
     businessName={businessInformation[0].business_name}

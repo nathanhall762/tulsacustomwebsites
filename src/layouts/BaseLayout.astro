@@ -23,7 +23,7 @@ const businessInformation = await getData('business_information');
 <!doctype html>
 <html
   lang='en'
-  class='scroller dark bg-neutral-9 font-sans font-light text-neutral-9'
+  class='bg-neutral-9 text-neutral-9 dark font-sans font-light scroller'
 >
   <head>
     <meta charset='UTF-8' />
@@ -148,7 +148,7 @@ const businessInformation = await getData('business_information');
       }
 
       body {
-        @apply text-neutral-9 dark:text-neutral-1;
+        @layer text-neutral-9 dark:text-neutral-1;
       }
 
       a {

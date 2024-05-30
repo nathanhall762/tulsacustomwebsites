@@ -14,24 +14,33 @@ export default {
       white: 'hsl(0, 0%, 96%)',
       white2: 'hsl(0, 0%, 90%)',
       neutral: {
-        1: 'hsl(var(--neutral-hue), var(--neutral-saturation), 92%)',
-        2: 'hsl(var(--neutral-hue), var(--neutral-saturation), 88%)',
-        3: 'hsl(var(--neutral-hue), var(--neutral-saturation), 78%)',
-        4: 'hsl(var(--neutral-hue), var(--neutral-saturation), 67%)',
-        5: 'hsl(var(--neutral-hue), var(--neutral-saturation), 46%)',
-        6: 'hsl(var(--neutral-hue), var(--neutral-saturation), 31%)',
-        7: 'hsl(var(--neutral-hue), var(--neutral-saturation), 20%)',
-        8: 'hsl(var(--neutral-hue), var(--neutral-saturation), 12%)',
-        9: 'hsl(var(--neutral-hue), var(--neutral-saturation), 8%)',
+        1: 'hsl(245, 35, 92%)',
+        2: 'hsl(245, 27, 86%)',
+        3: 'hsl(245, 20, 74%)',
+        4: 'hsl(245, 15, 61%)',
+        5: 'hsl(245, 10, 49%)',
+        6: 'hsl(245, 15, 37%)',
+        7: 'hsl(245, 20, 25%)',
+        8: 'hsl(245, 27, 15%)',
+        9: 'hsl(245, 35, 10%)',
       },
       primary: {
-        dk1: 'hsl(var(--primary-hue), var(--primary-saturation), 25%)',
-        dk2: 'hsl(var(--primary-hue), var(--primary-saturation), 32%)',
-        md1: 'hsl(var(--primary-hue), var(--primary-saturation), 40%)',
-        md2: 'hsl(var(--primary-hue), var(--primary-saturation), 47%)',
-        md3: 'hsl(var(--primary-hue), var(--primary-saturation), 57%)',
-        lt1: 'hsl(var(--primary-hue), var(--primary-saturation), 62%)',
-        lt2: 'hsl(var(--primary-hue), var(--primary-saturation), 68%)',
+        dk1: 'hsl(279, 100%, 12%)',
+        dk2: 'hsl(288, 95%, 16%)',
+        md1: 'hsl(296, 90%, 20%)',
+        md2: 'hsl(305, 85%, 24%)',
+        md3: 'hsl(313, 90%, 28%)',
+        lt1: 'hsl(321, 95%, 32%)',
+        lt2: 'hsl(330, 100%, 36%)',
+      },
+      secondary: {
+        dk1: 'hsl(14, 100%, 30%)',
+        dk2: 'hsl(17, 95%, 36%)',
+        md1: 'hsl(22, 91%, 41%)',
+        md2: 'hsl(27, 91%, 46%)',
+        md3: 'hsl(32, 92%, 50%)',
+        lt1: 'hsl(37, 100%, 55%)',
+        lt2: 'hsl(42, 100%, 60%)',
       },
     },
     textShadow: {
@@ -89,22 +98,26 @@ export default {
   },
   plugins: [
     plugin(function ({ addUtilities }) {
-      addUtilities({
-        '.scroller': {
-          scrollbarColor: 'hsl(var(--primary-hue), 100%, 25%) hsl(240, 5%, 8%)',
+      addUtilities(
+        {
+          '.scroller': {
+            scrollbarColor:
+              'hsl(var(--primary-hue), 100%, 25%) hsl(240, 5%, 8%)',
+          },
+          '.scroller-sm': {
+            scrollbarColor: 'hsl(var(--primary-hue), 5%, 46%) hsl(240, 5%, 8%)',
+            scrollbarWidth: 'thin',
+          },
+          '.no-scrollbar::-webkit-scrollbar': {
+            display: 'none',
+          },
+          '.no-scrollbar': {
+            '-ms-overflow-style': 'none',
+            'scrollbar-width': 'none',
+          },
         },
-        '.scroller-sm': {
-          scrollbarColor: 'hsl(var(--primary-hue), 5%, 46%) hsl(240, 5%, 8%)',
-          scrollbarWidth: 'thin',
-        },
-        '.no-scrollbar::-webkit-scrollbar': {
-          display: 'none',
-        },
-        '.no-scrollbar': {
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
-        },
-      }, ['responsive', 'hover']);
+        ['responsive', 'hover']
+      );
     }),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
