@@ -7,6 +7,7 @@ export default {
     fontFamily: {
       sans: ['Calibre', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
+      mono: ['Menlo', 'monospace'],
     },
     colors: {
       black: 'hsl(0, 0%, 5%)',
