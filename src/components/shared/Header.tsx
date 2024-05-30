@@ -115,11 +115,11 @@ const Header: React.FC<HeaderProps> = ({
               </div>
             </a>
           </div>
-          <nav className='hidden items-center justify-center gap-[1.4vw] border-r-[1px] border-neutral-6 align-middle lg:col-span-8  lg:flex xl:col-span-7'>
+          <nav className='hidden items-center justify-start px-16 gap-[1.8vw] border-r-[1px] border-neutral-6 align-middle lg:col-span-8  lg:flex xl:col-span-7'>
             {navs.map((nav) => (
               <div key={nav.name} className='group relative'>
                 <a
-                  className='text-bold text-sm text-neutral-1 transition duration-fast ease-in-out hover:text-primary-md2 dark:text-neutral-1'
+                  className='text-bold text-lg text-neutral-1 transition duration-fast ease-in-out hover:text-primary-md2 dark:text-neutral-1'
                   href={`${nav.link}`}
                 >
                   {nav.name}
@@ -130,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({
                       <a
                         key={subpage.name}
                         href={`${nav.link}${subpage.link}`}
-                        className='min-w-[20vw] bg-neutral-9 px-6 py-2 text-start text-sm text-neutral-1 hover:text-primary-md2 dark:bg-neutral-9 dark:text-neutral-1'
+                        className='min-w-[20vw] bg-neutral-9 px-6 py-2 text-start text-lg text-neutral-1 hover:text-primary-md2 dark:bg-neutral-9 dark:text-neutral-1'
                       >
                         {subpage.name}
                       </a>
@@ -185,7 +185,7 @@ const Header: React.FC<HeaderProps> = ({
                 className='flex justify-items-center self-center'
               >
                 <button className='my-2 transform rounded-xl bg-primary-md1 px-4 py-2 text-base text-neutral-1 transition duration-fast ease-in-out hover:scale-md hover:bg-primary-md2'>
-                  Schedule Service
+                  Hire Us
                 </button>
               </a>
             </nav>
@@ -212,7 +212,7 @@ const Header: React.FC<HeaderProps> = ({
             </nav>
           </div>
           <div className='hidden px-4 text-sm lg:col-span-2 lg:flex lg:justify-around xl:col-span-3'>
-            <div className='group hidden cursor-pointer items-center justify-center gap-[1.4vw] self-center xl:flex'>
+            {/* <div className='group hidden cursor-pointer items-center justify-center gap-[1.4vw] self-center xl:flex'>
               <a
                 href={`tel:${phone}`}
                 className='group hidden cursor-pointer items-center justify-center gap-[1.4vw] self-center xl:flex'
@@ -225,10 +225,10 @@ const Header: React.FC<HeaderProps> = ({
                   {formatPhoneNumber(phone)}
                 </span>
               </a>
-            </div>
+            </div> */}
             <a href='#contact' className='flex self-center'>
               <button className='transform rounded-xl bg-primary-md1 px-4 py-2 text-neutral-1 transition duration-fast ease-in-out hover:scale-sm hover:bg-primary-md2'>
-                <span className=''>Schedule Service</span>
+                <span className=''>Hire Us!</span>
               </button>
             </a>
           </div>

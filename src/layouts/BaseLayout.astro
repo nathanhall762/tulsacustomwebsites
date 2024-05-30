@@ -23,7 +23,7 @@ const businessInformation = await getData('business_information');
 <!doctype html>
 <html
   lang='en'
-  class='scroller dark bg-neutral-9 font-sans font-light text-neutral-9'
+  class='scroller dark bg-neutral-9 font-light text-neutral-9 font-mono'
 >
   <head>
     <meta charset='UTF-8' />
@@ -147,6 +147,67 @@ const businessInformation = await getData('business_information');
         --neutral-saturation: 5;
       }
 
+      @tailwind base;
+
+      @layer base {
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20vh);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        ul {
+          @apply ms-8 list-disc text-base leading-loose lg:text-lg lg:leading-loose;
+        }
+
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .slide-animation {
+          animation: slide 60s linear infinite;
+        }
+
+        .no-animation {
+          animation: none;
+        }
+
+        .markdown > p {
+          @apply mb-8;
+        }
+
+        .markdown > p > a,
+        .markdown > ul > li > a {
+          @apply text-primary-md2 hover:text-primary-md3 hover:underline;
+        }
+
+        .fade-in-up {
+          animation: fadeInUp 0.75s ease-out;
+        }
+        .card-zoom {
+          @apply relative overflow-hidden;
+        }
+        .card-zoom-image {
+          @apply absolute h-full w-full transform bg-cover bg-center transition-all duration-500 ease-in-out;
+        }
+        .card-zoom-text {
+          @apply absolute transform transition-all duration-500 ease-in-out;
+        }
+        .zoom-in {
+          @apply scale-[1.25];
+        }
+      }
+
       body {
         @apply text-neutral-9 dark:text-neutral-1;
       }
@@ -190,6 +251,13 @@ const businessInformation = await getData('business_information');
       p {
         @apply text-base leading-loose lg:text-lg lg:leading-loose;
       }
+
+      strong {
+        font-weight: bold;
+      }
+
+      
+
     </style>
   </body><!-- custom animation keyframes and other global stuffs -->
 </html>

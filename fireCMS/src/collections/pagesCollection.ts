@@ -62,6 +62,14 @@ export const PagesCollection:EntityCollection = {
 								name: 'Heading',
 								propertyConfig: 'markdown',
 							},
+							body_text: {
+								markdown: true,
+								propertyConfig: 'markdown',
+								dataType: 'string',
+								editable: true,
+								name: 'Body Text',
+								defaultValue: 'Body text goes here. This can be quite a bit of text, as needed.',
+							},
 							card: {
 								of: {
 									dataType: 'map',

@@ -1,6 +1,9 @@
+import ReactMarkdown from "react-markdown";
+
 interface Props {
   content: {
     heading: string;
+    body_text: string;
     card: {
       heading: string;
       body_text: string;
@@ -11,7 +14,7 @@ interface Props {
   };
 }
 
-const InfoCardList: React.FC<Props> = ({ content: { heading, card } }) => {
+const InfoCardList: React.FC<Props> = ({ content: { heading, body_text, card } }) => {
   return (
     <>
       <div className='flex flex-col px-4 py-16 text-center'>
@@ -21,6 +24,11 @@ const InfoCardList: React.FC<Props> = ({ content: { heading, card } }) => {
           </h2>
           <div className='mx-auto h-[2px] w-[40%] max-w-2xl bg-primary-md1'></div>
         </div>
+        <ReactMarkdown components={{
+            p(props) {
+            const { node, ...rest } = props;
+            return <p className='mb-4' {...rest} />;
+          }}} className='mb-4 text-lg font-bold lg:text-3xl'>{body_text}</ReactMarkdown>
         <div className='flex flex-col items-center justify-center gap-16 px-4 py-8 lg:flex-row lg:gap-16'>
           {card.map((card) => (
             <a href={card.link} className="group flex aspect-[2/3] w-full max-w-2xl transform cursor-pointer flex-col justify-end bg-cover shadow-2xl transition-transform hover:scale-105 hover:shadow-none">
