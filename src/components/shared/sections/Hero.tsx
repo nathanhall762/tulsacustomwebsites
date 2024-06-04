@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({
         <div className='px-4 py-16 lg:px-32'>
           <h1 className='text-shadow-outline pb-2 text-neutral-1 drop-shadow-xl lg:text-neutral-1'>
             Tulsa{' '}
-            <em className='bg-gradient-to-r from-secondary-dk2 to-secondary-md2 bg-clip-text pr-2 text-transparent'>
+            <em className='bg-gradient-to-r from-secondary-dk2 to-secondary-lt1 bg-clip-text pr-2 text-transparent'>
               Custom
             </em>{' '}
             Websites
