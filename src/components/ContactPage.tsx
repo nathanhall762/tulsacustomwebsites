@@ -20,14 +20,14 @@ const ContactPage: React.FC<Props> = ({
   phone,
   socials,
 }) => {
-  const [dotColor, setDotColor] = useState<string>('secondary-lt2');
+  const [dotColor, setDotColor] = useState<string>('text-secondary-lt2');
 
   useEffect(() => {
     const colors = [
-      'secondary-md1',
-      'primary-dk2',
-      'primary-lt2',
-      'secondary-lt2',
+      'text-secondary-lt2',
+      'text-secondary-md1',
+      'text-primary-dk2',
+      'text-primary-lt2',
     ];
     let colorIndex = 0;
 
@@ -56,7 +56,7 @@ const ContactPage: React.FC<Props> = ({
             {email}
           </a>
           <Icon
-            className={`pb-2 text-3xl text-${dotColor} transition-colors duration-md`}
+            className={`pb-2 text-3xl ${dotColor} transition-colors duration-md`}
             icon='oui:dot'
           />
           <p className='text-neutral-1'>Nathan & Ethan.</p>
