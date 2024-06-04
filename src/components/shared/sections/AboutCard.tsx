@@ -18,8 +18,8 @@ const AboutCard: React.FC<AboutCardProps> = ({
   },
 }) => {
   return (
-    <div className='bg-neutral-1 flex px-4 py-8 lg:py-16'>
-      <div className='bg-neutral-7 mx-auto flex max-w-6xl justify-center rounded-3xl px-6 py-8 text-center shadow-md lg:px-16 lg:py-16'>
+    <div className='flex bg-neutral-8 px-4 py-8 lg:py-16'>
+      <div className='mx-auto flex max-w-6xl justify-center rounded-3xl bg-neutral-7 px-6 py-8 text-center shadow-md lg:px-16 lg:py-16'>
         <div className='flex max-w-5xl flex-col items-center justify-around align-baseline'>
           <ReactMarkdown
             components={{
@@ -28,13 +28,13 @@ const AboutCard: React.FC<AboutCardProps> = ({
                 return <h2 className='mb-4' {...rest} />;
               },
             }}
-            className='text-neutral-1 mb-4 text-lg lg:text-3xl'
+            className='mb-4 text-lg text-neutral-1 lg:text-3xl'
           >
             {aboutTitle}
           </ReactMarkdown>
           <div className='mb-8 h-[2px] w-full max-w-2xl bg-primary-lt1'></div>
           <ReactMarkdown
-            className='markdown text-neutral-2 text-start text-lg lg:text-2xl'
+            className='markdown text-start text-lg text-neutral-2 lg:text-2xl'
             components={{
               a(props) {
                 const { node, ...rest } = props;
