@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({
             </em>{' '}
             Websites
           </h1>
-          <h3 className='text-shadow-outline pb-24 text-center text-xl text-neutral-2 lg:pb-48 lg:text-left lg:text-4xl'>
+          <h3 className='text-shadow-outline pb-24 text-center text-xl font-light tracking-wide text-neutral-2 lg:pb-48 lg:text-left lg:text-4xl'>
             {tagline}
           </h3>
           <div className='flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-16'>

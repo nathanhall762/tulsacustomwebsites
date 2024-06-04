@@ -8,9 +8,7 @@ const ColorView: React.FC = () => {
   };
 
   return (
-    <div
-      className={`${isClicked ? 'bg-white text-black' : 'bg-black text-white'} p-8 text-center`}
-    >
+    <div className={`${isClicked ? 'bg-white' : 'bg-black'} p-8 text-center`}>
       <button
         onClick={handleClick}
         className={`mb-8 rounded-md p-4 ${isClicked ? 'bg-black text-white' : 'bg-white text-black'}`}
@@ -18,16 +16,18 @@ const ColorView: React.FC = () => {
         Switch BG
       </button>
       <div className='flex w-full items-center'>
-        <div className='bg-neutral-1 size-32'></div>
-        <div className='bg-neutral-2 size-32'></div>
-        <div className='bg-neutral-3 size-32'></div>
-        <div className='bg-neutral-4 size-32'></div>
-        <div className='bg-neutral-5 size-32'></div>
-        <div className='bg-neutral-6 size-32'></div>
-        <div className='bg-neutral-7 size-32'></div>
-        <div className='bg-neutral-8 size-32'></div>
-        <div className='bg-neutral-9 size-32'></div>
-        <h2>neutral</h2>
+        <div className='size-32 bg-neutral-1'></div>
+        <div className='size-32 bg-neutral-2'></div>
+        <div className='size-32 bg-neutral-3'></div>
+        <div className='size-32 bg-neutral-4'></div>
+        <div className='size-32 bg-neutral-5'></div>
+        <div className='size-32 bg-neutral-6'></div>
+        <div className='size-32 bg-neutral-7'></div>
+        <div className='size-32 bg-neutral-8'></div>
+        <div className='size-32 bg-neutral-9'></div>
+        <h2 className={`${isClicked ? 'text-black' : 'text-white'}`}>
+          neutral
+        </h2>
       </div>
       <div className='flex w-full items-center'>
         <div className='size-32 bg-primary-dk1'></div>
@@ -37,17 +37,21 @@ const ColorView: React.FC = () => {
         <div className='size-32 bg-primary-md3'></div>
         <div className='size-32 bg-primary-lt1'></div>
         <div className='size-32 bg-primary-lt2'></div>
-        <h2>primary</h2>
+        <h2 className={`${isClicked ? 'text-black' : 'text-white'}`}>
+          primary
+        </h2>
       </div>
       <div className='flex w-full '>
-        <div className='bg-secondary-dk1 size-32'></div>
-        <div className='bg-secondary-dk2 size-32'></div>
-        <div className='bg-secondary-md1 size-32'></div>
-        <div className='bg-secondary-md2 size-32'></div>
-        <div className='bg-secondary-md3 size-32'></div>
-        <div className='bg-secondary-lt1 size-32'></div>
-        <div className='bg-secondary-lt2 size-32'></div>
-        <h2>secondary</h2>
+        <div className='size-32 bg-secondary-dk1'></div>
+        <div className='size-32 bg-secondary-dk2'></div>
+        <div className='size-32 bg-secondary-md1'></div>
+        <div className='size-32 bg-secondary-md2'></div>
+        <div className='size-32 bg-secondary-md3'></div>
+        <div className='size-32 bg-secondary-lt1'></div>
+        <div className='size-32 bg-secondary-lt2'></div>
+        <h2 className={`${isClicked ? 'text-black' : 'text-white'}`}>
+          secondary
+        </h2>
       </div>
     </div>
   );

@@ -50,7 +50,7 @@ const currentPath = Astro.url.pathname;
 <BaseLayout title={title} metaDescription={metaDescription}>
   <PageBuilder pageData={pageData} />
   <slot />
-  <ColorView client:load />
+  <!-- <ColorView client:load /> -->
   <!-- <ReviewCards heading='Reviews' reviews={reviews} /> -->
   <!-- <ContactSection
     businessName={businessInformation[0].business_name}
