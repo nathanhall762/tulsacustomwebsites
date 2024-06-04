@@ -14,9 +14,9 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZARN_SITE }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TULSACUSTOMWEBSITES }}'
+          projectId: tulsacustomwebsites
           channelId: live
-          projectId: zarn-site
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
 
