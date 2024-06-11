@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({
 
   const getImageClasses = (index: number) => {
     let baseClasses =
-      'absolute z-0 w-full h-full bg-cover bg-center transition-all duration-slow ease-in-out';
+      'absolute w-1/3 h-1/2 bg-cover right-0 top-[9vh] z-10 transition-all duration-slow ease-in-out';
     if (index === currentImageIndex) {
       return `${baseClasses} transform opacity-100`;
     } else {
@@ -41,15 +41,18 @@ const Hero: React.FC<HeroProps> = ({
     }
   };
 
+  const phoneImage = '/MobileWithCustomWebsite.png';
+
   return (
     <div className='relative h-[92vh] w-full bg-neutral-8 shadow-inner'>
-      {/* {backgroundImages.map((image, index) => (
+      {backgroundImages.map((image, index) => (
         <div
           key={image}
           className={getImageClasses(index)}
           style={{ backgroundImage: `url(${image})` }}
         />
-      ))} */}
+      ))}
+      <img className='absolute bg-no-repeat scale-50 h-full bg-cover right-[12vw] top-[2vh] z-10 transition-all duration-slow ease-in-out' src={phoneImage}></img>
       {/* <div className='absolute inset-0 h-full w-full bg-black opacity-30'></div> */}
       <div className='relative z-10 flex h-full flex-col justify-center text-center lg:text-left'>
         <div className='px-4 py-16 lg:px-32'>
@@ -76,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({
         </div>
       </div>
       <div className='absolute inset-0 z-0 flex flex-col justify-end'>
-        <div className='absolute inset-0 bg-black bg-opacity-0 backdrop-blur-[2px] lg:backdrop-blur-sm'></div>
+        <div className='absolute inset-0 bg-black backdrop-blur-[2px] z-0 lg:backdrop-blur-sm bg-opacity-0'></div>
         <div className='h-8 w-full bg-primary-dk1'></div>
         <div className='h-8 w-full bg-primary-md2'></div>
         <div className='h-8 w-full bg-primary-lt1'></div>

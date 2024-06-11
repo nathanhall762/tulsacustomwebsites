@@ -108,14 +108,14 @@ const Header: React.FC<HeaderProps> = ({
           className={`relative top-0 flex h-[9vh] justify-between text-center align-middle shadow-2xl transition-all duration-fast lg:grid lg:grid-cols-12`}
         >
           {/* desktop nav */}
-          <div className='border-neutral-6 relative flex flex-grow items-center justify-center border-r-[1px] lg:col-span-2'>
+          <div className='border-neutral-6 relative flex flex-grow items-center justify-center  lg:col-span-2'>
             <a href='/'>
               <div className='hover:text-accent text-neutral-1 dark:text-neutral-1 overflow-clip text-center transition-all duration-fast'>
                 <img src={logo} alt='logo' className='h-[8vh] py-2' />
               </div>
             </a>
           </div>
-          <nav className='border-neutral-6 hidden items-center justify-start gap-[1.8vw] border-r-[1px] px-16 align-middle lg:col-span-8  lg:flex xl:col-span-7'>
+          <nav className='border-neutral-6 hidden items-center justify-start gap-[1.8vw]  px-16 align-middle lg:col-span-8  lg:flex xl:col-span-7'>
             {navs.map((nav) => (
               <div key={nav.name} className='group relative'>
                 <a
