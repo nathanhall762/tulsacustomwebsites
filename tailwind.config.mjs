@@ -105,7 +105,7 @@ export default {
         {
           '.scroller': {
             scrollbarColor:
-              'hsl(var(--primary-hue), 100%, 25%) hsl(240, 5%, 8%)',
+              'hsl(313, 90%, 31%) hsl(240, 5%, 8%)',
           },
           '.scroller-sm': {
             scrollbarColor: 'hsl(var(--primary-hue), 5%, 46%) hsl(240, 5%, 8%)',

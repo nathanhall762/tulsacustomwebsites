@@ -115,7 +115,7 @@ const Header: React.FC<HeaderProps> = ({
               </div>
             </a>
           </div>
-          <nav className='border-neutral-6 hidden items-center justify-start gap-[1.8vw]  px-16 align-middle lg:col-span-8  lg:flex xl:col-span-7'>
+          <nav className='border-neutral-6 hidden items-center justify-end gap-[1.8vw]  px-16 align-middle lg:col-span-8  lg:flex xl:col-span-8'>
             {navs.map((nav) => (
               <div key={nav.name} className='group relative'>
                 <a
@@ -211,7 +211,7 @@ const Header: React.FC<HeaderProps> = ({
               ))}
             </nav>
           </div>
-          <div className='hidden px-4 text-sm lg:col-span-2 lg:flex lg:justify-around xl:col-span-3'>
+          <div className='hidden px-4 text-sm lg:col-span-2 lg:flex lg:justify-around xl:col-span-2'>
             {/* <div className='group hidden cursor-pointer items-center justify-center gap-[1.4vw] self-center xl:flex'>
               <a
                 href={`tel:${phone}`}
@@ -227,7 +227,7 @@ const Header: React.FC<HeaderProps> = ({
               </a>
             </div> */}
             <a href='#contact' className='flex self-center'>
-              <button className='text-neutral-1 transform rounded-xl bg-primary-lt1 px-4 py-2 transition duration-fast ease-in-out hover:scale-sm hover:bg-primary-lt2'>
+              <button className='text-neutral-1 transform rounded-xl bg-primary-lt1 px-4 lg:px-8 py-2 lg:py-3 transition duration-fast ease-in-out hover:scale-sm hover:bg-primary-lt2'>
                 <span className=''>Hire Us!</span>
               </button>
             </a>
