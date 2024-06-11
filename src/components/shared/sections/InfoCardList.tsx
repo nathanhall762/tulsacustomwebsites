@@ -1,3 +1,4 @@
+import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import ReactMarkdown from 'react-markdown';
 
 interface Props {
@@ -7,9 +8,6 @@ interface Props {
     card: {
       heading: string;
       body_text: string;
-      image: string;
-      alt_image_text: string;
-      link: string;
     }[];
   };
 }
@@ -35,8 +33,8 @@ const InfoCardList: React.FC<Props> = ({
         >
           {body_text}
         </ReactMarkdown>
-        <div className='flex flex-col items-center justify-center gap-16 px-4 py-8 lg:flex-row lg:gap-16'>
-          {card.map((card) => (
+        <div className='grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1'>
+          {/* {card.map((card) => (
             <a
               href={card.link}
               className='group flex aspect-[2/3] w-full max-w-2xl transform cursor-pointer flex-col justify-end bg-cover shadow-2xl transition-transform hover:scale-105 hover:shadow-none'
@@ -54,6 +52,16 @@ const InfoCardList: React.FC<Props> = ({
                 </div>
               </div>
             </a>
+          ))} */}
+          {card.map((card, index) => (
+            <div className='flex flex-col items-center gap-4 p-4' key={index}>
+              <h3 className=''>{card.heading}</h3>
+              <Icon
+                icon='svg-spinners:blocks-wave'
+                className='text-xl text-primary-lt1'
+              />
+              <p>{card.body_text}</p>
+            </div>
           ))}
         </div>
       </div>
