@@ -1,35 +1,37 @@
 import type { DocumentData } from 'firebase/firestore';
 
 interface Props {
-  content: {
+  heading: string;
+  default_card: {
     heading: string;
-    default_card: {
-      heading: string;
-      body_text: string;
-      image: string;
-      alt_image_text: string;
-      call_to_action_text?: string;
-      call_to_action_link?: string;
-    };
-    cards: {
-      heading: string;
-      body_text: string;
-      image: string;
-      alt_image_text: string;
-      call_to_action_text?: string;
-      call_to_action_link?: string;
-    }[];
+    body_text: string;
+    image: string;
+    alt_image_text: string;
+    call_to_action_text?: string;
+    call_to_action_link?: string;
   };
+  cards: {
+    heading: string;
+    body_text: string;
+    image: string;
+    alt_image_text: string;
+    call_to_action_text?: string;
+    call_to_action_link?: string;
+  }[];
 }
 
 const EuroProjectGallery: React.FC<Props> = ({
-  content: { heading, default_card: defaultCard, cards },
+  heading,
+  default_card: defaultCard,
+  cards,
 }) => {
   return (
     <>
       <div className='my-8 lg:my-16 lg:px-8'>
-        <h3 className='mb-4 text-center text-lg font-bold lg:text-3xl'>{heading}</h3>
-        <div className='mb-8 h-[2px] w-3/4 mx-auto max-w-2xl bg-primary-md1'></div>
+        <h3 className='mb-4 text-center text-lg font-bold lg:text-3xl'>
+          {heading}
+        </h3>
+        <div className='mx-auto mb-8 h-[2px] w-3/4 max-w-2xl bg-primary-md1'></div>
         <ul className='align-center m-0 grid grid-cols-1 text-center hover:cursor-pointer group-hover:shadow-inner sm:grid-cols-2'>
           {cards.map((card) => (
             <li

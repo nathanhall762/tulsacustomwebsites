@@ -1,34 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import Button from '../../ui/Button';
 
 interface HeroProps {
-  content: {
-    heading: string;
-    subheading: string;
-    images: string[];
-    call_to_action_text?: string;
-    call_to_action_link?: string;
-  };
+  heading: string;
+  subheading: string;
+  images: string[];
+  call_to_action_text?: string;
+  call_to_action_link?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({
-  content: {
-    heading,
-    subheading: tagline,
-    images: backgroundImages,
-    call_to_action_text,
-    call_to_action_link,
-  },
+  heading,
+  subheading,
+  images,
+  call_to_action_text,
+  call_to_action_link,
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [backgroundImages.length, 5000]);
+  }, [images.length, 5000]);
 
   const getImageClasses = (index: number) => {
     let baseClasses =
@@ -48,7 +45,7 @@ const Hero: React.FC<HeroProps> = ({
       className='relative h-[100vh] w-full bg-neutral-8 bg-cover shadow-inner xl:h-[100vh]'
       style={{ backgroundImage: `url(${backgroundTexture})` }}
     >
-      {backgroundImages.map((image, index) => (
+      {images.map((image, index) => (
         <div
           key={image}
           className={getImageClasses(index)}
@@ -70,13 +67,11 @@ const Hero: React.FC<HeroProps> = ({
             Websites
           </h1>
           <h3 className='text-shadow-outline pb-24 text-xl font-light tracking-wide text-neutral-2 lg:pb-24 lg:text-left lg:text-4xl'>
-            {tagline}
+            {subheading}
           </h3>
           <div className='items-left flex flex-col justify-start gap-4 lg:flex-row lg:gap-16 lg:pb-24'>
             <a href='/contact' className=''>
-              <button className='bg-other transform rounded-xl bg-primary-lt1 px-12 py-4 text-lg text-neutral-2 transition duration-300 ease-in-out hover:scale-110  hover:bg-primary-lt2'>
-                {call_to_action_text}
-              </button>
+              <Button text={call_to_action_text ?? ''} />
             </a>
             {/* <p className='text-base text-neutral-2 lg:text-lg'>
               <a href='tel:9189407800'>Call: (918) 940-7800</a>

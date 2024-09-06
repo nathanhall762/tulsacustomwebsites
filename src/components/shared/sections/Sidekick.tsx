@@ -1,21 +1,17 @@
 interface SidekickProps {
-  content: {
-    heading: string;
-    subheading: string;
-    image: string;
-    call_to_action_text?: string;
-    call_to_action_link?: string;
-  };
+  heading: string;
+  subheading: string;
+  image: string;
+  call_to_action_text?: string;
+  call_to_action_link?: string;
 }
 
 const Sidekick: React.FC<SidekickProps> = ({
-  content: {
-    heading: welcomeText,
-    subheading: tagline,
-    image,
-    call_to_action_text: callToActionText,
-    call_to_action_link: callToActionLink,
-  },
+  heading: welcomeText,
+  subheading: tagline,
+  image,
+  call_to_action_text: callToActionText,
+  call_to_action_link: callToActionLink,
 }) => {
   return (
     <div className='relative'>

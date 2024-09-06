@@ -1,24 +1,19 @@
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 
 interface Props {
-  content: {
+  heading: string;
+  body_text: string;
+  card: {
+    alt_image_text: string;
     heading: string;
     body_text: string;
-    card: {
-      alt_image_text: string;
-      heading: string;
-      body_text: string;
-    }[];
-  };
+  }[];
 }
 
-const InfoCardList: React.FC<Props> = ({
-  content: { heading, body_text, card },
-}) => {
-  console.log(card[0].alt_image_text);
+const InfoCardList: React.FC<Props> = ({ heading, body_text, card }) => {
   return (
     <>
-      <div className='flex flex-col px-4 my-16 lg:my-32 text-center'>
+      <div className='my-16 flex flex-col px-4 text-center lg:my-32'>
         <div className='items-center pb-16'>
           <h2 className='pb-4 text-neutral-1'>{heading}</h2>
           <div className='mx-auto mb-4 h-[2px] w-[40%] max-w-2xl bg-primary-md1'></div>
