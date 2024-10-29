@@ -1,17 +1,21 @@
 import ReactMarkdown from 'react-markdown';
 
 interface AboutCardProps {
-  heading: string;
-  body_text: string;
-  link_text: string;
-  link_url: string;
+  content: {
+    heading: string;
+    body_text: string;
+    link_text: string;
+    link_url: string;
+  };
 }
 
 const AboutCard: React.FC<AboutCardProps> = ({
+  content: {
   heading: aboutTitle,
   body_text: aboutBody,
   link_text: linkText,
   link_url: linkUrl,
+  },
 }) => {
   return (
     <div className='flex bg-neutral-8 px-4 py-8 lg:py-16'>

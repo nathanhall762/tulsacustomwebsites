@@ -20,7 +20,7 @@ const { pageData } = Astro.props;
       switch (item.type) {
         case 'hero_section':
           return <Hero {...item.value} client:idle />;
-        case 'sidekick_section':
+        case 'sidekick':
           return <Sidekick {...item.value} />;
         case 'welcome_message_section':
           return <AboutCard {...item.value} />;
