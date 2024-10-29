@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboutCard from '../../components/shared/sections/AboutCard';
+import Accordion from '../../components/shared/sections/Accordion';
+
+---
+
+<BaseLayout
+  title='text-components'
+  metaDescription='text-components'
+>
+  <AboutCard
+	content= {{
+	heading:'About Card',
+	body_text:'We are a team of professionals who are passionate about what we do. We are a team of professionals who are passionate about what we do. We are a team of professionals who are passionate about what we do.',
+	link_text:'Learn More',
+	link_url:'/about'
+	}}
+  />
+  <Accordion
+	content= {{
+	heading:'Accordion',
+	question_and_answer: [
+		{
+			question: 'What is the meaning of life?',
+			answer: '42'
+		},
+		{
+			question: 'What is the airspeed velocity of an unladen swallow?',
+			answer: 'African or European?'
+		},
+		{
+			question: 'What is the best color?',
+			answer: 'Blue'
+		}
+	]
+	}}
+  />

@@ -12,10 +12,14 @@ export default {
     },
     colors: {
       transparent: 'transparent',
-      black: 'hsl(0, 0%, 5%)',
-      black2: 'hsl(0, 0%, 12%)',
-      white: 'hsl(0, 0%, 96%)',
-      white2: 'hsl(0, 0%, 90%)',
+      black: {
+        1: 'hsl(0, 0%, 5%)',
+        2: 'hsl(0, 0%, 12%)',
+      },
+      white: {
+        1:  'hsl(0, 0%, 96%)',
+        2: 'hsl(0, 0%, 90%)',
+      },
       neutral: {
         1: 'hsl(245, 30%, 92%)',
         2: 'hsl(245, 25%, 86%)',

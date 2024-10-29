@@ -42,7 +42,7 @@ export const PagesCollection:EntityCollection = {
 			propertyConfig: 'block',
 			oneOf: {
 				propertiesOrder: [
-					'sidekick_section',
+					'sidekick',
 					'welcome_message_section',
 					'hero_section',
 					'info_card_list',
@@ -326,8 +326,8 @@ export const PagesCollection:EntityCollection = {
 						name: 'url',
 						editable: true,
 					},
-					sidekick_section: {
-						name: 'Sidekick Section',
+					sidekick: {
+						name: 'Sidekick',
 						editable: true,
 						dataType: 'map',
 						keyValue: false,
