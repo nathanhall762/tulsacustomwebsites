@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import TabListCards from '../../components/shared/sections/TabListCards';
-import PictureGallery from '../../components/PictureGallery';
-import ProjectGallery from '../../components/ProjectGallery';
+import TabListCards from '../../components/shared/page-sections/text-components/TabListCards';
+import PictureGallery from '../../components/shared/page-sections/image-components/PictureGallery';
+import ProjectGallery from '../../components/shared/page-sections/image-components/ProjectGallery';
+import EuroProjectGallery from '../../components/shared/page-sections/image-components/EuroProjectGallery';
 
 const tabListCardsContent = {
   heading: 'Explore Our Services',
@@ -10,7 +11,7 @@ const tabListCardsContent = {
     heading: 'Welcome to Our Platform',
     body_text:
       "Discover the variety of services we offer to help you achieve your goals. From expert consultations to hands-on support, we're here to make your journey a success.",
-    image: '/images/default.jpg',
+    image: 'https://via.placeholder.com/150',
     alt_image_text: 'People collaborating in an office space',
     call_to_action_text: 'Get Started',
     call_to_action_link: '/get-started',
@@ -20,7 +21,7 @@ const tabListCardsContent = {
       heading: 'Consulting Services',
       body_text:
         'Gain insights from industry experts and get personalized advice tailored to your needs. Let us help you navigate the challenges in your field.',
-      image: '/images/consulting.jpg',
+      image: 'https://via.placeholder.com/150',
       alt_image_text: 'Consultant speaking with a client',
       call_to_action_text: 'Learn More',
       call_to_action_link: '/services/consulting',
@@ -29,7 +30,7 @@ const tabListCardsContent = {
       heading: 'Project Management',
       body_text:
         'Keep your projects on track with our comprehensive project management solutions, designed to optimize efficiency and productivity.',
-      image: '/images/project-management.jpg',
+      image: 'https://via.placeholder.com/150',
       alt_image_text: 'Team planning a project',
       call_to_action_text: 'See Plans',
       call_to_action_link: '/services/project-management',
@@ -38,7 +39,7 @@ const tabListCardsContent = {
       heading: 'Technical Support',
       body_text:
         'Our support team is available 24/7 to address your technical issues and ensure your systems are always running smoothly.',
-      image: '/images/tech-support.jpg',
+      image: 'https://via.placeholder.com/150',
       alt_image_text: 'Technician assisting a customer',
       call_to_action_text: 'Contact Us',
       call_to_action_link: '/support',
@@ -47,7 +48,7 @@ const tabListCardsContent = {
       heading: 'Training & Workshops',
       body_text:
         'Empower your team with our training programs and workshops. We cover a wide range of skills to enhance professional growth.',
-      image: '/images/training.jpg',
+      image: 'https://via.placeholder.com/150',
       alt_image_text: 'People attending a training session',
       call_to_action_text: 'Join a Workshop',
       call_to_action_link: '/workshops',
@@ -56,26 +57,26 @@ const tabListCardsContent = {
 };
 const picturegalleryContent = [
   {
-    imageRef: '/images/feature1.jpg',
+    imageRef: 'https://via.placeholder.com/150',
     title: 'Explore Our Solutions',
     link: '/solutions',
   },
   {
-    imageRef: '/images/feature2.jpg',
+    imageRef: 'https://via.placeholder.com/150',
     title: 'Meet the Team',
     link: '/team',
   },
   {
-    imageRef: '/images/feature3.jpg',
+    imageRef: 'https://via.placeholder.com/150',
     title: 'Customer Success Stories',
     link: '/success-stories',
   },
   {
-    imageRef: '/images/feature4.jpg',
+    imageRef: 'https://via.placeholder.com/150',
     title: 'Innovative Technology',
   },
   {
-    imageRef: '/images/feature5.jpg',
+    imageRef: 'https://via.placeholder.com/150',
     title: 'Careers with Us',
     link: '/careers',
   },
@@ -86,7 +87,7 @@ const projects = [
     title: 'Urban Revitalization',
     description:
       'A comprehensive project focused on enhancing public spaces in urban areas, creating more livable, vibrant communities.',
-    image: '/images/urban-revitalization.jpg',
+    image: 'https://via.placeholder.com/150',
     altText: 'A newly revitalized urban park with greenery and benches',
     link: '/projects/urban-revitalization',
   },
@@ -94,7 +95,7 @@ const projects = [
     title: 'Sustainable Architecture',
     description:
       'Innovative architectural designs that prioritize sustainability, energy efficiency, and harmony with the environment.',
-    image: '/images/sustainable-architecture.jpg',
+    image: 'https://via.placeholder.com/150',
     altText: 'Modern building with sustainable design features',
     link: '/projects/sustainable-architecture',
   },
@@ -102,7 +103,7 @@ const projects = [
     title: 'Community Art Initiative',
     description:
       'A collaborative effort bringing local artists together to create public art that reflects community identity.',
-    image: '/images/community-art.jpg',
+    image: 'https://via.placeholder.com/150',
     altText: 'Mural on a city wall painted by local artists',
     link: '/projects/community-art',
   },
@@ -110,15 +111,49 @@ const projects = [
     title: 'Tech Innovation Hub',
     description:
       'A modern co-working space fostering collaboration and innovation in the technology sector.',
-    image: '/images/tech-innovation.jpg',
+    image: 'https://via.placeholder.com/150',
     altText: 'Inside view of a tech innovation co-working hub',
     link: '/projects/tech-innovation',
   },
 ];
 ---
 
-<BaseLayout title='text-components' metaDescription='text-components'>
+<BaseLayout
+  title='text-components'
+  metaDescription='text-components'>
   <TabListCards content={tabListCardsContent} />
   <PictureGallery images={picturegalleryContent} />
-  <ProjectGallery galleryHeader={galleryHeader} projects={projects} />
+  <ProjectGallery
+    galleryHeader={galleryHeader}
+    projects={projects}
+  />
+  <EuroProjectGallery
+    heading='Dummy Heading'
+    default_card={{
+      heading: 'Dummy Default Card Heading',
+      body_text: 'Dummy body text for the default card.',
+      image: 'https://via.placeholder.com/150',
+      alt_image_text: 'Dummy alt text for the default card image',
+      call_to_action_text: 'Dummy Call to Action',
+      call_to_action_link: '/dummy-link',
+    }}
+    cards={[
+      {
+        heading: 'Dummy Card 1 Heading',
+        body_text: 'Dummy body text for card 1.',
+        image: 'https://via.placeholder.com/150',
+        alt_image_text: 'Dummy alt text for card 1 image',
+        call_to_action_text: 'Dummy Call to Action 1',
+        call_to_action_link: '/dummy-link-1',
+      },
+      {
+        heading: 'Dummy Card 2 Heading',
+        body_text: 'Dummy body text for card 2.',
+        image: 'https://via.placeholder.com/150',
+        alt_image_text: 'Dummy alt text for card 2 image',
+        call_to_action_text: 'Dummy Call to Action 2',
+        call_to_action_link: '/dummy-link-2',
+      },
+    ]}
+  />
 </BaseLayout>

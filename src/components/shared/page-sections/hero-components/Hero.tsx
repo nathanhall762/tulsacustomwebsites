@@ -81,7 +81,7 @@ const Hero: React.FC<HeroProps> = ({
       </div>
       <div className='absolute inset-0 z-0 flex flex-col justify-end'>
         <div className='relative'>
-          <div className='absolute inset-0 z-0 bg-black bg-opacity-0 backdrop-blur-[2px] lg:backdrop-blur-sm'></div>
+          <div className='bg-black absolute inset-0 z-0 bg-opacity-0 backdrop-blur-[2px] lg:backdrop-blur-sm'></div>
           <div className='h-8 w-full bg-primary-dk1'></div>
           <div className='h-8 w-full bg-primary-md2'></div>
           <div className='h-8 w-full bg-primary-lt1'></div>

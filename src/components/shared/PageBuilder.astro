@@ -1,16 +1,16 @@
 ---
 import type { Item } from '../../layouts/Layout.astro';
-import AboutCard from './sections/AboutCard';
-import Accordion from './sections/Accordion';
-import BulletStatsCard from './sections/BulletStatsCard';
-import Hero from './sections/Hero';
-import InfoCardList from './sections/InfoCardList';
-import Sidekick from './sections/Sidekick';
-import TabListCards from './sections/TabListCards';
-import TextImagecard from './sections/TextImageCard';
-import Cta from './sections/Cta';
-import Testimonial from './sections/Testimonial';
-import EuroProjectGallery from '../EuroProjectGallery';
+import AboutCard from './page-sections/text-components/AboutCard';
+import Accordion from './page-sections/text-components/Accordion';
+import BulletStatsCard from './page-sections/text-components/BulletStatsCard';
+import Hero from './page-sections/hero-components/Hero';
+import InfoCardList from './page-sections/text-components/InfoCardList';
+import Sidekick from './page-sections/hero-components/Sidekick';
+import TabListCards from './page-sections/text-components/TabListCards';
+import TextImagecard from './page-sections/text-components/TextImageCard';
+import Cta from './page-sections/text-components/Cta';
+import Testimonial from './page-sections/text-components/Testimonial';
+import EuroProjectGallery from './page-sections/image-components/EuroProjectGallery';
 const { pageData } = Astro.props;
 ---
 
@@ -19,7 +19,12 @@ const { pageData } = Astro.props;
     pageData.content.map((item: Item) => {
       switch (item.type) {
         case 'hero_section':
-          return <Hero {...item.value} client:idle />;
+          return (
+            <Hero
+              {...item.value}
+              client:idle
+            />
+          );
         case 'sidekick':
           return <Sidekick {...item.value} />;
         case 'welcome_message_section':
@@ -29,11 +34,21 @@ const { pageData } = Astro.props;
         case 'bullet_stats_card':
           return <BulletStatsCard {...item.value} />;
         case 'tab_list_cards':
-          return <EuroProjectGallery {...item.value} client:visible />;
+          return (
+            <EuroProjectGallery
+              {...item.value}
+              client:visible
+            />
+          );
         case 'text_image_card':
           return <TextImagecard {...item.value} />;
         case 'accordion':
-          return <Accordion {...item.value} client:visible />;
+          return (
+            <Accordion
+              {...item.value}
+              client:visible
+            />
+          );
         case 'cta_section':
           return <Cta {...item.value} />;
         case 'testimonial':

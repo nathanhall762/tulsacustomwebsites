@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Review } from './components/ReviewCards';
+import type { Review } from './components/shared/page-sections/text-components/ReviewCards';
 
 const apiKey = import.meta.env.PUBLIC_GOOGLE_PLACES_API_KEY;
 const fetchReviews = async (): Promise<Review[]> => {

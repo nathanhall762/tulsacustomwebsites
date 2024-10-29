@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ProjectGallery from '../components/ProjectGallery';
-import Sidekick from '../components/shared/sections/Sidekick';
+import ProjectGallery from '../components/shared/page-sections/image-components/ProjectGallery';
+import Sidekick from '../components/shared/page-sections/hero-components/Sidekick';
 
 import codePicture from '../media/code.png';
 import zarnPicture from '../media/zarnPic.png';
@@ -17,8 +17,7 @@ import musicPicture from '../media/musicintulsa.png';
 <Layout
   title={'Our Work'}
   metaDescription={'Complete Gallery of Our Work'}
-  pageData={{ content: [] }}
->
+  pageData={{ content: [] }}>
   <Sidekick
     heading='Our Work'
     image={codePicture.src}

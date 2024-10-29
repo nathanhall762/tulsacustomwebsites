@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Icon } from '@iconify-icon/react';
 import { initAnalytics } from '../../firebase';
-import Button from '../ui/Button';
+import Button from './ui/Button';
 
 interface Nav {
   link: string;
