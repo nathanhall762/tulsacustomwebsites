@@ -1,38 +1,115 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AboutCard from '../../components/shared/sections/AboutCard';
+import BulletStatsCard from '../../components/shared/sections/BulletStatsCard';
 import Accordion from '../../components/shared/sections/Accordion';
-
+import InfoCardList from '../../components/shared/sections/InfoCardList';
+import ComparisonSection from '../../components/ComparisonSection';
+import TextImagecard from '../../components/shared/sections/TextImageCard';
+import TabListCards from '../../components/shared/sections/TabListCards';
 ---
 
 <BaseLayout
   title='text-components'
-  metaDescription='text-components'
->
+  metaDescription='text-components'>
   <AboutCard
-	content= {{
-	heading:'About Card',
-	body_text:'We are a team of professionals who are passionate about what we do. We are a team of professionals who are passionate about what we do. We are a team of professionals who are passionate about what we do.',
-	link_text:'Learn More',
-	link_url:'/about'
-	}}
+    content={{
+      heading: 'About Card',
+      body_text:
+        "This is a card component that can be used to display information about a person or a company. It can be used to display a person's name, title, and a brief description of them. It can also be used to display information about a company, such as its name, location, and a brief description of what it does.",
+      link_text: 'Learn More',
+      link_url: 'https://example.com',
+    }}
+  />
+  <BulletStatsCard
+    heading='Bullet Stats Card'
+    ,
+    body_text='This is a card component that can be used to display a list of bullet points with accompanying statistics. It can be used to display information such as the number of employees at a company, the number of products a company sells, or the number of years a person has been in business.'
+    ,
+    image='https://via.placeholder.com/150'
+    ,
+    image_alt_text='Placeholder Image'
+    ,
+  />
+  <InfoCardList
+    heading='Info Card List'
+    body_text='This is a list of info cards that can be used to display various pieces of information.'
+    card={[
+      {
+        alt_image_text: 'Alt text for image 1',
+        heading: 'Card 1 Heading',
+        body_text: 'This is the body text for card 1.',
+      },
+      {
+        alt_image_text: 'Alt text for image 2',
+        heading: 'Card 2 Heading',
+        body_text: 'This is the body text for card 2.',
+      },
+      {
+        alt_image_text: 'Alt text for image 3',
+        heading: 'Card 3 Heading',
+        body_text: 'This is the body text for card 3.',
+      },
+    ]}
+  />
+  <ComparisonSection />
+  <TextImagecard
+    heading='Sample Heading'
+    image='https://via.placeholder.com/150'
+    image_alt_text='Placeholder Image'
+    body_text='This is a sample body text for the TextImageCard component.'
+    link_url='https://example.com'
+    link_text='Learn More'
+    reversed={false}
+  />
+  <TabListCards
+    content={{
+      heading: 'Sample Heading',
+      default_card: {
+        heading: 'Default Card Heading',
+        body_text: 'This is the body text for the default card.',
+        image: 'https://via.placeholder.com/150',
+        alt_image_text: 'Placeholder Image',
+        call_to_action_text: 'Learn More',
+        call_to_action_link: 'https://example.com',
+      },
+      cards: [
+        {
+          heading: 'Card 1 Heading',
+          body_text: 'This is the body text for card 1.',
+          image: 'https://via.placeholder.com/150',
+          alt_image_text: 'Placeholder Image',
+          call_to_action_text: 'Learn More',
+          call_to_action_link: 'https://example.com',
+        },
+        {
+          heading: 'Card 2 Heading',
+          body_text: 'This is the body text for card 2.',
+          image: 'https://via.placeholder.com/150',
+          alt_image_text: 'Placeholder Image',
+          call_to_action_text: 'Learn More',
+          call_to_action_link: 'https://example.com',
+        },
+      ],
+    }}
   />
   <Accordion
-	content= {{
-	heading:'Accordion',
-	question_and_answer: [
-		{
-			question: 'What is the meaning of life?',
-			answer: '42'
-		},
-		{
-			question: 'What is the airspeed velocity of an unladen swallow?',
-			answer: 'African or European?'
-		},
-		{
-			question: 'What is the best color?',
-			answer: 'Blue'
-		}
-	]
-	}}
+    content={{
+      heading: 'Accordion',
+      question_and_answer: [
+        {
+          question: 'What is the meaning of life?',
+          answer: '42',
+        },
+        {
+          question: 'What is the airspeed velocity of an unladen swallow?',
+          answer: 'African or European?',
+        },
+        {
+          question: 'What is the best color?',
+          answer: 'Blue',
+        },
+      ],
+    }}
   />
+</BaseLayout>
