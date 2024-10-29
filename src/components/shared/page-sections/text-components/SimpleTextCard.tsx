@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 
-interface AboutCardProps {
+interface SimpleTextCardProps {
   content: {
     heading: string;
     body_text: string;
@@ -9,7 +9,7 @@ interface AboutCardProps {
   };
 }
 
-const AboutCard: React.FC<AboutCardProps> = ({
+const SimpleTextCard: React.FC<SimpleTextCardProps> = ({
   content: {
   heading: aboutTitle,
   body_text: aboutBody,
@@ -58,4 +58,4 @@ const AboutCard: React.FC<AboutCardProps> = ({
   );
 };
 
-export default AboutCard;
+export default SimpleTextCard;

@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AboutCard from '../../components/shared/page-sections/text-components/AboutCard';
+import AboutCard from '../../components/shared/page-sections/text-components/SimpleTextCard';
 import BulletStatsCard from '../../components/shared/page-sections/text-components/BulletStatsCard';
 import Accordion from '../../components/shared/page-sections/text-components/Accordion';
 import InfoCardList from '../../components/shared/page-sections/text-components/InfoCardList';
 import ComparisonSection from '../../components/shared/page-sections/text-components/ComparisonSection';
-import TextImagecard from '../../components/shared/page-sections/text-components/TextImageCard';
+import TextImagecard from '../../components/shared/page-sections/text-components/ImageByCopy';
 import TabListCards from '../../components/shared/page-sections/text-components/TabListCards';
 import ReviewCards from '../../components/shared/page-sections/text-components/ReviewCards';
 import Cta from '../../components/shared/page-sections/text-components/Cta';
@@ -19,7 +19,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
   metaDescription='text-components'>
   <AboutCard
     content={{
-      heading: 'About Card',
+      heading: 'Simple Text Card',
       body_text:
         "This is a card component that can be used to display information about a person or a company. It can be used to display a person's name, title, and a brief description of them. It can also be used to display information about a company, such as its name, location, and a brief description of what it does.",
       link_text: 'Learn More',
@@ -213,11 +213,11 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
 	`,
     }}
   />
-<ProjectPageInfo
-	title="Project Title"
-	description="This is a description of the project."
-	date="2023-10-01"
-	company="Example Company"
-	credits={["John Doe", "Jane Smith"]}
-/>
+  <ProjectPageInfo
+    title='Project Title'
+    description='This is a description of the project.'
+    date='2023-10-01'
+    company='Example Company'
+    credits={['John Doe', 'Jane Smith']}
+  />
 </BaseLayout>

@@ -10,7 +10,7 @@ interface Props {
   reversed?: boolean;
 }
 
-const TextImagecard: React.FC<Props> = ({
+const ImageByCopy: React.FC<Props> = ({
   heading,
   image,
   image_alt_text,
@@ -69,4 +69,4 @@ const TextImagecard: React.FC<Props> = ({
   );
 };
 
-export default TextImagecard;
+export default ImageByCopy;
