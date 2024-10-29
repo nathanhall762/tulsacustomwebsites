@@ -21,30 +21,30 @@ const businessInformation = await getData('business_information');
 ---
 
 <!doctype html>
-<html
-  lang='en'
-  class='dark bg-neutral-9 text-neutral-2 scroller font-body'
->
+<html lang='en' class='dark bg-neutral-9 font-body text-neutral-2 scroller'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={metaDescription} />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap'
+      rel='stylesheet'
+    />
     <link
       rel='icon'
       type='image/png'
       sizes='32x32'
       href={businessInformation[0].favicon.favicon_32_x32}
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+    <link rel='manifest' href='/site.webmanifest' />
+    <meta name='msapplication-TileColor' content='#da532c' />
+    <meta name='theme-color' content='#ffffff' />
     <title>
       {
         title
@@ -53,86 +53,9 @@ const businessInformation = await getData('business_information');
       }
     </title>
     <ViewTransitions />
-    <!-- TODO structed data -->
-    <script type='application/ld+json'>
-      // {
-      //   "@context": "http://schema.org",
-      //   "@type": "AutoRepair",
-      //   "image": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
-      //   "url": "https://zarn-site.web.app/",
-      //   "sameAs": [
-      //     "https://www.instagram.com/nzdiagnostics/?hl=en",
-      //     "https://www.youtube.com/channel/UCUX944rcFj1I2AvTuFL04Aw"
-      //   ],
-      //   "logo": "https://firebasestorage.googleapis.com/v0/b/zarn-site.appspot.com/o/88m8g_ZarnLogo.png?alt=media&amp;token=7dc4e3cc-1e25-4e2e-bc1e-2458e053f560",
-      //   "name": "Zarn Automotive",
-      //   "description": "Zarn Automotive is a locally owned auto repair shop in Broken Arrow, OK, offering expert services for luxury and import vehicles. Our experienced technicians provide comprehensive care, including AC services, battery replacements, and more.",
-      //   "telephone": "(918) 940-7800",
-      //   "contactPoint": {
-      //     "@type": "ContactPoint",
-      //     "telephone": "(918) 940-7800",
-      //     "contactType": "Customer Service"
-      //   },
-      //   "address": {
-      //     "@type": "PostalAddress",
-      //     "streetAddress": "2003 N Yellowood Ave ste f",
-      //     "addressLocality": "Broken Arrow",
-      //     "addressRegion": "OK",
-      //     "postalCode": "74012",
-      //     "addressCountry": "US"
-      //   },
-      //   "openingHours": ["Mo-Sa 09:00-17:00"],
-      //   "hasMap": "https://maps.app.goo.gl/s5gvjEPDHAo22F4y9",
-      //   "geo": {
-      //     "@type": "GeoCoordinates",
-      //     "latitude": "36.071981305212354",
-      //     "longitude": "-95.83970962507328"
-      //   },
-      //   "priceRange": "Call for quote",
-      //   "areaServed": [
-      //     {
-      //       "@type": "Place",
-      //       "name": "Broken Arrow"
-      //     },
-      //     {
-      //       "@type": "Place",
-      //       "name": "Tulsa"
-      //     },
-      //     {
-      //       "@type": "Place",
-      //       "name": "Bixby"
-      //     },
-      //     {
-      //       "@type": "Place",
-      //       "name": "Owasso"
-      //     },
-      //     {
-      //       "@type": "Place",
-      //       "name": "Jenks"
-      //     },
-      //     {
-      //       "@type": "Place",
-      //       "name": "Coweta"
-      //     },
-      //     {
-      //       "@type": "Place",
-      //       "name": "Wagoner"
-      //     },
-      //     {
-      //       "@type": "Place",
-      //       "name": "Catoosa"
-      //     }
-      //   ]
-      // }
-    </script>
   </head>
   <body>
     <Header
-      phone={businessInformation[0].business_phone}
-      address={businessInformation[0].business_address}
-      addressLink={businessInformation[0].google_maps_link}
-      email={businessInformation[0].business_contact_email}
-      socials={businessInformation[0].socials}
       navs={navs.filter((nav) => nav.link !== '/')}
       logo={businessInformation[0].business_logo}
       client:load
@@ -149,7 +72,6 @@ const businessInformation = await getData('business_information');
       socials={businessInformation[0].socials}
     />
     <style is:global>
-
       @tailwind base;
 
       @layer base {
@@ -212,8 +134,8 @@ const businessInformation = await getData('business_information');
       }
 
       ul {
-          @apply ms-8 list-disc text-base leading-loose lg:text-lg lg:leading-loose;
-        }
+        @apply ms-8 list-disc text-base leading-loose lg:text-lg lg:leading-loose;
+      }
 
       a {
         @apply transition-transform duration-fast ease-in-out;
@@ -228,31 +150,31 @@ const businessInformation = await getData('business_information');
       }
 
       h1 {
-        @apply text-4xl lg:text-8xl font-display font-normal text-neutral-1;
+        @apply font-display text-4xl font-normal text-neutral-1 lg:text-8xl;
       }
 
       h2 {
-        @apply text-3xl lg:text-5xl font-display font-normal text-neutral-1;
+        @apply font-display text-3xl font-normal text-neutral-1 lg:text-5xl;
       }
 
       h3 {
-        @apply text-xl lg:text-4xl font-display font-normal text-neutral-1;
+        @apply font-display text-xl font-normal text-neutral-1 lg:text-4xl;
       }
 
       h4 {
-        @apply text-lg lg:text-3xl font-display font-light text-neutral-1;
+        @apply font-display text-lg font-light text-neutral-1 lg:text-3xl;
       }
 
       h5 {
-        @apply text-base lg:text-2xl font-display font-light text-neutral-1;
+        @apply font-display text-base font-light text-neutral-1 lg:text-2xl;
       }
 
       h6 {
-        @apply text-base lg:text-xl font-display font-light text-neutral-1;
+        @apply font-display text-base font-light text-neutral-1 lg:text-xl;
       }
 
       p {
-        @apply text-base leading-loose lg:text-lg lg:leading-loose font-body;
+        @apply font-body text-base leading-loose lg:text-lg lg:leading-loose;
       }
 
       strong {

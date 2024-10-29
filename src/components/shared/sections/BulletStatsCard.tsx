@@ -1,16 +1,17 @@
 import ReactMarkdown from 'react-markdown';
 
 interface Props {
-  content: {
-    heading: string;
-    body_text: string;
-    image: string;
-    image_alt_text: string;
-  };
+  heading: string;
+  body_text: string;
+  image: string;
+  image_alt_text: string;
 }
 
 const BulletStatsCard: React.FC<Props> = ({
-  content: { heading: title, body_text: body, image: bg_image, image_alt_text },
+  heading: title,
+  body_text: body,
+  image: bg_image,
+  image_alt_text,
 }) => {
   return (
     <div

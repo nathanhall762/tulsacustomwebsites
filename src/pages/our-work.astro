@@ -1,15 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import type { DocumentData } from 'firebase/firestore';
-import { getData } from '../firebase';
+import ProjectGallery from '../components/ProjectGallery';
+import Sidekick from '../components/shared/sections/Sidekick';
 
-const data = await getData('pages', 'our-work');
-const pageData: DocumentData = data[0];
-console.log(`pageData`, pageData.seo_metadata);
+import codePicture from '../media/code.png';
+import zarnPicture from '../media/zarnPic.png';
+import musicPicture from '../media/musicintulsa.png';
+
+// import type { DocumentData } from 'firebase/firestore';
+// import { getData } from '../firebase';
+
+// const data = await getData('pages', 'our-work');
+// const pageData: DocumentData = data[0];
 ---
 
 <Layout
-  title={pageData.title}
-  metaDescription={pageData.seo_metadata.meta_description}
-  pageData={pageData}
-/>
+  title={'Our Work'}
+  metaDescription={'Complete Gallery of Our Work'}
+  pageData={{ content: [] }}
+>
+  <Sidekick
+    heading='Our Work'
+    image={codePicture.src}
+    subheading='Check it out'
+    call_to_action_text='Hire Us!'
+  />
+  <ProjectGallery
+    galleryHeader='Our Work'
+    projects={[
+      {
+        title: 'Zarn Automotive',
+        image: zarnPicture.src,
+        link: 'https://zarnautomotive.com/',
+      },
+      {
+        title: 'Music In Tulsa',
+        image: musicPicture.src,
+        link: 'https://musicintulsa.com/',
+      },
+    ]}
+  />
+</Layout>
