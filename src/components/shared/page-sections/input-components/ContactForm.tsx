@@ -234,7 +234,7 @@ const MultiStepForm: React.FC<Props> = ({ currentPath }) => {
           />
           <button
             type='submit'
-            className='hover:bg-blue-700 mt-4 rounded-lg bg-primary-dk1 p-2 text-white transition-all duration-200 hover:scale-md hover:bg-primary-dk2'
+            className='hover:bg-blue-700 text-white mt-4 rounded-lg bg-primary-dk1 p-2 transition-all duration-200 hover:scale-md hover:bg-primary-dk2'
           >
             Submit
           </button>
@@ -284,7 +284,7 @@ const MultiStepForm: React.FC<Props> = ({ currentPath }) => {
           />
           <button
             type='submit'
-            className='hover:bg-blue-700 mt-4 rounded-lg bg-primary-dk1 p-2 text-white transition-all duration-200 hover:scale-md hover:bg-primary-dk2'
+            className='hover:bg-blue-700 text-white mt-4 rounded-lg bg-primary-dk1 p-2 transition-all duration-200 hover:scale-md hover:bg-primary-dk2'
           >
             Submit
           </button>
