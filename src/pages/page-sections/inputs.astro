@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactSection from '../../components/shared/ContactSection';
+import ContactForm from '../../components/shared/ContactForm';
+---
+
+<BaseLayout title='text-components' metaDescription='text-components'>
+  <ContactForm currentPath='' />
+  <ContactSection
+    businessName='Zarn Automotive'
+    businessAddress='1234 Main St, Tulsa, OK 74101'
+    businessPhone='(555) 123-4567'
+    businessEmail='contact@zarnautomotive.com'
+    currentPath='/home'
+  />
+</BaseLayout>
