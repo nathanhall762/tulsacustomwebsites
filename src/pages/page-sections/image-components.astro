@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TabListCards from '../../components/shared/sections/TabListCards';
+import PictureGallery from '../../components/PictureGallery';
+import ProjectGallery from '../../components/ProjectGallery';
+
+const tabListCardsContent = {
+  heading: 'Explore Our Services',
+  default_card: {
+    heading: 'Welcome to Our Platform',
+    body_text:
+      "Discover the variety of services we offer to help you achieve your goals. From expert consultations to hands-on support, we're here to make your journey a success.",
+    image: '/images/default.jpg',
+    alt_image_text: 'People collaborating in an office space',
+    call_to_action_text: 'Get Started',
+    call_to_action_link: '/get-started',
+  },
+  cards: [
+    {
+      heading: 'Consulting Services',
+      body_text:
+        'Gain insights from industry experts and get personalized advice tailored to your needs. Let us help you navigate the challenges in your field.',
+      image: '/images/consulting.jpg',
+      alt_image_text: 'Consultant speaking with a client',
+      call_to_action_text: 'Learn More',
+      call_to_action_link: '/services/consulting',
+    },
+    {
+      heading: 'Project Management',
+      body_text:
+        'Keep your projects on track with our comprehensive project management solutions, designed to optimize efficiency and productivity.',
+      image: '/images/project-management.jpg',
+      alt_image_text: 'Team planning a project',
+      call_to_action_text: 'See Plans',
+      call_to_action_link: '/services/project-management',
+    },
+    {
+      heading: 'Technical Support',
+      body_text:
+        'Our support team is available 24/7 to address your technical issues and ensure your systems are always running smoothly.',
+      image: '/images/tech-support.jpg',
+      alt_image_text: 'Technician assisting a customer',
+      call_to_action_text: 'Contact Us',
+      call_to_action_link: '/support',
+    },
+    {
+      heading: 'Training & Workshops',
+      body_text:
+        'Empower your team with our training programs and workshops. We cover a wide range of skills to enhance professional growth.',
+      image: '/images/training.jpg',
+      alt_image_text: 'People attending a training session',
+      call_to_action_text: 'Join a Workshop',
+      call_to_action_link: '/workshops',
+    },
+  ],
+};
+const picturegalleryContent = [
+  {
+    imageRef: '/images/feature1.jpg',
+    title: 'Explore Our Solutions',
+    link: '/solutions',
+  },
+  {
+    imageRef: '/images/feature2.jpg',
+    title: 'Meet the Team',
+    link: '/team',
+  },
+  {
+    imageRef: '/images/feature3.jpg',
+    title: 'Customer Success Stories',
+    link: '/success-stories',
+  },
+  {
+    imageRef: '/images/feature4.jpg',
+    title: 'Innovative Technology',
+  },
+  {
+    imageRef: '/images/feature5.jpg',
+    title: 'Careers with Us',
+    link: '/careers',
+  },
+];
+const galleryHeader = 'Our Featured Projects';
+const projects = [
+  {
+    title: 'Urban Revitalization',
+    description:
+      'A comprehensive project focused on enhancing public spaces in urban areas, creating more livable, vibrant communities.',
+    image: '/images/urban-revitalization.jpg',
+    altText: 'A newly revitalized urban park with greenery and benches',
+    link: '/projects/urban-revitalization',
+  },
+  {
+    title: 'Sustainable Architecture',
+    description:
+      'Innovative architectural designs that prioritize sustainability, energy efficiency, and harmony with the environment.',
+    image: '/images/sustainable-architecture.jpg',
+    altText: 'Modern building with sustainable design features',
+    link: '/projects/sustainable-architecture',
+  },
+  {
+    title: 'Community Art Initiative',
+    description:
+      'A collaborative effort bringing local artists together to create public art that reflects community identity.',
+    image: '/images/community-art.jpg',
+    altText: 'Mural on a city wall painted by local artists',
+    link: '/projects/community-art',
+  },
+  {
+    title: 'Tech Innovation Hub',
+    description:
+      'A modern co-working space fostering collaboration and innovation in the technology sector.',
+    image: '/images/tech-innovation.jpg',
+    altText: 'Inside view of a tech innovation co-working hub',
+    link: '/projects/tech-innovation',
+  },
+];
+---
+
+<BaseLayout title='text-components' metaDescription='text-components'>
+  <TabListCards content={tabListCardsContent} />
+  <PictureGallery images={picturegalleryContent} />
+  <ProjectGallery galleryHeader={galleryHeader} projects={projects} />
+</BaseLayout>
