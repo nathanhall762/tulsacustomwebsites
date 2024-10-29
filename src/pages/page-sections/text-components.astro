@@ -1,12 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AboutCard from '../../components/shared/sections/AboutCard';
-import BulletStatsCard from '../../components/shared/sections/BulletStatsCard';
-import Accordion from '../../components/shared/sections/Accordion';
-import InfoCardList from '../../components/shared/sections/InfoCardList';
-import ComparisonSection from '../../components/ComparisonSection';
-import TextImagecard from '../../components/shared/sections/TextImageCard';
-import TabListCards from '../../components/shared/sections/TabListCards';
+import AboutCard from '../../components/shared/page-sections/text-components/AboutCard';
+import BulletStatsCard from '../../components/shared/page-sections/text-components/BulletStatsCard';
+import Accordion from '../../components/shared/page-sections/text-components/Accordion';
+import InfoCardList from '../../components/shared/page-sections/text-components/InfoCardList';
+import ComparisonSection from '../../components/shared/page-sections/text-components/ComparisonSection';
+import TextImagecard from '../../components/shared/page-sections/text-components/TextImageCard';
+import TabListCards from '../../components/shared/page-sections/text-components/TabListCards';
+import ReviewCards from '../../components/shared/page-sections/text-components/ReviewCards';
+import Cta from '../../components/shared/page-sections/text-components/Cta';
+import ContactPage from '../../components/shared/page-sections/text-components/CtaLarge';
+import Testimonial from '../../components/shared/page-sections/text-components/Testimonial';
+import ProjectPageInfo from '../../components/shared/page-sections/text-components/ProjectPageInfo';
 ---
 
 <BaseLayout
@@ -93,6 +98,68 @@ import TabListCards from '../../components/shared/sections/TabListCards';
       ],
     }}
   />
+  <ReviewCards
+    heading='Customer Reviews'
+    reviews={[
+      {
+        name: 'John Doe',
+        relativePublishTimeDescription: '2 days ago',
+        rating: 5,
+        text: {
+          text: 'This is an amazing product! Highly recommend it.',
+          languageCode: 'en',
+        },
+        originalText: {
+          text: 'This is an amazing product! Highly recommend it.',
+          languageCode: 'en',
+        },
+        authorAttribution: {
+          displayName: 'John Doe',
+          uri: 'https://example.com/johndoe',
+          photoUri: 'https://via.placeholder.com/150',
+        },
+        publishTime: '2023-10-01T12:00:00Z',
+      },
+      {
+        name: 'Jane Smith',
+        relativePublishTimeDescription: '1 week ago',
+        rating: 4,
+        text: {
+          text: 'Good value for the price.',
+          languageCode: 'en',
+        },
+        originalText: {
+          text: 'Good value for the price.',
+          languageCode: 'en',
+        },
+        authorAttribution: {
+          displayName: 'Jane Smith',
+          uri: 'https://example.com/janesmith',
+          photoUri: 'https://via.placeholder.com/150',
+        },
+        publishTime: '2023-09-24T12:00:00Z',
+      },
+      {
+        name: 'Sam Wilson',
+        relativePublishTimeDescription: '3 weeks ago',
+        rating: 3,
+        text: {
+          text: 'Decent quality, but could be improved.',
+          languageCode: 'en',
+        },
+        originalText: {
+          text: 'Decent quality, but could be improved.',
+          languageCode: 'en',
+        },
+        authorAttribution: {
+          displayName: 'Sam Wilson',
+          uri: 'https://example.com/samwilson',
+          photoUri: 'https://via.placeholder.com/150',
+        },
+        publishTime: '2023-09-10T12:00:00Z',
+      },
+    ]}
+  />
   <Accordion
     content={{
       heading: 'Accordion',
@@ -112,4 +179,45 @@ import TabListCards from '../../components/shared/sections/TabListCards';
       ],
     }}
   />
+  <Cta
+    content={{
+      cta: 'Cta',
+      button_text: 'Click Here',
+    }}
+  />
+  <ContactPage
+    title='Contact Us'
+    subHeading="We'd love to hear from you"
+    phone='123-456-7890'
+    address='123 Main St, Anytown, USA'
+    email='contact@example.com'
+    names='John Doe, Jane Smith'
+    socials={[
+      { link: 'https://facebook.com', type: 'Facebook' },
+      { link: 'https://twitter.com', type: 'Twitter' },
+      { link: 'https://linkedin.com', type: 'LinkedIn' },
+    ]}
+  />
+  <Testimonial
+    content={{
+      heading: 'Customer Testimonials',
+      body: `
+### John Doe
+> "This product has changed my life! The quality is outstanding and the customer service is top-notch. Highly recommend to everyone."
+
+### Jane Smith
+> "A fantastic experience from start to finish. The team was incredibly helpful and the product exceeded my expectations."
+
+### Sam Wilson
+> "Good value for the price. The product works as advertised and the support team was very responsive to my inquiries."
+	`,
+    }}
+  />
+<ProjectPageInfo
+	title="Project Title"
+	description="This is a description of the project."
+	date="2023-10-01"
+	company="Example Company"
+	credits={["John Doe", "Jane Smith"]}
+/>
 </BaseLayout>
