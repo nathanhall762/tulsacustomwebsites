@@ -12,13 +12,13 @@ export interface Item {
 interface Props {
   title: string;
   metaDescription: string;
-  pageData: DocumentData;
+  pageData?: DocumentData;
 }
 
 const { title, metaDescription, pageData } = Astro.props;
 ---
 
 <BaseLayout title={title} metaDescription={metaDescription}>
-  <PageBuilder pageData={pageData} />
+  <!-- <PageBuilder pageData={pageData} /> -->
   <slot />
 </BaseLayout>

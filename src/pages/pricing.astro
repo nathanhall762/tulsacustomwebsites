@@ -3,12 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import type { DocumentData } from 'firebase/firestore';
 import { getData } from '../firebase';
 
-const data = await getData('pages', 'pricing');
-const pageData: DocumentData = data[0];
+// const data = await getData('pages', 'pricing');
+// const pageData: DocumentData = data[0];
 ---
 
 <Layout
-  title={pageData.title}
-  metaDescription={pageData.seo_metadata.meta_description}
-  pageData={pageData}
+  title='pricing'
+  metaDescription='pricing'
 />
