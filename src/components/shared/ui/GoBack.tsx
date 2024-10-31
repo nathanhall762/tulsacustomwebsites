@@ -2,6 +2,7 @@ interface GoBackProps {
 	category: string;
 }
 
+// TODO: Do we need this component?
 const GoBack: React.FC<GoBackProps> = ({ category }) => {
     const goBack = () => {
         window.history.back();
