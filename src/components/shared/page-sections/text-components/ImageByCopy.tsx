@@ -21,7 +21,7 @@ const ImageByCopy: React.FC<Props> = ({
 }) => {
   return (
     <section
-      className={`${reversed && 'lg:ml-32'} ${!reversed && 'lg:mr-32'} my-16 flex justify-center lg:my-32`}
+      className={`$mx-16 my-16 flex justify-center lg:my-32`}
     >
       <div className='flex  flex-col transition-all lg:grid lg:grid-cols-12 lg:gap-8'>
         <img

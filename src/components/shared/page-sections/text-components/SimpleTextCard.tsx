@@ -4,8 +4,8 @@ interface SimpleTextCardProps {
   content: {
     heading: string;
     body_text: string;
-    link_text: string;
-    link_url: string;
+    link_text?: string;
+    link_url?: string;
   };
 }
 

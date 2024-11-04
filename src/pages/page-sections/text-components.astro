@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import AboutCard from '../../components/shared/page-sections/text-components/SimpleTextCard';
+import SimpleTextCard from '../../components/shared/page-sections/text-components/SimpleTextCard';
 import BulletStatsCard from '../../components/shared/page-sections/text-components/BulletStatsCard';
 import Accordion from '../../components/shared/page-sections/text-components/Accordion';
 import InfoCardList from '../../components/shared/page-sections/text-components/InfoCardList';
@@ -17,7 +17,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
 <BaseLayout
   title='text-components'
   metaDescription='text-components'>
-  <AboutCard
+  <SimpleTextCard
     content={{
       heading: 'Simple Text Card',
       body_text:
@@ -41,26 +41,31 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
     body_text='This is a list of info cards that can be used to display various pieces of information.'
     card={[
       {
-        alt_image_text: 'Alt text for image 1',
+        icon: 'Alt text for image 1',
         heading: 'Card 1 Heading',
         body_text: 'This is the body text for card 1.',
       },
       {
-        alt_image_text: 'Alt text for image 2',
+        icon: 'Alt text for image 2',
         heading: 'Card 2 Heading',
         body_text: 'This is the body text for card 2.',
       },
       {
-        alt_image_text: 'Alt text for image 3',
+        icon: 'Alt text for image 3',
         heading: 'Card 3 Heading',
         body_text: 'This is the body text for card 3.',
+      },
+      {
+        icon: 'Alt text for image 4',
+        heading: 'Card 4 Heading',
+        body_text: 'This is the body text for card 4.',
       },
     ]}
   />
   <ComparisonSection />
   <TextImagecard
     heading='Sample Heading'
-    image='https://via.placeholder.com/150'
+    image='https://via.placeholder.com/250'
     image_alt_text='Placeholder Image'
     body_text='This is a sample body text for the TextImageCard component.'
     link_url='https://example.com'
