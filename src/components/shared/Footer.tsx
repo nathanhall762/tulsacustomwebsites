@@ -1,4 +1,5 @@
 import { Icon } from '@iconify-icon/react';
+import Button from './ui/Button';
 
 const iconMap = {
   Facebook: 'mdi:facebook',
@@ -39,7 +40,7 @@ const Footer: React.FC<Props> = ({
   return (
     <footer className='bg-neutral-9 pb-8 pt-16 text-center text-neutral-1 lg:px-10 dark:bg-neutral-9 dark:text-neutral-1'>
       <div className='flex flex-col items-center justify-evenly lg:flex-row lg:justify-between'>
-        <div className='hidden lg:block'>
+        <div className='hidden lg:block nav-links'>
           {address && 
           <a href="https://maps.app.goo.gl/7oMSLMRF64DMPTx8A" target='_blank'>
             <p className='text-left'>
@@ -59,10 +60,10 @@ const Footer: React.FC<Props> = ({
           </a>
         </div>
         <div>
-          <nav className='mb-8 flex flex-col items-center gap-2 lg:flex-row lg:justify-end lg:gap-8'>
+          <nav className='mb-8 flex flex-col items-center gap-2 lg:flex-row lg:justify-end lg:gap-8 '>
             {navs.map((nav) => (
               <a
-                className='hover:text-primary-md1'
+                className='nav-links'
                 href={`${nav.link}`}
                 key={nav.name}
               >
@@ -70,9 +71,8 @@ const Footer: React.FC<Props> = ({
               </a>
             ))}
             <a href='/contact' className=''>
-              <button className='transform rounded-xl bg-primary-md2 px-4 py-2 text-lg text-neutral-1 transition duration-300 ease-in-out hover:scale-110 hover:bg-primary-md3'>
-                CONTACT US
-              </button>
+              <Button text='Contact Us' url='/contact' size='sm'>
+              </Button>
             </a>
           </nav>
           <nav className='mb-8 flex h-10 justify-center gap-4 lg:justify-end lg:gap-8'>
@@ -94,7 +94,7 @@ const Footer: React.FC<Props> = ({
           </nav>
         </div>
       </div>
-      <p className='text-center text-sm text-neutral-9 text-opacity-50 dark:text-neutral-1'>
+      <p className='text-center text-neutral-9 text-opacity-50 dark:text-neutral-1'>
         {copyright}
       </p>
     </footer>

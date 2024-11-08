@@ -61,14 +61,14 @@ const Hero: React.FC<HeroProps> = ({
         <div className='px-4 py-16 lg:px-32'>
           <h1 className='text-shadow-outline pb-2 text-neutral-1 drop-shadow-xl lg:text-neutral-1'>
             Tulsa{' '}
-            <em className='bg-gradient-to-r from-secondary-dk2 to-secondary-lt1 bg-clip-text pr-2 text-transparent'>
+            <em className='bg-border-gradient bg-clip-text pr-2 text-transparent'>
               Custom
             </em>{' '}
             Websites
           </h1>
-          <h3 className='text-shadow-outline pb-24 text-xl font-light tracking-wide text-neutral-2 lg:pb-24 lg:text-left lg:text-4xl'>
+          <p className='h1-sub text-shadow-outline pb-24 tracking-wide text-neutral-2 lg:pb-24 lg:text-left'>
             {subheading}
-          </h3>
+          </p>
           <div className='items-left flex flex-col justify-start gap-4 lg:flex-row lg:gap-16 lg:pb-24'>
             <a href='/contact' className=''>
               <Button text={call_to_action_text ?? ''} />

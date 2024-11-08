@@ -21,14 +21,32 @@ const businessInformation = await getData('business_information');
 ---
 
 <!doctype html>
-<html lang='en' class='dark bg-neutral-9 font-body text-neutral-2 scroller'>
+<html
+  lang='en'
+  class='dark bg-neutral-9 font-body text-neutral-2 scroller'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content={metaDescription} />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <meta
+      name='description'
+      content={metaDescription}
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <meta
+      name='generator'
+      content={Astro.generator}
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.googleapis.com'
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.gstatic.com'
+      crossorigin
+    />
     <link
       href='https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap'
       rel='stylesheet'
@@ -39,12 +57,35 @@ const businessInformation = await getData('business_information');
       sizes='32x32'
       href={businessInformation[0].favicon.favicon_32_x32}
     />
-    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
-    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-    <link rel='manifest' href='/site.webmanifest' />
-    <meta name='msapplication-TileColor' content='#da532c' />
-    <meta name='theme-color' content='#ffffff' />
+    <link
+      rel='apple-touch-icon'
+      sizes='180x180'
+      href='/apple-touch-icon.png'
+    />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='32x32'
+      href='/favicon-32x32.png'
+    />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='16x16'
+      href='/favicon-16x16.png'
+    />
+    <link
+      rel='manifest'
+      href='/site.webmanifest'
+    />
+    <meta
+      name='msapplication-TileColor'
+      content='#da532c'
+    />
+    <meta
+      name='theme-color'
+      content='#ffffff'
+    />
     <title>
       {
         title
@@ -73,8 +114,14 @@ const businessInformation = await getData('business_information');
     />
     <style is:global>
       @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
 
       @layer base {
+        html {
+          font-size: 62.5%;
+          scroll-behavior: smooth;
+        }
         @keyframes fadeInUp {
           0% {
             opacity: 0;
@@ -109,7 +156,7 @@ const businessInformation = await getData('business_information');
 
         .markdown > p > a,
         .markdown > ul > li > a {
-          @apply text-primary-md2 hover:text-primary-md3 hover:underline;
+          @apply text-primary-4 hover:text-primary-5 hover:underline;
         }
 
         .fade-in-up {
@@ -127,59 +174,85 @@ const businessInformation = await getData('business_information');
         .zoom-in {
           @apply scale-[1.25];
         }
-      }
 
-      body {
-        @layer text-neutral-2 font-body;
-      }
+        h1 {
+          font-size: 9.6rem;
+          @apply font-teko;
+        }
 
-      ul {
-        @apply ms-8 list-disc text-base leading-loose lg:text-lg lg:leading-loose;
-      }
+        .h1-sub {
+          font-size: 3.2rem;
+          @apply font-ubuntu-sans-mono;
+        }
 
-      a {
-        @apply transition-transform duration-fast ease-in-out;
-      }
+        h2 {
+          font-size: 6.4rem;
+          @apply font-teko;
+        }
 
-      a:hover {
-        @apply scale-md;
-      }
+        .h2-sub {
+          font-size: 2.4rem;
+          @apply font-ubuntu-sans-mono;
+        }
 
-      strong {
-        font-weight: bold;
-      }
+        h3 {
+          font-size: 3.6rem;
+          @apply font-teko;
+        }
 
-      h1 {
-        @apply font-display text-4xl font-normal text-neutral-1 lg:text-8xl;
-      }
+        .h3-sub {
+          font-size: 1.6rem;
+          @apply font-ubuntu-sans-mono;
+        }
 
-      h2 {
-        @apply font-display text-3xl font-normal text-neutral-1 lg:text-5xl;
-      }
+        button {
+          font-size: 2.4rem;
+          @apply font-ubuntu-condensed;
+        }
 
-      h3 {
-        @apply font-display text-xl font-normal text-neutral-1 lg:text-4xl;
-      }
+        a {
+          @apply transition-transform duration-fast ease-in-out;
+        }
 
-      h4 {
-        @apply font-display text-lg font-light text-neutral-1 lg:text-3xl;
-      }
+        a:hover {
+          @apply scale-md;
+        }
 
-      h5 {
-        @apply font-display text-base font-light text-neutral-1 lg:text-2xl;
-      }
+        .nav-links {
+          font-size: 2.0rem;
+          @apply font-ubuntu-sans-0 transition-transform duration-fast ease-in-out;
+        }
 
-      h6 {
-        @apply font-display text-base font-light text-neutral-1 lg:text-xl;
-      }
+        .nav-links:hover {
+          @apply scale-md text-primary-6;
+        }
 
-      p {
-        @apply font-body text-base leading-loose lg:text-lg lg:leading-loose;
-      }
+        strong {
+          font-weight: bold;
+        }
 
-      strong {
-        font-weight: bold;
+        @media screen and (max-width: 768px) {
+          h1 {
+            font-size: 6.4rem;
+          }
+
+          .h1-sub {
+            font-size: 2.4rem;
+          }
+
+          .nav-links {
+            font-size: 1.6rem;
+          }
+
+          .nav-links:hover {
+            @apply scale-md text-primary-6;
+          }
+
+          button {
+            font-size: 1.6rem;
+          }
+        }
       }
     </style>
-  </body><!-- custom animation keyframes and other global stuffs -->
+  </body>
 </html>

@@ -31,7 +31,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
     ,
     body_text='This is a card component that can be used to display a list of bullet points with accompanying statistics. It can be used to display information such as the number of employees at a company, the number of products a company sells, or the number of years a person has been in business.'
     ,
-    image='https://via.placeholder.com/150'
+    image='https://picsum.photos/1500/500'
     ,
     image_alt_text='Placeholder Image'
     ,
@@ -65,7 +65,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
   <ComparisonSection />
   <TextImagecard
     heading='Sample Heading'
-    image='https://via.placeholder.com/250'
+    image='https://picsum.photos/250/250'
     image_alt_text='Placeholder Image'
     body_text='This is a sample body text for the TextImageCard component.'
     link_url='https://example.com'
@@ -73,12 +73,13 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
     reversed={false}
   />
   <TabListCards
+    client:visible
     content={{
       heading: 'Sample Heading',
       default_card: {
         heading: 'Default Card Heading',
         body_text: 'This is the body text for the default card.',
-        image: 'https://via.placeholder.com/150',
+        image: 'https://picsum.photos/750/350',
         alt_image_text: 'Placeholder Image',
         call_to_action_text: 'Learn More',
         call_to_action_link: 'https://example.com',
@@ -87,7 +88,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
         {
           heading: 'Card 1 Heading',
           body_text: 'This is the body text for card 1.',
-          image: 'https://via.placeholder.com/150',
+          image: 'https://picsum.photos/650/250',
           alt_image_text: 'Placeholder Image',
           call_to_action_text: 'Learn More',
           call_to_action_link: 'https://example.com',
@@ -95,7 +96,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
         {
           heading: 'Card 2 Heading',
           body_text: 'This is the body text for card 2.',
-          image: 'https://via.placeholder.com/150',
+          image: 'https://picsum.photos/550/250',
           alt_image_text: 'Placeholder Image',
           call_to_action_text: 'Learn More',
           call_to_action_link: 'https://example.com',
@@ -121,7 +122,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
         authorAttribution: {
           displayName: 'John Doe',
           uri: 'https://example.com/johndoe',
-          photoUri: 'https://via.placeholder.com/150',
+          photoUri: 'https://picsum.photos/250/252',
         },
         publishTime: '2023-10-01T12:00:00Z',
       },
@@ -140,7 +141,7 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
         authorAttribution: {
           displayName: 'Jane Smith',
           uri: 'https://example.com/janesmith',
-          photoUri: 'https://via.placeholder.com/150',
+          photoUri: 'https://picsum.photos/250/253',
         },
         publishTime: '2023-09-24T12:00:00Z',
       },
@@ -159,13 +160,33 @@ import ProjectPageInfo from '../../components/shared/page-sections/text-componen
         authorAttribution: {
           displayName: 'Sam Wilson',
           uri: 'https://example.com/samwilson',
-          photoUri: 'https://via.placeholder.com/150',
+          photoUri: 'https://picsum.photos/250/254',
+        },
+        publishTime: '2023-09-10T12:00:00Z',
+      },
+      {
+        name: 'Sam Wilson',
+        relativePublishTimeDescription: '3 weeks ago',
+        rating: 3,
+        text: {
+          text: 'Decent quality, but could be improved.',
+          languageCode: 'en',
+        },
+        originalText: {
+          text: 'Decent quality, but could be improved.',
+          languageCode: 'en',
+        },
+        authorAttribution: {
+          displayName: 'Sam Wilson',
+          uri: 'https://example.com/samwilson',
+          photoUri: 'https://picsum.photos/250/255',
         },
         publishTime: '2023-09-10T12:00:00Z',
       },
     ]}
   />
   <Accordion
+  client:visible
     content={{
       heading: 'Accordion',
       question_and_answer: [

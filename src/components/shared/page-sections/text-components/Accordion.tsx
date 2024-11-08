@@ -20,8 +20,8 @@ const Accordion: React.FC<Props> = ({
 
   return (
     <>
-      <div className='px-4 py-8 lg:px-32 lg:py-16'>
-        <h2 className='text-primary pb-8 text-center text-2xl lg:text-3xl'>
+      <div className='px-4 py-8 lg:px-32 lg:py-16 my-24'>
+        <h2 className='text-primary pb-8 text-center'>
           {heading}
         </h2>
         <div className='flex flex-col'>
