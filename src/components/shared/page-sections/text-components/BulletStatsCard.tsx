@@ -1,55 +1,87 @@
 import ReactMarkdown from 'react-markdown';
+import Button from '../../ui/Button';
 
 interface Props {
   heading: string;
+  bold_text?: string;
   body_text: string;
   image: string;
   image_alt_text: string;
+  link_text?: string;
+  link_url?: string;
 }
 
 const BulletStatsCard: React.FC<Props> = ({
-  heading: title,
-  body_text: body,
+  heading,
+  bold_text,
+  body_text,
   image: bg_image,
   image_alt_text,
+  link_text,
+  link_url,
 }) => {
   return (
     <div
-      className={`flex justify-center bg-cover bg-center text-neutral-9 shadow-inner lg:px-32 dark:text-white`}
+      className={`flex justify-center bg-cover bg-center text-neutral-9 shadow-inner my-20 lg:px-[32rem] dark:text-white`}
       style={{ backgroundImage: `url('${bg_image}')` }}
       title={image_alt_text}
     >
-      <div
-        className={`flex h-full max-w-6xl flex-col items-center justify-center bg-neutral-8 bg-opacity-50 px-8 py-8 shadow-md backdrop-blur-sm backdrop-brightness-[.25] lg:bg-opacity-90 lg:px-16 lg:backdrop-brightness-100`}
-      >
-        <ReactMarkdown
-          components={{
-            p(props) {
-              const { node, ...rest } = props;
-              return <h2 className='mb-4' {...rest} />;
-            },
-          }}
-          className='mb-4 text-center text-lg font-bold lg:text-3xl'
-        >
-          {title}
-        </ReactMarkdown>
-        <div className='mb-8 h-[2px] w-full max-w-2xl bg-primary-md1'></div>
-        <div className='w-full text-center'>
-          <ReactMarkdown
-            className='py-2 text-left text-base lg:text-lg'
-            components={{
-              ul(props) {
-                const { node, ...rest } = props;
-                return (
-                  <ul className=' grid gap-x-8 py-4 lg:grid-cols-2' {...rest} />
-                );
-              },
-            }}
-          >
-            {body}
-          </ReactMarkdown>
+      <div className='rounded-[2.5rem] my-[-2rem] flex h-full flex-col justify-between bg-neutral-3 py-8 text-center text-neutral-8 shadow-md transition-all lg:col-span-7 lg:px-6 lg:py-16 dark:bg-neutral-7 dark:text-neutral-2'>
+          <div>
+            <div className='flex flex-col items-center'>
+              <ReactMarkdown
+                components={{
+                  p(props) {
+                    const { node, ...rest } = props;
+                    return <h2 className='' {...rest} />;
+                  },
+                }}
+                className=''
+              >
+                {heading}
+              </ReactMarkdown>
+              <div className='mb-16 h-[2px] w-3/4 max-w-2xl bg-border-gradient'></div>
+              <div className='px-12'>
+                {bold_text && (
+                  <ReactMarkdown
+                    className='markdown text-left lg:text-left'
+                    components={{
+                      p(props) {
+                        const { node, ...rest } = props;
+                        return <strong><p className='h2-sub mb-12 text-center text-primary-5' {...rest} /></strong>;
+                      },
+                    }}
+                  >
+                    {bold_text}
+                  </ReactMarkdown>
+                )}
+                <ReactMarkdown
+                  className='markdown mb-32 text-left lg:text-left'
+                  components={{
+                    p(props) {
+                      const { node, ...rest } = props;
+                      return (
+                        <p className='h3-sub mb-2 text-[2.0rem]' {...rest} />
+                      );
+                    },
+                  }}
+                >
+                  {body_text}
+                </ReactMarkdown>
+              </div>
+            </div>
+          </div>
+          {link_text && (
+            <div>
+              {link_url && (
+                <Button
+                  url={link_url}
+                  text={link_text}
+                ></Button>
+              )}
+            </div>
+          )}
         </div>
-      </div>
     </div>
   );
 };

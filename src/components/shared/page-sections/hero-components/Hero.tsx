@@ -38,13 +38,16 @@ const Hero: React.FC<HeroProps> = ({
   };
 
   const phoneImage = '/MobileWithCustomWebsite.png';
-  const backgroundTexture = '/parabolic-ellipse.svg';
+  const backgroundTexture = '/parabolic-ellipse.webp';
 
   return (
-    <div
-      className='relative h-[100vh] w-full bg-neutral-8 bg-cover shadow-inner xl:h-[100vh]'
-      style={{ backgroundImage: `url(${backgroundTexture})` }}
-    >
+    <div className='bg-fade-down relative h-[100vh] w-screen overflow-visible bg-cover shadow-inner self-center'>
+      <div
+        className='absolute left-0 top-0 -z-10 h-[150vh] w-full bg-cover bg-center'
+        style={{
+          backgroundImage: `url(${backgroundTexture})`,
+        }}
+      ></div>
       {images.map((image, index) => (
         <div
           key={image}
@@ -58,20 +61,20 @@ const Hero: React.FC<HeroProps> = ({
       ></img>
       {/* <div className='absolute inset-0 h-full w-full bg-black opacity-30'></div> */}
       <div className='relative top-32 z-10 flex h-full flex-col lg:text-left xl:top-0 xl:justify-center'>
-        <div className='px-4 py-16 lg:px-32'>
+        <div className='px-4 lg:pl-32 lg:py-16 lg:w-1/2'>
           <h1 className='text-shadow-outline pb-2 text-neutral-1 drop-shadow-xl lg:text-neutral-1'>
             Tulsa{' '}
-            <em className='bg-gradient-to-r from-secondary-dk2 to-secondary-lt1 bg-clip-text pr-2 text-transparent'>
+            <em className='bg-border-gradient bg-clip-text pr-2 text-transparent'>
               Custom
             </em>{' '}
             Websites
           </h1>
-          <h3 className='text-shadow-outline pb-24 text-xl font-light tracking-wide text-neutral-2 lg:pb-24 lg:text-left lg:text-4xl'>
+          <p className='h1-sub text-shadow-outline pb-24 tracking-wide text-neutral-2 lg:pb-24 lg:text-left'>
             {subheading}
-          </h3>
-          <div className='items-left flex flex-col justify-start gap-4 lg:flex-row lg:gap-16 lg:pb-24'>
-            <a href='/contact' className=''>
-              <Button text={call_to_action_text ?? ''} />
+          </p>
+          <div className='lg:items-left flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-start lg:gap-16 lg:pb-24'>
+            <a href='#contact' className=''>
+              <Button text={call_to_action_text ?? ''} url='#contact'/>
             </a>
             {/* <p className='text-base text-neutral-2 lg:text-lg'>
               <a href='tel:9189407800'>Call: (918) 940-7800</a>
@@ -82,11 +85,11 @@ const Hero: React.FC<HeroProps> = ({
       <div className='absolute inset-0 z-0 flex flex-col justify-end'>
         <div className='relative'>
           <div className='bg-black absolute inset-0 z-0 bg-opacity-0 backdrop-blur-[2px] lg:backdrop-blur-sm'></div>
-          <div className='h-8 w-full bg-primary-dk1'></div>
-          <div className='h-8 w-full bg-primary-md2'></div>
-          <div className='h-8 w-full bg-primary-lt1'></div>
-          <div className='h-8 w-full bg-secondary-md2'></div>
-          <div className='h-8 w-full bg-secondary-lt1'></div>
+          <div className='h-8 w-full bg-primary-1'></div>
+          <div className='h-8 w-full bg-primary-4'></div>
+          <div className='h-8 w-full bg-primary-6'></div>
+          <div className='h-8 w-full bg-secondary-4'></div>
+          <div className='h-8 w-full bg-secondary-6'></div>
         </div>
       </div>
     </div>

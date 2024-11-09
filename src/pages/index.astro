@@ -3,9 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/shared/page-sections/hero-components/Hero';
 import BulletStatsCard from '../components/shared/page-sections/text-components/BulletStatsCard';
 import InfoCardList from '../components/shared/page-sections/text-components/InfoCardList';
-import TextImagecard from '../components/shared/page-sections/text-components/ImageByCopy';
+import ImageByCopy from '../components/shared/page-sections/text-components/ImageByCopy';
 import clockImage from '../media/Website-Page-Load-Time-Statistics-Featured.png';
 import pricingImage from '../media/0306_Pricing-Consumer-Goods_Luke-Social.png';
+import Cta from '../components/shared/page-sections/text-components/Cta';
+import ContactSection from '../components/shared/page-sections/input-components/ContactSection';
 
 // import type { DocumentData } from 'firebase/firestore';
 // import { getData } from '../firebase';
@@ -29,6 +31,7 @@ import pricingImage from '../media/0306_Pricing-Consumer-Goods_Luke-Social.png';
     ]}
     subheading='Modern Website Design & Development for Any Budget'
     call_to_action_text='Hire Us!'
+    call_to_action_link='#contact'
   />
   <InfoCardList
     body_text='At Tulsa Custom Websites, we specialize in digital marketing solutions to get your business seen by more potential customers:'
@@ -60,23 +63,32 @@ import pricingImage from '../media/0306_Pricing-Consumer-Goods_Luke-Social.png';
       },
     ]}
   />
-  <TextImagecard
+  <ImageByCopy
     heading='True Ownership, Total Control'
     body_text='Unlike platforms like WordPress, Wix, and Squarespace, we offer you the chance to truly own your website. With no subscription to a website builder, you have complete control over the design and functionality. The only ongoing cost is a minimal server fee. By choosing us, you’re investing in a solution that offers flexibility, long-term cost savings, and complete ownership of your digital presence.'
     image='https://firebasestorage.googleapis.com/v0/b/tulsacustomwebsites.appspot.com/o/buhrg_LeaveWixSquarespaceWordpress.png?alt=media&token=d81fc601-d1c4-4801-bfbb-6051d35e0212'
     image_alt_text=''
+    link_url='/our-work'
+    link_text='See Our Work'
+    reversed={true}
   />
-  <TextImagecard
+  <ImageByCopy
     heading='Modern Technologies, Superior Experience'
     body_text='We use modern and effective technologies to create your website from scratch, ensuring it’s tailored exactly to your needs. Your site will be unique, efficient, and scalable, providing a superior user experience and meeting all your business goals. Making edits to your content, changing your hero image, or updating your phone number shouldn’t require hiring a web developer. With our streamlined custom content management system, you can manage your content effortlessly, giving you the freedom to make updates whenever you need.'
     image='https://firebasestorage.googleapis.com/v0/b/tulsacustomwebsites.appspot.com/o/i4q1x_transparentfirecmsmockup.png?alt=media&token=4889ebfc-6cfe-4135-ba73-70c483afbf91'
     image_alt_text=''
+    link_url='#contact'
+    link_text='Start Building'
   />
-  <TextImagecard
-    heading='40% of online users will abandon a website that takes longer than three seconds to load.'
+  <ImageByCopy
+    heading='Fast Load Times, High Performance'
+    bold_text='40% of online users will abandon a website that takes longer than three seconds to load.'
     body_text="That's why we prioritize fast load times and accessibility to help you reach your business objectives. Even with large photos, video, or user-interactive elements, your website will achieve high performance marks with the tools and methods we have learned over our years of experience. Everything in our design & development stack has been handpicked to make our sites faster than the competition."
     image={clockImage.src}
     image_alt_text=''
+    link_url='/our-work'
+    link_text='See Our Blazing Fast Sites'
+    reversed={true}
   />
   <!-- TODO: add in this section -->
   <!-- <TextImagecard heading='Soft Skills'/> -->
@@ -85,5 +97,15 @@ import pricingImage from '../media/0306_Pricing-Consumer-Goods_Luke-Social.png';
     body_text='From landing pages using our template components to full digital marketing packages and bespoke boutique sites with custom code, our design and development services cater to small businesses, bands, brands, and enterprises alike. * Creatives, Bands, and Brands * Small Businesses * Enterprises'
     image={pricingImage.src}
     image_alt_text=''
+    link_text='Get a Quote'
+    link_url='#contact'
   />
+  <Cta
+    content={{
+      cta: 'Ready to take the next step?',
+      button_text: 'Hire Us!',
+      url: '#contact',
+    }}
+  />
+  
 </Layout>

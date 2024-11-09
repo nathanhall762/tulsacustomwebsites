@@ -20,14 +20,14 @@ const Sidekick: React.FC<SidekickProps> = ({
         className='lg:[50vh] flex h-[60vh] w-full flex-col justify-end bg-cover bg-center'
         style={{ backgroundImage: `url(${image})` }}
       >
-        <div className='relative z-10 px-4 pb-8 text-left lg:pb-16 lg:pl-16 lg:pr-64'>
+        <div className='relative z-10 px-4 lg:px-12 rounded-3xl backdrop-blur-lg bg-opacity-50 mb-8 text-left lg:pm-16 lg:ml-16 lg:mr-64 bg-neutral-8 w-fit'>
           <div className='fade-in-up'>
-            <h2 className='pb-2 text-xl font-normal text-neutral-2 drop-shadow-xl text-shadow-xl lg:text-3xl lg:text-neutral-1'>
+            <h1 className='pb-2 font-normal text-neutral-2 drop-shadow-xl text-shadow-xl lg:text-neutral-1'>
               {welcomeText}
-            </h2>
-            <h1 className='mt-2 pb-8 text-3xl tracking-widest drop-shadow-xl text-shadow-xl lg:mt-6 lg:pb-16 lg:text-5xl'>
-              {tagline}
             </h1>
+            <p className='mt-2 pb-8 tracking-widest drop-shadow-xl text-shadow-xl lg:mt-6 lg:pb-16 h1-sub'>
+              {tagline}
+            </p>
             {callToActionLink && (
               <div className='flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-start lg:gap-16'>
                 <a href={callToActionLink}>
