@@ -96,23 +96,15 @@ const businessInformation = await getData('business_information');
     </title>
     <ViewTransitions />
   </head>
-  <body class="flex flex-col items-center">
+  <body class='flex flex-col items-center'>
     <Header
       navs={navs.filter((nav) => nav.link !== '/')}
       logo={businessInformation[0].business_logo}
       client:load
     />
-    <main class='flex max-w-[1500px] flex-col'>
+    <main class='flex w-screen max-w-[1500px] flex-col'>
       <slot />
     </main>
-    <ContactSection
-      heading='Contact Tulsa Custom Websites'
-      businessEmail='hello@tulsacustomwebsites.com'
-      formContent={{
-        heading: 'Tell us about your next project!',
-        body: `We'd love to hear about what you are working on and how we can help build it. Please fill out the form below so we can schedule a discovery interview and get started!`,
-      }}
-    />
     <Footer
       address={businessInformation[0].business_address}
       copyright=`${businessInformation[0].business_name} 2024`
@@ -131,9 +123,14 @@ const businessInformation = await getData('business_information');
           font-size: 62.5%;
           scroll-behavior: smooth;
           background-image: url('/public/Background.webp');
-          background-position: top; /* Centers the image */
-          background-repeat: no-repeat; /* Prevents repeating */
+          background-position: top;
+          background-repeat: no-repeat;
+          overflow-x: hidden;
         }
+        body {
+          overflow: hidden !important;
+        }
+
         @keyframes fadeInUp {
           0% {
             opacity: 0;

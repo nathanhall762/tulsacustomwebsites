@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({
   const backgroundTexture = '/parabolic-ellipse.webp';
 
   return (
-    <div className='bg-fade-down relative h-[100vh] w-screen overflow-visible bg-cover shadow-inner self-center'>
+    <div className='bg-fade-down relative h-[100vh] w-[99vw] overflow-visible bg-cover shadow-inner self-center'>
       <div
         className='absolute left-0 top-0 -z-10 h-[150vh] w-full bg-cover bg-center'
         style={{

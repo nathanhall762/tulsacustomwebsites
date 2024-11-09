@@ -7,7 +7,7 @@ interface Props {
 const Cta: React.FC<Props> = ({ content }) => {
   const image = 'public/Tulsa-Custom-Websites-1.webp';
   return (
-    <div className='my-40'>
+    <div className='my-40 w-full'>
       <div className='flex lg:flex-row flex-col justify-center items-center bg-border-gradient-reverse p-8 shadow-md gap-16 lg:py-12 py-16'>
       <div className='lg:size-[15%] aspect-square '>
         <img src={image} alt="Tulsa Custom Websites Logo" className='w-full h-full object-cover' />

@@ -4,13 +4,18 @@ import ContactSection from '../../components/shared/page-sections/input-componen
 import ContactForm from '../../components/shared/page-sections/input-components/ContactForm';
 ---
 
-<BaseLayout title='text-components' metaDescription='text-components'>
-  <ContactForm currentPath='' />
+<BaseLayout
+  title='text-components'
+  metaDescription='text-components'>
+  <ContactForm
+    content={{ heading: 'Contact Form', body: 'This is a contact form' }}
+  />
   <ContactSection
+    heading='Contact Section'
     businessName='Zarn Automotive'
     businessAddress='1234 Main St, Tulsa, OK 74101'
     businessPhone='(555) 123-4567'
     businessEmail='contact@zarnautomotive.com'
-    currentPath='/home'
+    formContent={{ heading: 'Contact Form', body: 'This is a contact form' }}
   />
 </BaseLayout>
