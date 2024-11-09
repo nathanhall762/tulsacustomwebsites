@@ -1,6 +1,7 @@
 ---
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
+import ContactSection from '../components/shared/page-sections/input-components/ContactSection';
 import { ViewTransitions } from 'astro:transitions';
 import { getData } from '../firebase';
 import { navs } from '../navMenu';
@@ -101,9 +102,17 @@ const businessInformation = await getData('business_information');
       logo={businessInformation[0].business_logo}
       client:load
     />
-    <main class='bg-neutral-8'>
+    <main class=''>
       <slot />
     </main>
+    <ContactSection
+    heading='Contact Tulsa Custom Websites'
+    businessEmail='hello@tulsacustomwebsites.com'
+    formContent={{
+      heading: 'Tell us about your next project!',
+      body: `We'd love to hear about what you are working on and how we can help build it. Please fill out the form below so we can schedule a discovery interview and get started!`,
+    }}
+  />
     <Footer
       address={businessInformation[0].business_address}
       copyright=`${businessInformation[0].business_name} 2024`
@@ -121,6 +130,9 @@ const businessInformation = await getData('business_information');
         html {
           font-size: 62.5%;
           scroll-behavior: smooth;
+          background-image: url('/public/Background.webp');
+          background-position: top; /* Centers the image */
+          background-repeat: no-repeat; /* Prevents repeating */
         }
         @keyframes fadeInUp {
           0% {
@@ -219,12 +231,17 @@ const businessInformation = await getData('business_information');
         }
 
         .nav-links {
-          font-size: 2.0rem;
+          font-size: 2rem;
           @apply font-ubuntu-sans-0 transition-transform duration-fast ease-in-out;
         }
 
         .nav-links:hover {
           @apply scale-md text-primary-6;
+        }
+
+        .field-label {
+          @apply font-ubuntu-sans-mono;
+          font-size: 2.4rem;
         }
 
         strong {
@@ -238,6 +255,14 @@ const businessInformation = await getData('business_information');
 
           .h1-sub {
             font-size: 2.4rem;
+          }
+
+          h2 {
+            font-size: 4.8rem;
+          }
+
+          .h2-sub {
+            font-size: 1.8rem;
           }
 
           .nav-links {

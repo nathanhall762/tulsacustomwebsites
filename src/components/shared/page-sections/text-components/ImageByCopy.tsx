@@ -23,14 +23,14 @@ const ImageByCopy: React.FC<Props> = ({
   reversed = false,
 }) => {
   return (
-    <section className={`m-24 flex justify-center lg:my-32`}>
+    <section className={`my-24 flex justify-center lg:m-32`}>
       <div className='flex  flex-col transition-all lg:grid lg:grid-cols-12 lg:gap-8'>
         <img
           src={image}
           alt={image_alt_text}
-          className={`${reversed && 'lg:order-1'}  box-border w-screen object-cover lg:col-span-5 lg:row-span-1 lg:h-full lg:w-full`}
+          className={`${reversed && 'lg:order-1'}  box-border w-screen object-cover overflow-visible z-[0] lg:col-span-5 lg:row-span-1 lg:h-full lg:w-full`}
         />
-        <div className='radius-3xl flex h-full flex-col justify-between bg-neutral-3 py-8 text-center text-neutral-8 shadow-md transition-all lg:col-span-7 lg:px-6 lg:py-16 dark:bg-neutral-7 dark:text-neutral-2'>
+        <div className='z-[1] radius-3xl flex h-full flex-col justify-between bg-neutral-3 py-8 text-center text-neutral-8 shadow-md transition-all lg:col-span-7 lg:px-6 lg:py-16 dark:bg-neutral-7 dark:text-neutral-2'>
           <div>
             <div className='flex flex-col items-center'>
               <ReactMarkdown
@@ -79,7 +79,7 @@ const ImageByCopy: React.FC<Props> = ({
             <div>
               {link_url && (
                 <Button
-                  onClickFunc={() => (window.location.href = link_url)}
+                  url={link_url}
                   text={link_text}
                 ></Button>
               )}

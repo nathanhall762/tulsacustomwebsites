@@ -1,23 +1,27 @@
+import Button from '../../ui/Button';
+
 interface Props {
-  content: { cta: string; button_text: string };
+  content: { cta: string; button_text: string; url: string };
 }
 
 const Cta: React.FC<Props> = ({ content }) => {
+  const image = 'public/Tulsa-Custom-Websites-1.webp';
   return (
-    <>
-      <div className='flex justify-center shadow-md bg-neutral-9 p-8'>
-        <div className='flex max-w-5xl flex-col items-center gap-8 '>
-          <h2 className='text-center font-semibold text-neutral-1 text-shadow-xl lg:text-left'>
+    <div className='my-40'>
+      <div className='flex lg:flex-row flex-col justify-center items-center bg-border-gradient-reverse p-8 shadow-md gap-16 lg:py-12 py-16'>
+      <div className='lg:size-[15%] aspect-square '>
+        <img src={image} alt="Tulsa Custom Websites Logo" className='w-full h-full object-cover' />
+      </div>
+        <div className='flex flex-col items-center gap-8 '>
+          <h2 className='font-semibold text-center text-neutral-9 lg:text-left lg:text-[9.6rem] w-fit'>
             {content.cta}
           </h2>
-          <a href="#contact">
-            <button className='bg-other hover:bg-accent transform rounded-xl bg-primary-md1 px-12 py-4 text-lg text-neutral-2 transition duration-300 ease-in-out hover:scale-110 hover:bg-primary-md2'>
-              {content.button_text}
-            </button>
-          </a>
+          <div className='bg-border-gradient p-2 rounded-2xl transition duration-300 ease-in-out hover:scale-110 group'>
+            <Button text={content.button_text} url='#contact' buttonColor='bg-secondary-3' />
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

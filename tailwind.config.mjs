@@ -62,6 +62,9 @@ export default {
     },
     backgroundImage: {
         'border-gradient': 'linear-gradient(90deg, #eb0056 0%, #eb6a00 100%)',
+        'border-gradient-reverse': 'linear-gradient(90deg, #eb6a00 0%, #eb0056 100%)',
+        'fade-down': 'linear-gradient(180deg, #1E1D30 0%, transparent 100%)',
+        'fade-up': 'linear-gradient(0deg, rgb(19, 18, 33) 0%, transparent 100%)',
     },
     textShadow: {
       sm: '1px 1px 2px hsl(0, 0%, 5%)',

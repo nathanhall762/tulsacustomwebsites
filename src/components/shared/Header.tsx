@@ -90,16 +90,16 @@ const Header: React.FC<HeaderProps> = ({ logo, navs }) => {
                 ))}
               </div>
               <a
-                href='/contact'
+                href='#contact'
                 className='flex justify-items-center self-center'
               >
-                <Button text='Hire Us!' />
+                <Button text='Hire Us!' onClickFunc={toggleNav}/>
               </a>
             </nav>
           </div>
           <div className='hidden px-4 lg:col-span-2 lg:flex lg:justify-around xl:col-span-2'>
-            <a href='/contact' className='flex self-center'>
-              <Button text='Hire Us!' size='sm' />
+            <a href='#contact' className='flex self-center'>
+              <Button text='Hire Us!' size='sm' url='#contact'/>
             </a>
           </div>
         </div>

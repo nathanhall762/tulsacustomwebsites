@@ -24,10 +24,10 @@ const ContactPage: React.FC<Props> = ({
 
   useEffect(() => {
     const colors = [
-      'text-secondary-lt2',
-      'text-secondary-md1',
-      'text-primary-dk2',
-      'text-primary-lt2',
+      'text-secondary-6',
+      'text-secondary-3',
+      'text-primary-2',
+      'text-primary-7',
     ];
     let colorIndex = 0;
 
@@ -42,49 +42,51 @@ const ContactPage: React.FC<Props> = ({
   }, []);
 
   return (
-    <div className='flex h-screen w-screen items-center justify-center px-4 pb-[20vh] text-center text-neutral-1 dark:text-neutral-9'>
-      <div className='w-full max-w-7xl bg-neutral-9 px-4 py-16'>
-        <h1 className='bg-gradient-to-r from-secondary-dk2 to-secondary-lt2 bg-clip-text pb-4 text-4xl text-secondary-md3 text-transparent lg:text-8xl'>
-          {title}
-        </h1>
-        <h2 className='pb-16 font-body text-xl lg:text-2xl'>{subHeading}</h2>
-        <div className='flex flex-col items-center justify-center'>
-          <a
-            href={`mailto:${email}`}
-            className='text-wrap break-words pb-2 text-primary-lt2 lg:text-xl'
-          >
-            {email}
-          </a>
-          <Icon
-            className={`pb-2 text-3xl ${dotColor} transition-colors duration-md`}
-            icon='oui:dot'
-          />
-          <p className='text-neutral-1'>Nathan & Ethan.</p>
+    <div className='flex h-screen items-center justify-center px-2 text-center'>
+      <div className='rounded-3xl w-[100%] bg-border-gradient py-2'>
+        <div className='rounded-3xl bg-neutral-9 px-12 py-16'>
+          <h1 className='bg-border-gradient bg-clip-text pb-4 text-transparent'>
+            {title}
+          </h1>
+          <p className='h1-sub pb-16 text-white-2'>{subHeading}</p>
+          <div className='flex flex-col items-center justify-center'>
+            <a
+              href={`mailto:${email}`}
+              className='h2-sub text-wrap break-words pb-2 text-primary-6'
+            >
+              {email}
+            </a>
+            <Icon
+              className={`pb-2 text-3xl ${dotColor} transition-colors duration-md`}
+              icon='oui:dot'
+            />
+            <p className='h3-sub text-neutral-1'>Nathan & Ethan.</p>
+          </div>
         </div>
+        {/* <div className='grid h-48 grid-cols-2 grid-rows-2 pb-16  lg:text-xl'>
+          <div className='flex size-full items-center justify-center border-b border-r border-neutral-300'>
+            <p className='p-4'>{email}</p>
+          </div>
+          <div className='flex size-full items-center justify-center border-b border-neutral-300'>
+            <p className='p-4'>{names}</p>
+          </div>
+          <div className='flex size-full items-center justify-center border-r border-neutral-300'>
+            <p className='p-4'>{phone}</p>
+          </div>
+          <div className='flex size-full items-center justify-center border-neutral-300'>
+            <p className='p-4'>{address}</p>
+          </div>
+        </div>
+        <nav className='mb-8 flex justify-center gap-4 lg:justify-end lg:gap-8'>
+          {socials.map((social) => (
+            <a className='text-lg' href={`/${social.link}`} key={social.type}>
+              <i
+                className={`fa-brands fa-${social.type} text-2xl hover:scale-110 hover:text-tertiary lg:text-4xl`}
+              ></i>
+            </a>
+          ))}
+        </nav> */}
       </div>
-      {/* <div className='grid h-48 grid-cols-2 grid-rows-2 pb-16  lg:text-xl'>
-        <div className='flex size-full items-center justify-center border-b border-r border-neutral-300'>
-          <p className='p-4'>{email}</p>
-        </div>
-        <div className='flex size-full items-center justify-center border-b border-neutral-300'>
-          <p className='p-4'>{names}</p>
-        </div>
-        <div className='flex size-full items-center justify-center border-r border-neutral-300'>
-          <p className='p-4'>{phone}</p>
-        </div>
-        <div className='flex size-full items-center justify-center border-neutral-300'>
-          <p className='p-4'>{address}</p>
-        </div>
-      </div>
-      <nav className='mb-8 flex justify-center gap-4 lg:justify-end lg:gap-8'>
-        {socials.map((social) => (
-          <a className='text-lg' href={`/${social.link}`} key={social.type}>
-            <i
-              className={`fa-brands fa-${social.type} text-2xl hover:scale-110 hover:text-tertiary lg:text-4xl`}
-            ></i>
-          </a>
-        ))}
-      </nav> */}
     </div>
   );
 };
