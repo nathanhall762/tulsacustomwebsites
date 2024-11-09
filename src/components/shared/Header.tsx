@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ logo, navs }) => {
   };
 
   return (
-    <header className=''>
+    <header className='w-full'>
       <div className={`top-0 z-50 h-[9vh] bg-primary-lt2`}></div>
       <div
         className={`fixed top-0 z-50 h-[9vh] w-full bg-neutral-9 transition-all duration-fast ease-in-out`}

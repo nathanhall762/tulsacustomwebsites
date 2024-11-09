@@ -30,7 +30,7 @@ const ContactSection: React.FC<Props> = ({
   };
 
   return (
-    <div className='mt-16 bg-fade-up' id='contact' >
+    <div className='mt-16 bg-fade-up max-w-[1500px]' id='contact' >
       <div className='flex flex-col items-center'>
         <h2 className='mb-8 text-center'>{heading}</h2>
         <div className='mb-16 h-[2px] w-3/4 max-w-2xl bg-border-gradient'></div>

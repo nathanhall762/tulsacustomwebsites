@@ -38,7 +38,7 @@ const Footer: React.FC<Props> = ({
   };
 
   return (
-    <footer className='bg-neutral-9 pb-8 pt-16 text-center text-neutral-1 lg:px-10 dark:bg-neutral-9 dark:text-neutral-1'>
+    <footer className='bg-neutral-9 pb-8 pt-16 text-center text-neutral-1 w-full lg:px-10 dark:bg-neutral-9 dark:text-neutral-1'>
       <div className='flex flex-col items-center justify-evenly lg:flex-row lg:justify-between'>
         <div className='hidden lg:block nav-links'>
           {address && 

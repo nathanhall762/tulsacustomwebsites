@@ -96,23 +96,23 @@ const businessInformation = await getData('business_information');
     </title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="flex flex-col items-center">
     <Header
       navs={navs.filter((nav) => nav.link !== '/')}
       logo={businessInformation[0].business_logo}
       client:load
     />
-    <main class=''>
+    <main class='flex max-w-[1500px] flex-col'>
       <slot />
     </main>
     <ContactSection
-    heading='Contact Tulsa Custom Websites'
-    businessEmail='hello@tulsacustomwebsites.com'
-    formContent={{
-      heading: 'Tell us about your next project!',
-      body: `We'd love to hear about what you are working on and how we can help build it. Please fill out the form below so we can schedule a discovery interview and get started!`,
-    }}
-  />
+      heading='Contact Tulsa Custom Websites'
+      businessEmail='hello@tulsacustomwebsites.com'
+      formContent={{
+        heading: 'Tell us about your next project!',
+        body: `We'd love to hear about what you are working on and how we can help build it. Please fill out the form below so we can schedule a discovery interview and get started!`,
+      }}
+    />
     <Footer
       address={businessInformation[0].business_address}
       copyright=`${businessInformation[0].business_name} 2024`
@@ -186,6 +186,11 @@ const businessInformation = await getData('business_information');
         .zoom-in {
           @apply scale-[1.25];
         }
+        /* .margin-x-auto > *:not(:first-child) {
+          margin-left: auto;
+          margin-right: auto;
+          @apply bg-white-1;
+        } */
 
         h1 {
           font-size: 9.6rem;
