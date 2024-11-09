@@ -6,6 +6,7 @@ import InfoCardList from '../components/shared/page-sections/text-components/Inf
 import ImageByCopy from '../components/shared/page-sections/text-components/ImageByCopy';
 import clockImage from '../media/Website-Page-Load-Time-Statistics-Featured.png';
 import pricingImage from '../media/0306_Pricing-Consumer-Goods_Luke-Social.png';
+import logo from '../media/Tulsa-Custom-Websites-1.webp';
 import Cta from '../components/shared/page-sections/text-components/Cta';
 import ContactSection from '../components/shared/page-sections/input-components/ContactSection';
 
@@ -105,7 +106,15 @@ import ContactSection from '../components/shared/page-sections/input-components/
       cta: 'Ready to take the next step?',
       button_text: 'Hire Us!',
       url: '#contact',
+      image: logo.src,
     }}
   />
-  
+  <ContactSection
+      heading='Contact Tulsa Custom Websites'
+      businessEmail='hello@tulsacustomwebsites.com'
+      formContent={{
+        heading: 'Tell us about your next project!',
+        body: `We'd love to hear about what you are working on and how we can help build it. Please fill out the form below so we can schedule a discovery interview and get started!`,
+      }}
+    />
 </Layout>

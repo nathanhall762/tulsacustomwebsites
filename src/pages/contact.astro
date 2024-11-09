@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContactPage from '../components/shared/page-sections/text-components/CtaLarge';
+import ContactSection from '../components/shared/page-sections/input-components/ContactSection';
 ---
 
 <Layout
@@ -17,4 +18,12 @@ import ContactPage from '../components/shared/page-sections/text-components/CtaL
     title='Say Hi!'
     client:load
   />
+  <ContactSection
+      heading='Contact Tulsa Custom Websites'
+      businessEmail='hello@tulsacustomwebsites.com'
+      formContent={{
+        heading: 'Tell us about your next project!',
+        body: `We'd love to hear about what you are working on and how we can help build it. Please fill out the form below so we can schedule a discovery interview and get started!`,
+      }}
+    />
 </Layout>

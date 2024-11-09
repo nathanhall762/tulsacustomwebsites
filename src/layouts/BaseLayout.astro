@@ -1,10 +1,13 @@
 ---
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
-import ContactSection from '../components/shared/page-sections/input-components/ContactSection';
 import { ViewTransitions } from 'astro:transitions';
 import { getData } from '../firebase';
 import { navs } from '../navMenu';
+import logo from '../media/Tulsa-Custom-Websites-1.webp';
+import androidfavicon192 from '../media/favicon/android-chrome-192x192.png';
+import favicon32 from '../media/favicon/favicon-32x32.png';
+import favicon16 from '../media/favicon/favicon-16x16.png';
 
 export interface Item {
   type: string;
@@ -18,7 +21,19 @@ interface Props {
 
 const { title, metaDescription } = Astro.props;
 
-const businessInformation = await getData('business_information');
+// const businessInformation = await getData('business_information');
+const businessInformation = [
+  {
+    business_name: 'Tulsa Custom Websites',
+    business_contact_email: '',
+    socials: [],
+    favicon: {
+      favicon_32_x32: favicon32.src,
+      favicon_48_x48: favicon16.src,
+    },
+    business_logo: logo,
+  },
+];
 ---
 
 <!doctype html>
@@ -66,14 +81,8 @@ const businessInformation = await getData('business_information');
     <link
       rel='icon'
       type='image/png'
-      sizes='32x32'
-      href='/favicon-32x32.png'
-    />
-    <link
-      rel='icon'
-      type='image/png'
       sizes='16x16'
-      href='/favicon-16x16.png'
+      href={businessInformation[0].favicon.favicon_48_x48}
     />
     <link
       rel='manifest'
@@ -98,19 +107,17 @@ const businessInformation = await getData('business_information');
   </head>
   <body class='flex flex-col items-center'>
     <Header
-      navs={navs.filter((nav) => nav.link !== '/')}
-      logo={businessInformation[0].business_logo}
+      navs={navs}
+      logo={logo.src}
       client:load
     />
     <main class='flex w-screen max-w-[1500px] flex-col'>
       <slot />
     </main>
     <Footer
-      address={businessInformation[0].business_address}
       copyright=`${businessInformation[0].business_name} 2024`
       email={businessInformation[0].business_contact_email}
       navs={navs}
-      phone={businessInformation[0].business_phone}
       socials={businessInformation[0].socials}
     />
     <style is:global>
