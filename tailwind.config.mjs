@@ -9,11 +9,20 @@ export default {
       display: ['Teko', 'ui-monospace', 'sans-serif'],
       body: ['Ubuntu Sans Mono', 'monospace'],
       'ubuntu-sans': ['Ubuntu', 'sans-serif'],
-      'teko': ['Teko', 'sans-serif'],
+      teko: ['Teko', 'sans-serif'],
       'ubuntu-sans-mono': ['Ubuntu Mono', 'monospace'],
       'ubuntu-condensed': ['Ubuntu Condensed', 'sans-serif'],
     },
     fontWeight: {
+      thin: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900',
       'ubuntu-sans-0': '400',
       'teko-1': '700',
       'ubuntu-sans-mono-2': '600',
@@ -61,10 +70,12 @@ export default {
       },
     },
     backgroundImage: {
-        'border-gradient': 'linear-gradient(90deg, #eb0056 0%, #eb6a00 100%)',
-        'border-gradient-reverse': 'linear-gradient(90deg, #eb6a00 0%, #eb0056 100%)',
-        'fade-down': 'linear-gradient(180deg, rgb(19, 18, 33) 0%, transparent 100%)',
-        'fade-up': 'linear-gradient(0deg, rgb(19, 18, 33) 0%, transparent 100%)',
+      'border-gradient': 'linear-gradient(90deg, #eb0056 0%, #eb6a00 100%)',
+      'border-gradient-reverse':
+        'linear-gradient(90deg, #eb6a00 0%, #eb0056 100%)',
+      'fade-down':
+        'linear-gradient(180deg, rgb(19, 18, 33) 0%, transparent 100%)',
+      'fade-up': 'linear-gradient(0deg, rgb(19, 18, 33) 0%, transparent 100%)',
     },
     textShadow: {
       sm: '1px 1px 2px hsl(0, 0%, 5%)',
@@ -124,8 +135,7 @@ export default {
       addUtilities(
         {
           '.scroller': {
-            scrollbarColor:
-              'hsl(313, 90%, 31%) hsl(240, 5%, 8%)',
+            scrollbarColor: 'hsl(313, 90%, 31%) hsl(240, 5%, 8%)',
           },
           '.scroller-sm': {
             scrollbarColor: 'hsl(var(--primary-hue), 5%, 46%) hsl(240, 5%, 8%)',
