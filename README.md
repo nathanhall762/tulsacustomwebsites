@@ -40,9 +40,6 @@ Contact [Nathan Hall](https://github.com/nathanhall762) or [Ethan Wakeford](http
 
 ### Folders and Key Files
 
-- **`.astro`**: Contains Astro-specific components or libraries; used internally by Astro for handling certain framework files.
-- **`settings.json`**: Holds project-specific settings or preferences, potentially for your editor or build tools.
-- **`types.d.ts`**: A TypeScript declaration file, used to define types or add TypeScript type support to JavaScript libraries without built-in types.
 - **`.firebase`**: Used by Firebase to configure deployment settings and cache the site’s build output. This acts as a Firebase-hosting-specific staging area based on the `dist` folder.
 - **`.github`**: Contains YAML files for GitHub Actions to enable CI/CD (e.g., builds on push/merge).
 - **`dist`**: Output directory for your Astro build, containing statically generated files ready for deployment.
