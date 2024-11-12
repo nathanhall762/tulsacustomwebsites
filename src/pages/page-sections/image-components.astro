@@ -118,15 +118,10 @@ const projects = [
 ];
 ---
 
-<BaseLayout
-  title='text-components'
-  metaDescription='text-components'>
+<BaseLayout title='text-components' metaDescription='text-components'>
   <TabListCards content={tabListCardsContent} />
   <PictureGallery images={picturegalleryContent} />
-  <ProjectGallery
-    galleryHeader={galleryHeader}
-    projects={projects}
-  />
+  <ProjectGallery galleryHeader={galleryHeader} projects={projects} />
   <EuroProjectGallery
     heading='Euro Project Gallery'
     default_card={{

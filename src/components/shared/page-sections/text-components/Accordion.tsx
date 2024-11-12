@@ -20,10 +20,8 @@ const Accordion: React.FC<Props> = ({
 
   return (
     <>
-      <div className='px-4 py-8 lg:px-32 lg:py-16 my-24'>
-        <h2 className='text-primary pb-8 text-center'>
-          {heading}
-        </h2>
+      <div className='my-24 px-4 py-8 lg:px-32 lg:py-16'>
+        <h2 className='text-primary pb-8 text-center'>{heading}</h2>
         <div className='flex flex-col'>
           {question_and_answer.map((q_and_a_group, index) => (
             <div
@@ -40,7 +38,7 @@ const Accordion: React.FC<Props> = ({
                   icon={'ep:arrow-up'}
                   className={`${
                     index === clicked ? 'text-primary scale-110' : 'rotate-180'
-                  } group-hover:text-primary cursor-pointer text-5xl font-bold text-neutral-1 transition duration-300 ease-in-out group-hover:scale-125 lg:text-3xl`}
+                  } group-hover:text-primary font-bold cursor-pointer text-5xl text-neutral-1 transition duration-300 ease-in-out group-hover:scale-125 lg:text-3xl`}
                 ></Icon>
               </div>
               <div

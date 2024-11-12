@@ -9,7 +9,7 @@ const ComparisonSection = () => {
           <li>Item 3</li>
         </ul>
       </div>
-      <div className='bg-ltbg3 text-black z-20 flex h-5/6 self-center w-1/2 flex-col rounded-e-2xl bg-neutral-7 p-10 font-bold shadow-xl'>
+      <div className='bg-ltbg3 text-black font-bold z-20 flex h-5/6 w-1/2 flex-col self-center rounded-e-2xl bg-neutral-7 p-10 shadow-xl'>
         <h3 className='text-center'>Our Company</h3>
         <ul className='m-10 leading-10'>
           <li>Item 1</li>
