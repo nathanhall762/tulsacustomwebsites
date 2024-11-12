@@ -1,6 +1,6 @@
 # Project Overview
 
-### Purpose
+## Purpose
 
 Tulsa Custom Websites builds professional websites for businesses and brands using a custom design process and tech stack. It is easy to build something overly complex fast, so we are proud to have a system based on simplicity that we continue to spend an immense amount of time and effort on. Our streamlined system reduces development time, allowing us to focus on our clients' brand and business needs.
 
