@@ -48,10 +48,10 @@ Contact [Nathan Hall](https://github.com/nathanhall762) or [Ethan Wakeford](http
   - **`layouts`**: Astro components providing reusable UI structures, such as page templates.
   - **`media`**: Contains media assets (images, audio, or video files).
   - **`pages`**: Files here correspond to routes on the website, handling routing, data loading, and page layout.
-- **`env.d.ts`**: TypeScript environment declaration file for defining type information for environment variables.
-- **`firebase.ts`**: Contains Firebase-specific code or configuration for integrating Firebase services.
-- **`googleReviews.ts`**: Function to request Google My Business reviews data from Google Places API.
-- **`navMenu.ts`**: Object of navigation menu items.
+  - **`env.d.ts`**: TypeScript environment declaration file for defining type information for environment variables.
+  - **`firebase.ts`**: Contains Firebase-specific code or configuration for integrating Firebase services.
+  - **`googleReviews.ts`**: Function to request Google My Business reviews data from Google Places API.
+  - **`navMenu.ts`**: Object of navigation menu items.
 - **`.env`**: Environment variables file storing sensitive data (e.g., API keys, Firebase credentials), not committed to version control.
 - **`.firebaserc`**: Firebase configuration file defining the project’s Firebase configurations for deployment and CLI use. The project name in the file must match the Firebase project.
 - **`.gitignore`**: Specifies files and directories for Git to ignore, preventing unnecessary or sensitive files from being committed.
