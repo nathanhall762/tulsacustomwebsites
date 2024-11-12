@@ -32,6 +32,12 @@ Contact [Nathan Hall](https://github.com/nathanhall762) or [Ethan Wakeford](http
 
 # Project Structure
 
+### System Context Diagram
+
+[More about the C4 Diagram System](https://c4model.com/)
+
+![image](public/C1-Diagrams-Tulsa-Custom-Websites.png)
+
 ### Folders and Key Files
 
 - **`.astro`**: Contains Astro-specific components or libraries; used internally by Astro for handling certain framework files.
