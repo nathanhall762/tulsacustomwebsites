@@ -1,6 +1,8 @@
+local_backend: true
 backend:  
-  name: github
-  repo: nathanhall762/tulsacustomwebsites # Path to your GitHub repository
+  # name: github
+  name: git-gateway
+  # repo: nathanhall762/tulsacustomwebsites # Path to your GitHub repository
 media_folder: /public/media
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog

@@ -19,6 +19,9 @@ import ContactSection from '../components/shared/page-sections/input-components/
 // no longer using the cms for this stuff cause it's faster for small scale sites
 // that never need to be used by a client
 // for now at least, sorry nathan
+import getCollection from '../cms/getCollection';
+
+const data = getCollection('blog');
 ---
 
 <Layout
@@ -26,6 +29,7 @@ import ContactSection from '../components/shared/page-sections/input-components/
   metaDescription={'Custom website design and building out of Tulsa Oklahoma'}
   pageData={{ content: [] }}
 >
+  <h1>{data}</h1>
   <Hero
     heading='Tulsa Custom Websites'
     images={[
