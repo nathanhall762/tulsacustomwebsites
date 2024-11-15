@@ -123,13 +123,34 @@ export default {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+        slideFromLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
       },
       animation: {
         fadeInUp: 'fadeInUp 0.75s ease-out',
         slide: 'slide 60s linear infinite',
+        slideFromLeft1: 'slideFromLeft 0.4s ease-in forwards 1 0s',
+        slideFromLeft2: 'slideFromLeft 0.4s ease-in forwards 1 0.1s',
+        slideFromLeft3: 'slideFromLeft 0.4s ease-in forwards 1 0.2s',
+        slideFromLeft4: 'slideFromLeft 0.4s ease-in forwards 1 0.3s',
+      },
+      transitionDelay: {
+        0: '0ms',
+        200: '200ms',
+        400: '400ms',
+        600: '600ms',
+        800: '800ms',
       },
     },
   },
+  safelist: [
+    'animate-slideFromLeft1',
+    'animate-slideFromLeft2',
+    'animate-slideFromLeft3',
+    'animate-slideFromLeft4',
+  ],
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities(
