@@ -136,13 +136,6 @@ export default {
         slideFromLeft3: 'slideFromLeft 0.4s ease-in forwards 1 0.2s',
         slideFromLeft4: 'slideFromLeft 0.4s ease-in forwards 1 0.3s',
       },
-      transitionDelay: {
-        0: '0ms',
-        200: '200ms',
-        400: '400ms',
-        600: '600ms',
-        800: '800ms',
-      },
     },
   },
   safelist: [

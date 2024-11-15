@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({ logo, navs }) => {
               <Button text='Hire Us!' size='sm' url='#contact' />
             </nav>
           </div>
-          <div className='hidden px-4 lg:col-span-2 lg:flex lg:justify-around xl:col-span-2'>
+          <div className='hidden px-4 lg:flex lg:items-center'>
             <Button text='Hire Us!' size='sm' url='#contact' />
           </div>
         </div>
