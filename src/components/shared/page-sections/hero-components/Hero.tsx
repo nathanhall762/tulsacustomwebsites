@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({
   const backgroundTexture = '/parabolic-ellipse.webp';
 
   return (
-    <div className='bg-fade-down relative h-[100vh] w-[99vw] overflow-visible bg-cover shadow-inner self-center'>
+    <div className='relative h-[100vh] w-[99vw] self-center overflow-visible bg-fade-down bg-cover shadow-inner'>
       <div
         className='absolute left-0 top-0 -z-10 h-[150vh] w-full bg-cover bg-center'
         style={{
@@ -61,10 +61,10 @@ const Hero: React.FC<HeroProps> = ({
       ></img>
       {/* <div className='absolute inset-0 h-full w-full bg-black opacity-30'></div> */}
       <div className='relative top-32 z-10 flex h-full flex-col lg:text-left xl:top-0 xl:justify-center'>
-        <div className='px-4 lg:pl-32 lg:py-16 lg:w-1/2'>
+        <div className='px-4 lg:w-1/2 lg:py-16 lg:pl-32'>
           <h1 className='text-shadow-outline pb-2 text-neutral-1 drop-shadow-xl lg:text-neutral-1'>
             Tulsa{' '}
-            <em className='bg-border-gradient bg-clip-text pr-2 text-transparent'>
+            <em className='bg-border-gradient bg-clip-text pr-3 text-transparent'>
               Custom
             </em>{' '}
             Websites
@@ -74,7 +74,7 @@ const Hero: React.FC<HeroProps> = ({
           </p>
           <div className='lg:items-left flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-start lg:gap-16 lg:pb-24'>
             <a href='#contact' className=''>
-              <Button text={call_to_action_text ?? ''} url='#contact'/>
+              <Button text={call_to_action_text ?? ''} url='#contact' />
             </a>
             {/* <p className='text-base text-neutral-2 lg:text-lg'>
               <a href='tel:9189407800'>Call: (918) 940-7800</a>

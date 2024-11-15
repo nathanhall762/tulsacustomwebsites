@@ -15,16 +15,13 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   projects,
   galleryHeader,
 }) => {
-  console.log('asdf');
-  console.log(projects[0].image);
   return (
     <>
       <div className='my-48 h-fit lg:w-screen lg:px-8'>
-        <div className='flex flex-col items-center'>
+        {/* <div className='flex flex-col items-center'>
           <h2 className='mb-8 text-center'>{galleryHeader}</h2>
           <div className='mb-16 h-[2px] w-3/4 max-w-2xl bg-border-gradient'></div>
-        </div>
-        <div className='bg-primary-md1 mx-auto mb-8 h-[2px] w-3/4 max-w-2xl'></div>
+        </div> */}
         <ul className='m-0 mx-auto flex flex-wrap items-center justify-center gap-8 text-center sm:flex-row lg:gap-8'>
           {projects.map((project, index) => (
             <li
