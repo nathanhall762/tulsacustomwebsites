@@ -33,7 +33,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
                 index === 0 && projects.length % 2 !== 0
                   ? 'w-full'
                   : 'w-full sm:w-[calc(50%-1rem)] lg:w-[calc(50%-1rem)]'
-              } bg-cover bg-top bg-no-repeat rounded-3xl overflow-hidden`}
+              } overflow-hidden rounded-3xl bg-cover bg-top bg-no-repeat`}
             >
               <div className='size-full'>
                 <a
@@ -47,7 +47,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
                       backgroundImage: `url(${project.image})`,
                     }}
                   ></div>
-                  <p className='bg-white h1-sub dark:bg-black dark:text-white z-50 rounded-3xl bg-opacity-50 p-2 backdrop-blur-lg transition-all duration-300 ease-in-out hover:bg-opacity-100 group-hover:backdrop-brightness-50 group-hover:opacity-100'>
+                  <p className='bg-white h1-sub dark:bg-black dark:text-white z-50 rounded-3xl bg-opacity-50 px-6 py-2 backdrop-blur-lg transition-all duration-300 ease-in-out hover:bg-opacity-100 group-hover:opacity-100 group-hover:backdrop-brightness-50'>
                     {project.title}
                   </p>
                 </a>
