@@ -17,7 +17,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
 }) => {
   return (
     <>
-      <div className='my-48 h-fit lg:w-screen lg:px-8'>
+      <div className='my-48 h-fit lg:w-full lg:px-8'>
         {/* <div className='flex flex-col items-center'>
           <h2 className='mb-8 text-center'>{galleryHeader}</h2>
           <div className='mb-16 h-[2px] w-3/4 max-w-2xl bg-border-gradient'></div>
