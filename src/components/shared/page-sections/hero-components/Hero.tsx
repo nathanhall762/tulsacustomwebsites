@@ -43,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <div className='relative h-[100vh] w-[99vw] self-center overflow-visible bg-fade-down bg-cover shadow-inner'>
       <div
-        className='absolute left-0 top-0 -z-10 h-[150vh] w-full bg-cover bg-center'
+        className='absolute left-0 top-0 -z-10 h-full w-full bg-cover bg-center'
         style={{
           backgroundImage: `url(${backgroundTexture})`,
         }}

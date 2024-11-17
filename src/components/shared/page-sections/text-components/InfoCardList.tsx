@@ -18,10 +18,10 @@ const InfoCardList: React.FC<Props> = ({ heading, body_text, card: cards }) => {
   });
 
   return (
-    <>
+    <div className='max-w-[1500px]'>
       <div
         ref={cardRef}
-        className='my-16 flex flex-col px-4 text-center lg:my-32'
+        className='my-16 flex flex-col px-4 text-center lg:my-32 '
       >
         <div className='items-center pb-16'>
           <h2 className='bg-border-gradient bg-clip-text pb-4 text-transparent'>
@@ -52,7 +52,7 @@ const InfoCardList: React.FC<Props> = ({ heading, body_text, card: cards }) => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
