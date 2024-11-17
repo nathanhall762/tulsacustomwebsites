@@ -37,32 +37,14 @@ const businessInformation = [
 ---
 
 <!doctype html>
-<html
-  lang='en'
-  class='dark bg-neutral-9 font-body text-neutral-2 scroller'>
+<html lang='en' class='dark bg-neutral-9 font-body text-neutral-2 scroller'>
   <head>
     <meta charset='UTF-8' />
-    <meta
-      name='description'
-      content={metaDescription}
-    />
-    <meta
-      name='viewport'
-      content='width=device-width'
-    />
-    <meta
-      name='generator'
-      content={Astro.generator}
-    />
-    <link
-      rel='preconnect'
-      href='https://fonts.googleapis.com'
-    />
-    <link
-      rel='preconnect'
-      href='https://fonts.gstatic.com'
-      crossorigin
-    />
+    <meta name='description' content={metaDescription} />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <link
       href='https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap'
       rel='stylesheet'
@@ -73,29 +55,16 @@ const businessInformation = [
       sizes='32x32'
       href={businessInformation[0].favicon.favicon_32_x32}
     />
-    <link
-      rel='apple-touch-icon'
-      sizes='180x180'
-      href='/apple-touch-icon.png'
-    />
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
     <link
       rel='icon'
       type='image/png'
       sizes='16x16'
       href={businessInformation[0].favicon.favicon_48_x48}
     />
-    <link
-      rel='manifest'
-      href='/site.webmanifest'
-    />
-    <meta
-      name='msapplication-TileColor'
-      content='#da532c'
-    />
-    <meta
-      name='theme-color'
-      content='#ffffff'
-    />
+    <link rel='manifest' href='/site.webmanifest' />
+    <meta name='msapplication-TileColor' content='#da532c' />
+    <meta name='theme-color' content='#ffffff' />
     <title>
       {
         title
@@ -106,12 +75,8 @@ const businessInformation = [
     <ViewTransitions />
   </head>
   <body class='flex flex-col items-center'>
-    <Header
-      navs={navs}
-      logo={logo.src}
-      client:load
-    />
-    <main class='flex w-screen max-w-[1500px] flex-col'>
+    <Header navs={navs} logo={logo.src} client:load />
+    <main class='flex w-screen flex-col items-center'>
       <slot />
     </main>
     <Footer
@@ -129,9 +94,9 @@ const businessInformation = [
         html {
           font-size: 62.5%;
           scroll-behavior: smooth;
-          background-image: url('/public/Background.webp');
-          background-position: top;
-          background-repeat: no-repeat;
+          /* background-image: url('/public/Background.webp'); */
+          /* background-position: top; */
+          /* background-repeat: no-repeat; */
           overflow-x: hidden;
         }
         body {
