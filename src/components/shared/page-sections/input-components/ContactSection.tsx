@@ -32,14 +32,14 @@ const ContactSection: React.FC<Props> = ({
   };
 
   return (
-    <div className='relative flex w-full justify-center pb-40 pt-20'>
+    <div className='relative flex w-full justify-center bg-fade-up pb-40 pt-20'>
       <div
         className='absolute left-0 top-0 -z-10 h-full w-full bg-cover bg-center'
         style={{
           backgroundImage: `url(${backgroundTexture})`,
         }}
       ></div>
-      <div className='mt-16 max-w-[1500px] bg-fade-up' id='contact'>
+      <div className='mt-16 max-w-[1500px]' id='contact'>
         <div className='flex flex-col items-center'>
           <h2 className='mb-8 text-center'>{heading}</h2>
           <div className='mb-16 h-[2px] w-3/4 max-w-2xl bg-border-gradient'></div>

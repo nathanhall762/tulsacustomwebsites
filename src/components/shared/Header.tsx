@@ -60,6 +60,7 @@ const Header: React.FC<HeaderProps> = ({ logo, navs }) => {
               </div>
             ))}
           </nav>
+          {/* Hamburger */}
           <div
             onClick={toggleNav}
             className={`z-50 flex w-20 cursor-pointer items-center justify-center text-neutral-1 transition-transform duration-fast lg:hidden dark:text-neutral-1 ${isNavOpen ? 'rotate-180 opacity-100' : 'rotate-0 opacity-100'}`}
@@ -92,7 +93,7 @@ const Header: React.FC<HeaderProps> = ({ logo, navs }) => {
               <Button text='Hire Us!' size='sm' url='#contact' />
             </nav>
           </div>
-          <div className='hidden px-4 lg:flex lg:items-center'>
+          <div className='hidden px-4 lg:col-span-2 lg:flex lg:items-center'>
             <Button text='Hire Us!' size='sm' url='#contact' />
           </div>
         </div>
