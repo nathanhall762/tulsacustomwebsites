@@ -18,8 +18,8 @@ const Field: React.FC<FieldProps> = ({
   onChange,
 }) => {
   return (
-    <div className='flex flex-col gap-2 mb-4'>
-      <label htmlFor={name} className='text-black-1 field-label'>
+    <div className='mb-4 flex flex-col gap-2'>
+      <label htmlFor={name} className='field-label font-bold text-neutral-9'>
         {label}
       </label>
       <input
@@ -28,7 +28,7 @@ const Field: React.FC<FieldProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className='border-neutral-9 text-[1.6rem] rounded-lg border p-2'
+        className='rounded-2xl border-2 bg-neutral-1 p-4 text-[2rem] focus:border-primary-6 focus:outline-none focus:ring-0'
       />
     </div>
   );

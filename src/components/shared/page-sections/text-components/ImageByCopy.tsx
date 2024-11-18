@@ -32,7 +32,7 @@ const ImageByCopy: React.FC<Props> = ({
           backgroundImage: `url(${backgroundTexture})`,
         }}
       ></div>
-      <div className={`my-24 max-w-[1500px] lg:m-32`}>
+      <div className={`my-24 max-w-[1500px] lg:mx-32 lg:my-40`}>
         <div className='flex flex-col transition-all lg:grid lg:grid-cols-12 lg:gap-8'>
           <img
             src={image}
