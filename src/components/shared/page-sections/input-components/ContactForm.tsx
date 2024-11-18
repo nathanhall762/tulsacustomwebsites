@@ -10,7 +10,7 @@ interface FormData {
 }
 
 interface FormProps {
-  content: { heading: string; body: string; };
+  content: { heading: string; body: string };
 }
 
 const isValidEmail = (email: string): boolean => {
@@ -52,19 +52,19 @@ const Form: React.FC<FormProps> = ({ content }) => {
   };
 
   return (
-    <div className='size-full bg-border-gradient p-2 rounded-3xl'>
-      <div className='size-full px-[10%] lg:px-[5%] py-6 bg-neutral-5 rounded-3xl'>
+    <div className='size-full rounded-3xl bg-border-gradient p-2'>
+      <div className='size-full rounded-3xl bg-neutral-9 px-[10%] py-6 lg:px-[5%]'>
         {step === 1 && (
           <form
             onSubmit={handleSubmit}
-            className='flex flex-col justify-between size-full gap-4 py-4 text-black-1 lg:px-8'
+            className='flex size-full flex-col justify-between gap-4 py-4 text-black-1 lg:px-8'
           >
             <div>
-              <h2 className='text-neutral-9 text-center'>{content.heading}</h2>
-              <p className='h3-sub text-black-2 mb-12'>
+              <h2 className='text-center text-neutral-1'>{content.heading}</h2>
+              <p className='h3-sub mb-20 text-3xl text-neutral-3'>
                 {content.body}
               </p>
-              <div className='lg:px-[10%] mb-20'>
+              <div className='mb-20 lg:px-[10%]'>
                 <Field
                   label='What do you want to build?'
                   name='body'
@@ -83,7 +83,9 @@ const Form: React.FC<FormProps> = ({ content }) => {
                 />
               </div>
             </div>
-                <div className='flex justify-center'><Button text='Submit'></Button></div>
+            <div className='flex justify-center'>
+              <Button text='Submit'></Button>
+            </div>
           </form>
         )}
         {step === 3 && formData.submit && (
