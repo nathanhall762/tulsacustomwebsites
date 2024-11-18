@@ -25,21 +25,21 @@ const ImageByCopy: React.FC<Props> = ({
   backgroundTexture,
 }) => {
   return (
-    <section className='relative m-40 flex w-full justify-center'>
+    <section className='relative flex w-full justify-center lg:my-40'>
       <div
         className='absolute inset-0 -z-10 bg-cover bg-center'
         style={{
           backgroundImage: `url(${backgroundTexture})`,
         }}
       ></div>
-      <div className={`my-24 max-w-[1500px]  lg:m-32`}>
+      <div className={`my-24 max-w-[1500px] lg:m-32`}>
         <div className='flex flex-col transition-all lg:grid lg:grid-cols-12 lg:gap-8'>
           <img
             src={image}
             alt={image_alt_text}
             className={`${reversed && 'lg:order-1'}  z-[0] box-border w-screen overflow-visible object-cover lg:col-span-5 lg:row-span-1 lg:h-full lg:w-full`}
           />
-          <div className='radius-3xl z-[1] flex h-full flex-col justify-between bg-neutral-3 py-8 text-center text-neutral-8 shadow-md transition-all lg:col-span-7 lg:px-6 lg:py-16 dark:bg-neutral-7 dark:text-neutral-2'>
+          <div className='radius-3xl z-[1] flex h-full flex-col justify-between bg-neutral-8/75 py-8  text-center text-neutral-2 shadow-md transition-all lg:col-span-7 lg:px-6 lg:py-16'>
             <div>
               <div className='flex flex-col items-center'>
                 <ReactMarkdown
@@ -64,7 +64,7 @@ const ImageByCopy: React.FC<Props> = ({
                           return (
                             <strong>
                               <p
-                                className='h2-sub mb-12 text-center text-primary-5'
+                                className='h2-sub mb-12 text-center text-[3rem] leading-tight text-primary-7'
                                 {...rest}
                               />
                             </strong>
@@ -81,7 +81,10 @@ const ImageByCopy: React.FC<Props> = ({
                       p(props) {
                         const { node, ...rest } = props;
                         return (
-                          <p className='h3-sub mb-2 text-[2.0rem]' {...rest} />
+                          <p
+                            className='h3-sub mb-2 text-[2rem] leading-loose'
+                            {...rest}
+                          />
                         );
                       },
                     }}
