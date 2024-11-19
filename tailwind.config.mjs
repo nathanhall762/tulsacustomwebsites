@@ -77,11 +77,24 @@ export default {
         'linear-gradient(180deg, rgb(19, 18, 33) 0%, transparent 100%)',
       'fade-up': 'linear-gradient(0deg, rgb(19, 18, 33) 0%, transparent 100%)',
     },
+    borderImage: {
+      'border-gradient': 'linear-gradient(90deg, #eb0056 0%, #eb6a00 100%)',
+      'border-gradient-reverse':
+        'linear-gradient(90deg, #eb6a00 0%, #eb0056 100%)',
+    },
+    dropShadow: {
+      sm: '1px 1px 2px hsl(0, 0%, 5%)',
+      DEFAULT: '2px 2px 4px hsl(0, 0%, 5%)',
+      lg: '4px 4px 8px hsl(0, 0%, 5%)',
+      xl: '4px 4px 16px hsl(0, 0%, 5%)',
+      glow: '0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 30px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%), 0 0 70px hsl(0, 0%, 100%), 0 0 80px hsl(0, 0%, 100%), 0 0 100px hsl(0, 0%, 100%)',
+    },
     textShadow: {
       sm: '1px 1px 2px hsl(0, 0%, 5%)',
       DEFAULT: '2px 2px 4px hsl(0, 0%, 5%)',
       lg: '4px 4px 8px hsl(0, 0%, 5%)',
       xl: '4px 4px 16px hsl(0, 0%, 5%)',
+      glow: '0 0 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 30px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%), 0 0 70px hsl(0, 0%, 100%), 0 0 80px hsl(0, 0%, 100%), 0 0 100px hsl(0, 0%, 100%)',
     },
     extend: {
       spacing: {

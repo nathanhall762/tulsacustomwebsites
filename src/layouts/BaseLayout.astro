@@ -187,6 +187,15 @@ const businessInformation = [
           @apply font-teko;
         }
 
+        .gradient-border {
+          background: linear-gradient(90deg, #eb0056 0%, #eb6a00 100%);
+          border-radius: 15px; /* Same as your content */
+          -webkit-mask-image: inset(
+            10px round 15px
+          ); /* Creates an inner "cutout" for content */
+          mask-image: inset(10px round 15px);
+        }
+
         .h2-sub {
           font-size: 2.4rem;
           @apply font-ubuntu-sans-mono;
@@ -194,6 +203,7 @@ const businessInformation = [
 
         h3 {
           font-size: 3.6rem;
+          line-height: 1.2;
           @apply font-teko;
         }
 

@@ -2,9 +2,75 @@
 import Layout from '../layouts/Layout.astro';
 import type { DocumentData } from 'firebase/firestore';
 import { getData } from '../firebase';
+import PricingComponent from '../components/shared/page-sections/text-components/Pricing.tsx';
+import Sidekick from '../components/shared/page-sections/hero-components/Sidekick';
+import codePicture from '../media/code.png';
+import ContactSection from '../components/shared/page-sections/input-components/ContactSection';
+import logo from '../media/Tulsa-Custom-Websites-1.webp';
+import Cta from '../components/shared/page-sections/text-components/Cta';
 
 // const data = await getData('pages', 'pricing');
 // const pageData: DocumentData = data[0];
 ---
 
-<Layout title='pricing' metaDescription='pricing' />
+<Layout title='pricing' metaDescription='pricing'>
+  <Sidekick
+    heading='Pricing'
+    image={codePicture.src}
+    subheading='Check it out'
+    call_to_action_text='Hire Us!'
+  />
+  <PricingComponent
+    heading='Website Pricing for Any Budget'
+    subheading='Whether you need a professional website that shows up on search engines, or you need a completely unique website that blows away the competition on search engine results, we have pricing options so you only pay for what you and your business needs.'
+    pricingOptions={[
+      {
+        title: 'I Need a Professional Website',
+        description: `
+		* Critical SEO Optimization
+		* Custom Design
+		* Blazing Fast Load Times
+		* CMS to Manage Your Content
+		* Analytics Integration
+		* Pay Once, Own It Forever
+		`,
+        price: '$2,400',
+        buttonText: 'Get Started',
+        buttonLink: '#contact',
+      },
+      {
+        title: 'I Need a Completely Unique Website',
+        description: `
+		+ Advanced SEO Optimization
+		+ Completely Unique Design
+		* Critical SEO Optimization
+		* Custom Design
+		* Blazing Fast Load Times
+		* CMS to Manage Your Content
+		* Analytics Integration
+		* Pay Once, Own It Forever
+		`,
+        price: '$10,200',
+        buttonText: 'Get Started',
+        buttonLink: '#contact',
+      },
+    ]}
+  />
+  <Cta
+    content={{
+      cta: 'Ready to take the next step?',
+      button_text: 'Hire Us!',
+      url: '#contact',
+      image: logo.src,
+    }}
+  />
+  <ContactSection
+    heading='Contact Tulsa Custom Websites'
+    businessEmail='hello@tulsacustomwebsites.com'
+    formContent={{
+      heading: 'Tell us about your next project!',
+      body: `We'd love to hear about what you are working on and how we can help build it. Please fill out the form below so we can schedule a discovery interview and get started!`,
+    }}
+    backgroundTexture='parabolic-ellipse.webp'
+  />
+</Layout>
