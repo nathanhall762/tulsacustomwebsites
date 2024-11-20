@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({
     }
   };
 
-  const phoneImage = '/MobileWithCustomWebsite.png';
+  const phoneImage = '/MobileWithCustomWebsite.webp';
   const backgroundTexture = '/parabolic-ellipse.webp';
 
   return (
