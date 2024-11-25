@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Button from '../../ui/Button';
+import Rainbow from '../../ui/Rainbow';
 
 interface HeroProps {
   heading: string;
@@ -56,20 +57,20 @@ const Hero: React.FC<HeroProps> = ({
         />
       ))}
       <img
-        className='absolute top-[2vh] z-10 hidden h-full scale-50 bg-cover bg-no-repeat transition-all duration-slow ease-in-out xl:visible xl:right-[24vw] xl:inline'
+        className='absolute top-[2vh] z-10 hidden h-full scale-50 bg-cover bg-no-repeat brightness-200 transition-all duration-slow ease-in-out xl:visible xl:right-[24vw] xl:inline'
         src={phoneImage}
       ></img>
       {/* <div className='absolute inset-0 h-full w-full bg-black opacity-30'></div> */}
       <div className='relative top-32 z-10 flex h-full flex-col lg:text-left xl:top-0 xl:justify-center'>
         <div className='px-4 lg:w-1/2 lg:py-16 lg:pl-32'>
-          <h1 className='text-shadow-outline pb-2 text-neutral-1 drop-shadow-xl lg:text-neutral-1'>
+          <h1 className='text-shadow-outline pb-2 text-[5rem] text-neutral-1 drop-shadow-xl lg:text-neutral-1'>
             Tulsa{' '}
             <em className='bg-border-gradient bg-clip-text pr-3 text-transparent'>
               Custom
             </em>{' '}
             Websites
           </h1>
-          <p className='h1-sub text-shadow-outline pb-24 tracking-wide text-neutral-2 lg:pb-24 lg:text-left'>
+          <p className='h1-sub text-shadow-outline pb-24 text-[2rem] tracking-wide text-neutral-2 lg:pb-24 lg:text-left'>
             {subheading}
           </p>
           <div className='lg:items-left flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-start lg:gap-16 lg:pb-24'>
@@ -82,16 +83,7 @@ const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
       </div>
-      <div className='absolute inset-0 z-0 flex flex-col justify-end'>
-        <div className='relative'>
-          <div className='bg-black absolute inset-0 z-0 bg-opacity-0 backdrop-blur-[2px] lg:backdrop-blur-sm'></div>
-          <div className='h-8 w-full bg-primary-1'></div>
-          <div className='h-8 w-full bg-primary-4'></div>
-          <div className='h-8 w-full bg-primary-6'></div>
-          <div className='h-8 w-full bg-secondary-4'></div>
-          <div className='h-8 w-full bg-secondary-6'></div>
-        </div>
-      </div>
+      <Rainbow />
     </div>
   );
 };

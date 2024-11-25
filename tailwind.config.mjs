@@ -156,6 +156,10 @@ export default {
     'animate-slideFromLeft2',
     'animate-slideFromLeft3',
     'animate-slideFromLeft4',
+    'lg:animate-slideFromLeft1',
+    'lg:animate-slideFromLeft2',
+    'lg:animate-slideFromLeft3',
+    'lg:animate-slideFromLeft4',
   ],
   plugins: [
     plugin(function ({ addUtilities }) {
