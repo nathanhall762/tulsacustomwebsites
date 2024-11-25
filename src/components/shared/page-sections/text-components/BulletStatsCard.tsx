@@ -64,12 +64,12 @@ const BulletStatsCard: React.FC<Props> = ({
                   </ReactMarkdown>
                 )}
                 <ReactMarkdown
-                  className='markdown mb-32 text-left lg:text-left'
+                  className='markdown mb-16 text-left lg:mb-32 lg:text-left'
                   components={{
                     p(props) {
                       const { node, ...rest } = props;
                       return (
-                        <p className='h3-sub mb-2 text-[2.0rem]' {...rest} />
+                        <p className='h3-sub mb-2 lg:text-[2.0rem]' {...rest} />
                       );
                     },
                   }}

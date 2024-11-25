@@ -32,14 +32,14 @@ const ImageByCopy: React.FC<Props> = ({
           backgroundImage: `url(${backgroundTexture})`,
         }}
       ></div>
-      <div className={`my-24 max-w-[1500px] lg:mx-32 lg:my-40`}>
+      <div className={`max-w-[1500px] lg:mx-32 lg:my-40 `}>
         <div className='flex flex-col transition-all lg:grid lg:grid-cols-12 lg:gap-8'>
           <img
             src={image}
             alt={image_alt_text}
             className={`${reversed && 'lg:order-1'}  z-[0] box-border w-screen overflow-visible object-cover lg:col-span-5 lg:row-span-1 lg:h-full lg:w-full`}
           />
-          <div className='radius-3xl z-[1] flex h-full flex-col justify-between bg-neutral-8/75 py-8  text-center text-neutral-2 shadow-md transition-all lg:col-span-7 lg:px-6 lg:py-16'>
+          <div className='radius-3xl z-[1] flex h-full flex-col justify-between bg-neutral-8/50 py-24 text-center text-neutral-1 shadow-md  transition-all lg:col-span-7 lg:bg-neutral-8/75 lg:px-6 lg:py-16 lg:text-neutral-2'>
             <div>
               <div className='flex flex-col items-center'>
                 <ReactMarkdown
@@ -64,7 +64,7 @@ const ImageByCopy: React.FC<Props> = ({
                           return (
                             <strong>
                               <p
-                                className='h2-sub mb-12 text-center text-[3rem] leading-tight text-primary-7'
+                                className='h2-sub mb-12 text-center text-[2rem] leading-tight text-primary-7 lg:text-[3rem]'
                                 {...rest}
                               />
                             </strong>
@@ -82,7 +82,7 @@ const ImageByCopy: React.FC<Props> = ({
                         const { node, ...rest } = props;
                         return (
                           <p
-                            className='h3-sub mb-2 text-[2rem] leading-loose'
+                            className='h3-sub mb-2 leading-loose lg:text-[2rem]'
                             {...rest}
                           />
                         );
