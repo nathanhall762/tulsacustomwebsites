@@ -1,16 +1,223 @@
-backend:  
+backend:
   name: github
   repo: nathanhall762/tulsacustomwebsites # Path to your GitHub repository
-media_folder: /public/media
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+site_url: https://tulsacustomwebsites.com
+display_url: https://tulsacustomwebsites.com
+logo_url: 'src/media/Tulsa-Custom-Websites-1.webp'
+media_folder: 'src/media' # Location where files will be stored in the repo
+public_folder: 'src/media' # The src attribute for uploaded media
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "public/content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in frontmatter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: 'pages' # Used in routes, e.g., /admin/collections/pages
+    label: 'Pages' # Used in the UI
+    label_singular: 'Page'
+    folder: 'public/content/pages' # The path to the folder where the documents are stored
+    create: true # Allow users to create new pages
+    fields:
+      - { label: 'Page Title', name: 'title', widget: 'string' }
+      - { label: 'URL Slug', name: 'slug', widget: 'string' }
+      - { label: 'Parent Route', name: 'parent route', widget: 'string' }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'list',
+          types:
+            [
+              {
+                label: 'Sidekick',
+                name: 'sidekick',
+                widget: 'object',
+                fields:
+                  [
+                    { label: 'Heading', name: 'heading', widget: 'string' },
+                    {
+                      label: 'Subheading',
+                      name: 'subheading',
+                      widget: 'string',
+                    },
+                    { label: 'Image', name: 'image', widget: 'image' },
+                    {
+                      label: 'Call to Action Text',
+                      name: 'call_to_action_text',
+                      widget: 'string',
+                      required: false,
+                    },
+                    {
+                      label: 'Call to Action Link',
+                      name: 'call_to_action_link',
+                      widget: 'string',
+                      required: false,
+                    },
+                  ],
+              },
+              {
+                label: 'Hero',
+                name: 'hero',
+                widget: 'object',
+                fields:
+                  [
+                    { label: 'Heading', name: 'heading', widget: 'string' },
+                    {
+                      label: 'Subheading',
+                      name: 'subheading',
+                      widget: 'string',
+                    },
+                    {
+                      label: 'Images',
+                      name: 'images',
+                      widget: 'list',
+                      field: { label: 'Image', name: 'image', widget: 'image' },
+                    },
+                    {
+                      label: 'Call to Action Text',
+                      name: 'call_to_action_text',
+                      widget: 'string',
+                      required: false,
+                    },
+                    {
+                      label: 'Call to Action Link',
+                      name: 'call_to_action_link',
+                      widget: 'string',
+                      required: false,
+                    },
+                  ],
+              },
+              {
+                label: 'FAQ',
+                name: 'faq',
+                widget: 'object',
+                fields:
+                  [
+                    { label: 'Heading', name: 'heading', widget: 'string' },
+                    {
+                      label: 'Question and Answer',
+                      name: 'question_and_answer',
+                      widget: 'list',
+                      fields:
+                        [
+                          {
+                            label: 'Question',
+                            name: 'question',
+                            widget: 'string',
+                          },
+                          { label: 'Answer', name: 'answer', widget: 'text' },
+                        ],
+                    },
+                  ],
+              },
+            ],
+        }
+      - {
+          label: 'SEO Description',
+          name: 'seo_description',
+          widget: 'text',
+          required: false,
+        }
+  - name: 'widgets-demo'
+    label: 'Widgets Demo'
+    folder: 'content/widgets-demo'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: 'String Field',
+          name: 'string_field',
+          widget: 'string',
+          default: 'Default text',
+        }
+      - {
+          label: 'Text Field',
+          name: 'text_field',
+          widget: 'text',
+          default: 'This is a multi-line text field.',
+        }
+      - {
+          label: 'Markdown Field',
+          name: 'markdown_field',
+          widget: 'markdown',
+          default: "## Markdown Title\nThis is some **bold** text.",
+        }
+      - {
+          label: 'Boolean Field',
+          name: 'boolean_field',
+          widget: 'boolean',
+          default: true,
+        }
+      - {
+          label: 'Number Field',
+          name: 'number_field',
+          widget: 'number',
+          value_type: 'int',
+          default: 10,
+          min: 0,
+          max: 100,
+        }
+      - {
+          label: 'Select Field',
+          name: 'select_field',
+          widget: 'select',
+          options: ['Option 1', 'Option 2', 'Option 3'],
+          default: 'Option 1',
+        }
+      - {
+          label: 'Multi-Select Field',
+          name: 'multi_select_field',
+          widget: 'select',
+          options: ['Red', 'Green', 'Blue'],
+          multiple: true,
+          default: ['Red', 'Blue'],
+        }
+      - {
+          label: 'Datetime Field',
+          name: 'datetime_field',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - {
+          label: 'Image Field',
+          name: 'image_field',
+          widget: 'image',
+          media_library: { config: { multiple: false } },
+        }
+      - { label: 'File Upload', name: 'file_upload', widget: 'file' }
+      - {
+          label: 'Relation Field',
+          name: 'relation_field',
+          widget: 'relation',
+          collection: 'widgets-demo',
+          search_fields: ['string_field'],
+          value_field: 'string_field',
+          display_fields: ['string_field'],
+        }
+      - {
+          label: 'List of Strings',
+          name: 'list_strings',
+          widget: 'list',
+          default: ['Item 1', 'Item 2', 'Item 3'],
+        }
+      - {
+          label: 'List of Objects',
+          name: 'list_objects',
+          widget: 'list',
+          fields:
+            [
+              { label: 'Item Name', name: 'item_name', widget: 'string' },
+              { label: 'Item Value', name: 'item_value', widget: 'number' },
+            ],
+        }
+      - {
+          label: 'Object Field',
+          name: 'object_field',
+          widget: 'object',
+          fields:
+            [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Description', name: 'description', widget: 'text' },
+            ],
+        }
