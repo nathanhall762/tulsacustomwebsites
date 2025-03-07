@@ -9,14 +9,7 @@ content:
       subheading: Subheading
       images:
         - src/media/Tulsa-Custom-Websites-1.webp
-      call_to_action_text: Call to Action
-      call_to_action_link: '#'
-  - type: hero
-    value:
-      heading: Heading
-      subheading: Subheading
-      images:
-        - src/media/Tulsa-Custom-Websites-1.webp
-      call_to_action_text: Call to Action
-      call_to_action_link: '#'
+      call_to_action_text: Click Button
+      call_to_a$$ction_link: '#'
+seo_description: 'SEO description '
 ---
