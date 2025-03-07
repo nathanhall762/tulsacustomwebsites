@@ -158,6 +158,54 @@ collections:
                     },
                   ],
               },
+              {
+                label: 'Accordion',
+                name: 'accordion',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'accordion',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Frequently Asked Questions',
+                          },
+                          {
+                            label: 'Questions and Answers',
+                            name: 'question_and_answer',
+                            widget: 'list',
+                            fields:
+                              [
+                                {
+                                  label: 'Question',
+                                  name: 'question',
+                                  widget: 'string',
+                                  default: 'What is this?',
+                                },
+                                {
+                                  label: 'Answer',
+                                  name: 'answer',
+                                  widget: 'text',
+                                  default: 'This is an answer.',
+                                },
+                              ],
+                          },
+                        ],
+                    },
+                  ],
+              },
             ],
         }
       - {
