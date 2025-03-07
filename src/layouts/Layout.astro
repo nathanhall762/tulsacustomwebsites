@@ -1,6 +1,4 @@
 ---
-import type { DocumentData } from 'firebase/firestore';
-import { getData } from '../firebase';
 import PageBuilder from '../components/shared/PageBuilder.astro';
 import BaseLayout from './BaseLayout.astro';
 
@@ -9,16 +7,12 @@ export interface Item {
   value: any;
 }
 
-interface Props {
-  title: string;
-  metaDescription: string;
-  pageData?: DocumentData;
-}
-
 const { title, metaDescription, pageData } = Astro.props;
+console.log(pageData);
+// console.log(`Layout got: ${pageData}`);
 ---
 
 <BaseLayout title={title} metaDescription={metaDescription}>
-  <!-- <PageBuilder pageData={pageData} /> -->
+  {pageData && <PageBuilder pageData={pageData} />}
   <slot />
 </BaseLayout>

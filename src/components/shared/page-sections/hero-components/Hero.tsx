@@ -6,23 +6,24 @@ interface HeroProps {
   content: {
     heading: string;
     subheading: string;
-    images: string[];
+    images?: string[];
     call_to_action_text?: string;
     call_to_action_link?: string;
   };
 }
 
 const Hero: React.FC<HeroProps> = ({ content }) => {
+  console.log(content);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === content.images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrentImageIndex((prevIndex) =>
+  //       prevIndex === content.images.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   }, 5000);
 
-    return () => clearInterval(timer);
-  }, [content.images.length, 5000]);
+  //   return () => clearInterval(timer);
+  // }, [content.images.length, 5000]);
 
   const getImageClasses = (index: number) => {
     let baseClasses =
@@ -45,13 +46,13 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
           backgroundImage: `url(${backgroundTexture})`,
         }}
       ></div>
-      {content.images.map((image, index) => (
+      {/* {content.images.map((image, index) => (
         <div
           key={image}
           className={getImageClasses(index)}
           style={{ backgroundImage: `url(${image})` }}
         />
-      ))}
+      ))} */}
       <img
         className='absolute top-[2vh] z-10 hidden h-full scale-50 bg-cover bg-no-repeat brightness-200 transition-all duration-slow ease-in-out xl:visible xl:right-[24vw] xl:inline'
         src={phoneImage}

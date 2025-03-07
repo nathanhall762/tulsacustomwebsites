@@ -17,7 +17,7 @@ collections:
   - name: 'pages' # Used in routes, e.g., /admin/collections/pages
     label: 'Pages' # Used in the UI
     label_singular: 'Page'
-    folder: 'public/content/pages' # The path to the folder where the documents are stored
+    folder: 'src/content/pages' # The path to the folder where the documents are stored
     create: true # Allow users to create new pages
     fields:
       - { label: 'Page Title', name: 'title', widget: 'string' }
@@ -62,29 +62,52 @@ collections:
                 widget: 'object',
                 fields:
                   [
-                    { label: 'Heading', name: 'heading', widget: 'string' },
                     {
-                      label: 'Subheading',
-                      name: 'subheading',
+                      label: 'Type',
+                      name: 'type',
                       widget: 'string',
+                      default: 'hero',
                     },
                     {
-                      label: 'Images',
-                      name: 'images',
-                      widget: 'list',
-                      field: { label: 'Image', name: 'image', widget: 'image' },
-                    },
-                    {
-                      label: 'Call to Action Text',
-                      name: 'call_to_action_text',
-                      widget: 'string',
-                      required: false,
-                    },
-                    {
-                      label: 'Call to Action Link',
-                      name: 'call_to_action_link',
-                      widget: 'string',
-                      required: false,
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                          },
+                          {
+                            label: 'Subheading',
+                            name: 'subheading',
+                            widget: 'string',
+                          },
+                          {
+                            label: 'Images',
+                            name: 'images',
+                            widget: 'list',
+                            field:
+                              {
+                                label: 'Image',
+                                name: 'image',
+                                widget: 'image',
+                              },
+                          },
+                          {
+                            label: 'Call to Action Text',
+                            name: 'call_to_action_text',
+                            widget: 'string',
+                            required: false,
+                          },
+                          {
+                            label: 'Call to Action Link',
+                            name: 'call_to_action_link',
+                            widget: 'string',
+                            required: false,
+                          },
+                        ],
                     },
                   ],
               },

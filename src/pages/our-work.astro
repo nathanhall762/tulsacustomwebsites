@@ -18,17 +18,14 @@ import Cta from '../components/shared/page-sections/text-components/Cta';
 // const pageData: DocumentData = data[0];
 ---
 
-<Layout
-  title={'Our Work'}
-  metaDescription={'Complete Gallery of Our Work'}
-  pageData={{ content: [] }}
->
-  <Sidekick
-    heading='Our Work'
-    image={codePicture.src}
-    subheading='Check it out'
-    call_to_action_text='Hire Us!'
-  />
+<Layout title={'Our Work'} metaDescription={'Complete Gallery of Our Work'}>
+  <!-- <Sidekick
+  content={{
+    heading='Our Work',
+    image={codePicture.src},
+    subheading='Check it out',
+    call_to_action_text='Hire Us!'}}
+  /> -->
   <ProjectGallery
     galleryHeader='Our Work'
     projects={[

@@ -12,47 +12,34 @@ import Cta from './page-sections/text-components/Cta';
 import Testimonial from './page-sections/text-components/Testimonial';
 import EuroProjectGallery from './page-sections/image-components/EuroProjectGallery';
 const { pageData } = Astro.props;
+console.log(`page builder:`);
+console.log(pageData);
 ---
 
 <>
   {
-    pageData.content.map((item: Item) => {
+    pageData.map((item: Item) => {
       switch (item.type) {
-        case 'hero_section':
-          return (
-            <Hero
-              {...item.value}
-              client:idle
-            />
-          );
+        case 'hero':
+          return <Hero content={item.value} client:idle />;
         case 'sidekick':
-          return <Sidekick {...item.value} />;
+          return <Sidekick content={item.value} />;
         case 'welcome_message_section':
-          return <AboutCard {...item.value} />;
+          return <AboutCard content={item.value} />;
         case 'info_card_list':
-          return <InfoCardList {...item.value} />;
+          return <InfoCardList content={item.value} />;
         case 'bullet_stats_card':
-          return <BulletStatsCard {...item.value} />;
+          return <BulletStatsCard content={item.value} />;
         case 'tab_list_cards':
-          return (
-            <EuroProjectGallery
-              {...item.value}
-              client:visible
-            />
-          );
+          return <EuroProjectGallery content={item.value} client:visible />;
         case 'text_image_card':
-          return <TextImagecard {...item.value} />;
+          return <TextImagecard content={item.value} />;
         case 'accordion':
-          return (
-            <Accordion
-              {...item.value}
-              client:visible
-            />
-          );
+          return <Accordion content={item.value} client:visible />;
         case 'cta_section':
-          return <Cta {...item.value} />;
+          return <Cta content={item.value} />;
         case 'testimonial':
-          return <Testimonial {...item.value} />;
+          return <Testimonial content={item.value} />;
         default:
           return null;
       }
