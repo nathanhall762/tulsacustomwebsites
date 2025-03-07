@@ -5,11 +5,16 @@ parent route: /
 content:
   - type: hero
     value:
-      heading: Heading
-      subheading: Subheading
-      images:
-        - src/media/Tulsa-Custom-Websites-1.webp
-      call_to_action_text: Click Button
-      call_to_a$$ction_link: '#'
-seo_description: 'SEO description '
+      heading: Welcome to Our Website
+      subheading: We offer the best services in town.
+      call_to_action_text: Learn More
+      call_to_action_link: "#"
+  - type: sidekick
+    value:
+      heading: Our Sidekick
+      subheading: Helping you achieve more.
+      image: https://placehold.co/1440x550
+      call_to_action_text: Find Out More
+      call_to_action_link: "#"
+seo_description: "SEO description "
 ---
