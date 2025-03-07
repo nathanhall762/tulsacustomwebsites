@@ -20,9 +20,24 @@ collections:
     folder: 'src/content/pages' # The path to the folder where the documents are stored
     create: true # Allow users to create new pages
     fields:
-      - { label: 'Page Title', name: 'title', widget: 'string' }
-      - { label: 'URL Slug', name: 'slug', widget: 'string' }
-      - { label: 'Parent Route', name: 'parent route', widget: 'string' }
+      - {
+          label: 'Page Title',
+          name: 'title',
+          widget: 'string',
+          default: 'Untitled Page',
+        }
+      - {
+          label: 'URL Slug',
+          name: 'slug',
+          widget: 'string',
+          default: 'untitled-page',
+        }
+      - {
+          label: 'Parent Route',
+          name: 'parent route',
+          widget: 'string',
+          default: '/',
+        }
       - {
           label: 'Content',
           name: 'content',
@@ -30,88 +45,115 @@ collections:
           types:
             [
               {
-                label: 'Sidekick',
-                name: 'sidekick',
-                widget: 'object',
-                fields:
-                  [
-                    { label: 'Heading', name: 'heading', widget: 'string' },
-                    {
-                      label: 'Subheading',
-                      name: 'subheading',
-                      widget: 'string',
-                    },
-                    { label: 'Image', name: 'image', widget: 'image' },
-                    {
-                      label: 'Call to Action Text',
-                      name: 'call_to_action_text',
-                      widget: 'string',
-                      required: false,
-                    },
-                    {
-                      label: 'Call to Action Link',
-                      name: 'call_to_action_link',
-                      widget: 'string',
-                      required: false,
-                    },
-                  ],
-              },
-              {
                 label: 'Hero',
                 name: 'hero',
                 widget: 'object',
                 fields:
                   [
-                    type: hero,
-                    values:
-                      [
-                        { label: 'Heading', name: 'heading', widget: 'string' },
-                        {
-                          label: 'Subheading',
-                          name: 'subheading',
-                          widget: 'string',
-                        },
-                        {
-                          label: 'Images',
-                          name: 'images',
-                          widget: 'list',
-                          field:
-                            { label: 'Image', name: 'image', widget: 'image' },
-                        },
-                        {
-                          label: 'Call to Action Text',
-                          name: 'call_to_action_text',
-                          widget: 'string',
-                          required: false,
-                        },
-                        {
-                          label: 'Call to Action Link',
-                          name: 'call_to_action_link',
-                          widget: 'string',
-                          required: false,
-                        },
-                      ],
-                  ],
-              },
-              {
-                label: 'FAQ',
-                name: 'faq',
-                widget: 'object',
-                fields:
-                  [
-                    { label: 'Heading', name: 'heading', widget: 'string' },
                     {
-                      label: 'Question and Answer',
-                      name: 'question_and_answer',
-                      widget: 'list',
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'hero',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
                       fields:
                         [
                           {
-                            label: 'Question',
-                            name: 'question',
+                            label: 'Heading',
+                            name: 'heading',
                             widget: 'string',
+                            default: 'Welcome to Our Website',
                           },
-                          { label: 'Answer', name: 'answer', widget: 'text' },
+                          {
+                            label: 'Subheading',
+                            name: 'subheading',
+                            widget: 'string',
+                            default: 'We offer the best services in town.',
+                          },
+                          {
+                            label: 'Images',
+                            name: 'images',
+                            widget: 'list',
+                            field:
+                              {
+                                label: 'Image',
+                                name: 'image',
+                                widget: 'image',
+                                default: 'https://placehold.co/1920x1080',
+                              },
+                          },
+                          {
+                            label: 'Call to Action Text',
+                            name: 'call_to_action_text',
+                            widget: 'string',
+                            required: false,
+                            default: 'Learn More',
+                          },
+                          {
+                            label: 'Call to Action Link',
+                            name: 'call_to_action_link',
+                            widget: 'string',
+                            required: false,
+                            default: '#',
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Sidekick',
+                name: 'sidekick',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'sidekick',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Our Sidekick',
+                          },
+                          {
+                            label: 'Subheading',
+                            name: 'subheading',
+                            widget: 'string',
+                            default: 'Helping you achieve more.',
+                          },
+                          {
+                            label: 'Image',
+                            name: 'image',
+                            widget: 'image',
+                            default: 'https://placehold.co/1440x550',
+                          },
+                          {
+                            label: 'Call to Action Text',
+                            name: 'call_to_action_text',
+                            widget: 'string',
+                            required: false,
+                            default: 'Find Out More',
+                          },
+                          {
+                            label: 'Call to Action Link',
+                            name: 'call_to_action_link',
+                            widget: 'string',
+                            required: false,
+                            default: '#',
+                          },
                         ],
                     },
                   ],
@@ -123,106 +165,5 @@ collections:
           name: 'seo_description',
           widget: 'text',
           required: false,
-        }
-  - name: 'widgets-demo'
-    label: 'Widgets Demo'
-    folder: 'content/widgets-demo'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: 'String Field',
-          name: 'string_field',
-          widget: 'string',
-          default: 'Default text',
-        }
-      - {
-          label: 'Text Field',
-          name: 'text_field',
-          widget: 'text',
-          default: 'This is a multi-line text field.',
-        }
-      - {
-          label: 'Markdown Field',
-          name: 'markdown_field',
-          widget: 'markdown',
-          default: "## Markdown Title\nThis is some **bold** text.",
-        }
-      - {
-          label: 'Boolean Field',
-          name: 'boolean_field',
-          widget: 'boolean',
-          default: true,
-        }
-      - {
-          label: 'Number Field',
-          name: 'number_field',
-          widget: 'number',
-          value_type: 'int',
-          default: 10,
-          min: 0,
-          max: 100,
-        }
-      - {
-          label: 'Select Field',
-          name: 'select_field',
-          widget: 'select',
-          options: ['Option 1', 'Option 2', 'Option 3'],
-          default: 'Option 1',
-        }
-      - {
-          label: 'Multi-Select Field',
-          name: 'multi_select_field',
-          widget: 'select',
-          options: ['Red', 'Green', 'Blue'],
-          multiple: true,
-          default: ['Red', 'Blue'],
-        }
-      - {
-          label: 'Datetime Field',
-          name: 'datetime_field',
-          widget: 'datetime',
-          format: 'YYYY-MM-DD HH:mm',
-        }
-      - {
-          label: 'Image Field',
-          name: 'image_field',
-          widget: 'image',
-          media_library: { config: { multiple: false } },
-        }
-      - { label: 'File Upload', name: 'file_upload', widget: 'file' }
-      - {
-          label: 'Relation Field',
-          name: 'relation_field',
-          widget: 'relation',
-          collection: 'widgets-demo',
-          search_fields: ['string_field'],
-          value_field: 'string_field',
-          display_fields: ['string_field'],
-        }
-      - {
-          label: 'List of Strings',
-          name: 'list_strings',
-          widget: 'list',
-          default: ['Item 1', 'Item 2', 'Item 3'],
-        }
-      - {
-          label: 'List of Objects',
-          name: 'list_objects',
-          widget: 'list',
-          fields:
-            [
-              { label: 'Item Name', name: 'item_name', widget: 'string' },
-              { label: 'Item Value', name: 'item_value', widget: 'number' },
-            ],
-        }
-      - {
-          label: 'Object Field',
-          name: 'object_field',
-          widget: 'object',
-          fields:
-            [
-              { label: 'Title', name: 'title', widget: 'string' },
-              { label: 'Description', name: 'description', widget: 'text' },
-            ],
+          default: 'This is a page description for SEO purposes.',
         }
