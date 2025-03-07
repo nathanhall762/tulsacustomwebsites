@@ -35,137 +35,83 @@ collections:
                 widget: 'object',
                 fields:
                   [
+                    { label: 'Heading', name: 'heading', widget: 'string' },
                     {
-                      label: 'Type',
-                      name: 'type',
+                      label: 'Subheading',
+                      name: 'subheading',
                       widget: 'string',
-                      default: 'sidekick',
+                    },
+                    { label: 'Image', name: 'image', widget: 'image' },
+                    {
+                      label: 'Call to Action Text',
+                      name: 'call_to_action_text',
+                      widget: 'string',
+                      required: false,
                     },
                     {
-                      label: 'Value',
-                      name: 'value',
-                      widget: 'object',
+                      label: 'Call to Action Link',
+                      name: 'call_to_action_link',
+                      widget: 'string',
+                      required: false,
+                    },
+                  ],
+              },
+              {
+                label: 'Hero',
+                name: 'hero',
+                widget: 'object',
+                fields:
+                  [
+                    type: hero,
+                    values:
+                      [
+                        { label: 'Heading', name: 'heading', widget: 'string' },
+                        {
+                          label: 'Subheading',
+                          name: 'subheading',
+                          widget: 'string',
+                        },
+                        {
+                          label: 'Images',
+                          name: 'images',
+                          widget: 'list',
+                          field:
+                            { label: 'Image', name: 'image', widget: 'image' },
+                        },
+                        {
+                          label: 'Call to Action Text',
+                          name: 'call_to_action_text',
+                          widget: 'string',
+                          required: false,
+                        },
+                        {
+                          label: 'Call to Action Link',
+                          name: 'call_to_action_link',
+                          widget: 'string',
+                          required: false,
+                        },
+                      ],
+                  ],
+              },
+              {
+                label: 'FAQ',
+                name: 'faq',
+                widget: 'object',
+                fields:
+                  [
+                    { label: 'Heading', name: 'heading', widget: 'string' },
+                    {
+                      label: 'Question and Answer',
+                      name: 'question_and_answer',
+                      widget: 'list',
                       fields:
                         [
                           {
-                            label: 'Heading',
-                            name: 'heading',
+                            label: 'Question',
+                            name: 'question',
                             widget: 'string',
                           },
-                          {
-                            label: 'Subheading',
-                            name: 'subheading',
-                            widget: 'string',
-                          },
-                          {
-                            label: 'Images',
-                            name: 'images',
-                            widget: 'list',
-                            field:
-                              {
-                                label: 'Image',
-                                name: 'image',
-                                widget: 'image',
-                              },
-                          },
-                          {
-                            label: 'Call to Action Text',
-                            name: 'call_to_action_text',
-                            widget: 'string',
-                            required: false,
-                          },
-                          {
-                            label: 'Call to Action Link',
-                            name: 'call_to_action_link',
-                            widget: 'string',
-                            required: false,
-                          },
-                        ],
-                    },
-                    {
-                      label: 'Hero',
-                      name: 'hero',
-                      widget: 'object',
-                      fields:
-                        [
-                          {
-                            label: 'Type',
-                            name: 'type',
-                            widget: 'string',
-                            default: 'hero',
-                          },
-                          {
-                            label: 'Value',
-                            name: 'value',
-                            widget: 'object',
-                            fields:
-                              [
-                                {
-                                  label: 'Heading',
-                                  name: 'heading',
-                                  widget: 'string',
-                                },
-                                {
-                                  label: 'Subheading',
-                                  name: 'subheading',
-                                  widget: 'string',
-                                },
-                                {
-                                  label: 'Images',
-                                  name: 'images',
-                                  widget: 'list',
-                                  field:
-                                    {
-                                      label: 'Image',
-                                      name: 'image',
-                                      widget: 'image',
-                                    },
-                                },
-                                {
-                                  label: 'Call to Action Text',
-                                  name: 'call_to_action_text',
-                                  widget: 'string',
-                                  required: false,
-                                },
-                                {
-                                  label: 'Call to Action Link',
-                                  name: 'call_to_action_link',
-                                  widget: 'string',
-                                  required: false,
-                                },
-                              ],
-                          },
-                        ],
-                    },
-                    {
-                      label: 'FAQ',
-                      name: 'faq',
-                      widget: 'object',
-                      fields:
-                        [
-                          {
-                            label: 'Heading',
-                            name: 'heading',
-                            widget: 'string',
-                          },
-                          {
-                            label: 'Question and Answer',
-                            name: 'question_and_answer',
-                            widget: 'list',
-                            fields:
-                              [
-                                {
-                                  label: 'Question',
-                                  name: 'question',
-                                  widget: 'string',
-                                },
-                                {
-                                  label: 'Answer',
-                                  name: 'answer',
-                                  widget: 'text',
-                                },
-                              ],
-                          },
+                          { label: 'Answer', name: 'answer', widget: 'text' },
                         ],
                     },
                   ],
