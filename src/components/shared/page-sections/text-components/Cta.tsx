@@ -16,7 +16,7 @@ const Cta: React.FC<Props> = ({ content }) => {
           />
         </div>
         <div className='flex flex-col items-center gap-8 '>
-          <h2 className='font-semibold w-fit text-center text-neutral-9 lg:text-left lg:text-[9.6rem]'>
+          <h2 className='w-fit text-center font-semibold text-neutral-9 lg:text-left lg:text-[9.6rem]'>
             {content.cta}
           </h2>
           <div className='group rounded-2xl bg-border-gradient p-2 transition duration-300 ease-in-out hover:scale-110'>

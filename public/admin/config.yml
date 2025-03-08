@@ -206,6 +206,517 @@ collections:
                     },
                   ],
               },
+              {
+                label: 'Cta',
+                name: 'cta',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'cta',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'CTA',
+                            name: 'cta',
+                            widget: 'string',
+                            default: 'Take Action Now',
+                          },
+                          {
+                            label: 'Button Text',
+                            name: 'button_text',
+                            widget: 'string',
+                            default: 'Click Here',
+                          },
+                          {
+                            label: 'URL',
+                            name: 'url',
+                            widget: 'string',
+                            default: '#',
+                          },
+                          {
+                            label: 'Image',
+                            name: 'image',
+                            widget: 'image',
+                            default: 'https://placehold.co/600x400',
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Cta Large',
+                name: 'cta_large',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'cta_large',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Title',
+                            name: 'title',
+                            widget: 'string',
+                            default: 'Get in Touch',
+                          },
+                          {
+                            label: 'Subheading',
+                            name: 'subHeading',
+                            widget: 'string',
+                            default: 'We’re here to help',
+                          },
+                          {
+                            label: 'Phone',
+                            name: 'phone',
+                            widget: 'string',
+                            default: '(123) 456-7890',
+                          },
+                          {
+                            label: 'Address',
+                            name: 'address',
+                            widget: 'string',
+                            default: '123 Main St, City, Country',
+                          },
+                          {
+                            label: 'Email',
+                            name: 'email',
+                            widget: 'string',
+                            default: 'info@example.com',
+                          },
+                          {
+                            label: 'Names',
+                            name: 'names',
+                            widget: 'string',
+                            default: 'John Doe, Jane Smith',
+                          },
+                          {
+                            label: 'Socials',
+                            name: 'socials',
+                            widget: 'list',
+                            fields:
+                              [
+                                {
+                                  label: 'Link',
+                                  name: 'link',
+                                  widget: 'string',
+                                },
+                                {
+                                  label: 'Type',
+                                  name: 'type',
+                                  widget: 'string',
+                                },
+                              ],
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Image By Copy',
+                name: 'image_by_copy',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'image_by_copy',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Our Story',
+                          },
+                          {
+                            label: 'Image',
+                            name: 'image',
+                            widget: 'image',
+                            default: 'https://placehold.co/600x400',
+                          },
+                          {
+                            label: 'Image Alt Text',
+                            name: 'image_alt_text',
+                            widget: 'string',
+                            default: 'Descriptive image text',
+                          },
+                          {
+                            label: 'Bold Text',
+                            name: 'bold_text',
+                            widget: 'string',
+                            required: false,
+                          },
+                          {
+                            label: 'Body Text',
+                            name: 'body_text',
+                            widget: 'text',
+                            default: 'Some descriptive text here.',
+                          },
+                          {
+                            label: 'Link URL',
+                            name: 'link_url',
+                            widget: 'string',
+                            required: false,
+                          },
+                          {
+                            label: 'Link Text',
+                            name: 'link_text',
+                            widget: 'string',
+                            required: false,
+                            default: 'Learn More',
+                          },
+                          {
+                            label: 'Reversed',
+                            name: 'reversed',
+                            widget: 'boolean',
+                            required: false,
+                            default: false,
+                          },
+                          {
+                            label: 'Background Texture',
+                            name: 'backgroundTexture',
+                            widget: 'string',
+                            required: false,
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Info Card List',
+                name: 'info_card_list',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'info_card_list',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Information',
+                          },
+                          {
+                            label: 'Body Text',
+                            name: 'body_text',
+                            widget: 'text',
+                            default: 'Here are some key details.',
+                          },
+                          {
+                            label: 'Cards',
+                            name: 'card',
+                            widget: 'list',
+                            fields:
+                              [
+                                {
+                                  label: 'Icon',
+                                  name: 'icon',
+                                  widget: 'string',
+                                },
+                                {
+                                  label: 'Heading',
+                                  name: 'heading',
+                                  widget: 'string',
+                                },
+                                {
+                                  label: 'Body Text',
+                                  name: 'body_text',
+                                  widget: 'text',
+                                },
+                              ],
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Simple Text Card',
+                name: 'simple_text_card',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'simple_text_card',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Key Information',
+                          },
+                          {
+                            label: 'Body Text',
+                            name: 'body_text',
+                            widget: 'text',
+                            default: 'This is some important information.',
+                          },
+                          {
+                            label: 'Link Text',
+                            name: 'link_text',
+                            widget: 'string',
+                            required: false,
+                          },
+                          {
+                            label: 'Link URL',
+                            name: 'link_url',
+                            widget: 'string',
+                            required: false,
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Tab List Cards',
+                name: 'tab_list_cards',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'tab_list_cards',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Our Features',
+                          },
+                          {
+                            label: 'Default Card',
+                            name: 'default_card',
+                            widget: 'object',
+                            fields:
+                              [
+                                {
+                                  label: 'Heading',
+                                  name: 'heading',
+                                  widget: 'string',
+                                },
+                                {
+                                  label: 'Body Text',
+                                  name: 'body_text',
+                                  widget: 'text',
+                                },
+                                {
+                                  label: 'Image',
+                                  name: 'image',
+                                  widget: 'image',
+                                },
+                                {
+                                  label: 'Alt Image Text',
+                                  name: 'alt_image_text',
+                                  widget: 'string',
+                                },
+                                {
+                                  label: 'Call to Action Text',
+                                  name: 'call_to_action_text',
+                                  widget: 'string',
+                                  required: false,
+                                },
+                                {
+                                  label: 'Call to Action Link',
+                                  name: 'call_to_action_link',
+                                  widget: 'string',
+                                  required: false,
+                                },
+                              ],
+                          },
+                          {
+                            label: 'Cards',
+                            name: 'cards',
+                            widget: 'list',
+                            fields:
+                              [
+                                {
+                                  label: 'Heading',
+                                  name: 'heading',
+                                  widget: 'string',
+                                },
+                                {
+                                  label: 'Body Text',
+                                  name: 'body_text',
+                                  widget: 'text',
+                                },
+                                {
+                                  label: 'Image',
+                                  name: 'image',
+                                  widget: 'image',
+                                },
+                                {
+                                  label: 'Alt Image Text',
+                                  name: 'alt_image_text',
+                                  widget: 'string',
+                                },
+                                {
+                                  label: 'Call to Action Text',
+                                  name: 'call_to_action_text',
+                                  widget: 'string',
+                                  required: false,
+                                },
+                                {
+                                  label: 'Call to Action Link',
+                                  name: 'call_to_action_link',
+                                  widget: 'string',
+                                  required: false,
+                                },
+                              ],
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Testimonial',
+                name: 'testimonial',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'testimonial',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Customer Testimonials',
+                          },
+                          {
+                            label: 'Body',
+                            name: 'body',
+                            widget: 'text',
+                            default: 'This service was amazing!',
+                          },
+                        ],
+                    },
+                  ],
+              },
+              {
+                label: 'Bullet Stats Card',
+                name: 'bullet_stats_card',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Type',
+                      name: 'type',
+                      widget: 'string',
+                      default: 'bullet_stats_card',
+                    },
+                    {
+                      label: 'Value',
+                      name: 'value',
+                      widget: 'object',
+                      fields:
+                        [
+                          {
+                            label: 'Heading',
+                            name: 'heading',
+                            widget: 'string',
+                            default: 'Key Stats',
+                          },
+                          {
+                            label: 'Bold Text',
+                            name: 'bold_text',
+                            widget: 'string',
+                            required: false,
+                          },
+                          {
+                            label: 'Body Text',
+                            name: 'body_text',
+                            widget: 'text',
+                            default: 'Detailed statistics about our service.',
+                          },
+                          {
+                            label: 'Image',
+                            name: 'image',
+                            widget: 'image',
+                            default: 'https://placehold.co/600x400',
+                          },
+                          {
+                            label: 'Image Alt Text',
+                            name: 'image_alt_text',
+                            widget: 'string',
+                            default: 'Descriptive image text',
+                          },
+                          {
+                            label: 'Link Text',
+                            name: 'link_text',
+                            widget: 'string',
+                            required: false,
+                            default: 'Learn More',
+                          },
+                          {
+                            label: 'Link URL',
+                            name: 'link_url',
+                            widget: 'string',
+                            required: false,
+                            default: '#',
+                          },
+                        ],
+                    },
+                  ],
+              },
             ],
         }
       - {
