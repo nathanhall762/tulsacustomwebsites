@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFilesFromDir } from '../readMd';
+
+const dir = 'pages';
+
+const content = readFilesFromDir(dir);
+---
+
+<Layout />
