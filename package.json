@@ -24,7 +24,6 @@
     "decap-cms-app": "^3.6.2",
     "firebase": "^11.4.0",
     "grey-matter": "^0.0.0",
-    "marked": "^15.0.7",
     "react": "latest",
     "react-dom": "latest",
     "react-intersection-observer": "^9.6.4",
