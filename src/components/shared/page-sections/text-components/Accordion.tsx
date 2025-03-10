@@ -3,15 +3,11 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 interface Props {
-  content: {
-    heading: string;
-    question_and_answer: { question: string; answer: string }[];
-  };
+  heading: string;
+  question_and_answer: { question: string; answer: string }[];
 }
 
-const Accordion: React.FC<Props> = ({
-  content: { heading, question_and_answer },
-}) => {
+const Accordion: React.FC<Props> = ({ heading, question_and_answer }) => {
   const [clicked, setClicked] = useState<number>();
 
   const handleClick = (index: number) => {
@@ -38,7 +34,7 @@ const Accordion: React.FC<Props> = ({
                   icon={'ep:arrow-up'}
                   className={`${
                     index === clicked ? 'text-primary scale-110' : 'rotate-180'
-                  } group-hover:text-primary font-bold cursor-pointer text-5xl text-neutral-1 transition duration-300 ease-in-out group-hover:scale-125 lg:text-3xl`}
+                  } group-hover:text-primary cursor-pointer text-5xl font-bold text-neutral-1 transition duration-300 ease-in-out group-hover:scale-125 lg:text-3xl`}
                 ></Icon>
               </div>
               <div

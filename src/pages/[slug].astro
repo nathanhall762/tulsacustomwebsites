@@ -11,11 +11,7 @@ interface Content {
 
 export function getStaticPaths() {
   const dir = 'pages';
-
   const filesContent = readFilesFromDir(dir) as Content[];
-
-  console.log('heres my stuff');
-  console.log(filesContent);
 
   const pages = filesContent.map((data) => {
     return {

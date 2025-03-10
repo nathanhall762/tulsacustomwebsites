@@ -119,10 +119,10 @@ const projects = [
 ---
 
 <BaseLayout title='text-components' metaDescription='text-components'>
-  <TabListCards content={tabListCardsContent} />
+  <TabListCards {...tabListCardsContent} />
   <PictureGallery images={picturegalleryContent} />
   <ProjectGallery galleryHeader={galleryHeader} projects={projects} />
-  <!-- <EuroProjectGallery
+  <EuroProjectGallery
     heading='Euro Project Gallery'
     default_card={{
       heading: 'Dummy Default Card Heading',
@@ -150,5 +150,5 @@ const projects = [
         call_to_action_link: '/dummy-link-2',
       },
     ]}
-  /> -->
+  />
 </BaseLayout>

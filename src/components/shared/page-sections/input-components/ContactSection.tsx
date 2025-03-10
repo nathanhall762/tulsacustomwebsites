@@ -105,7 +105,7 @@ const ContactSection: React.FC<Props> = ({
           </div>
           <div className='h-50vh mb-12 lg:mb-0 lg:w-[60vw]'>
             {/* contact form goes here */}
-            <ContactForm content={{ heading: formHeading, body: body }} />
+            <ContactForm heading={formHeading} body={body} />
           </div>
         </div>
       </div>

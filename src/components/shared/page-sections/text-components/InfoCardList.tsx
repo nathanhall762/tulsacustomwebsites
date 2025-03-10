@@ -2,18 +2,16 @@ import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import { useInView } from 'react-intersection-observer';
 
 interface Props {
-  content: {
+  heading: string;
+  body_text: string;
+  card: {
+    icon: string;
     heading: string;
     body_text: string;
-    card: {
-      icon: string;
-      heading: string;
-      body_text: string;
-    }[];
-  };
+  }[];
 }
 
-const InfoCardList: React.FC<Props> = ({ content }) => {
+const InfoCardList: React.FC<Props> = ({ heading, body_text, card }) => {
   const { ref: cardRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -27,12 +25,12 @@ const InfoCardList: React.FC<Props> = ({ content }) => {
       >
         <div className='flex flex-col items-center pb-24'>
           <h2 className='bg-border-gradient bg-clip-text pb-16 text-transparent'>
-            {content.heading}
+            {heading}
           </h2>
-          <p className='h2-sub max-w-4xl'>{content.body_text}</p>
+          <p className='h2-sub max-w-4xl'>{body_text}</p>
         </div>
         <div className='grid grid-cols-1 gap-x-4 gap-y-16 lg:grid-cols-4 '>
-          {content.card.map((card, index) => {
+          {card.map((card, index) => {
             const indexAnimationStyle = `lg:animate-slideFromLeft${index + 1} lg:delay-${index * 200}`;
 
             return (

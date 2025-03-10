@@ -2,24 +2,30 @@ import ReactMarkdown from 'react-markdown';
 import Button from '../../ui/Button';
 
 interface Props {
-  content: {
-    heading: string;
-    bold_text?: string;
-    body_text: string;
-    image: string;
-    image_alt_text: string;
-    link_text?: string;
-    link_url?: string;
-  };
+  heading: string;
+  bold_text?: string;
+  body_text: string;
+  image: string;
+  image_alt_text: string;
+  link_text?: string;
+  link_url?: string;
 }
 
-const BulletStatsCard: React.FC<Props> = ({ content }) => {
+const BulletStatsCard: React.FC<Props> = ({
+  heading,
+  bold_text,
+  body_text,
+  image,
+  image_alt_text,
+  link_text,
+  link_url,
+}) => {
   return (
     <div className='flex w-full items-center justify-center'>
       <div
         className={`my-20 flex max-w-[1500px] justify-center bg-cover bg-center text-neutral-9 shadow-inner lg:px-[32rem]`}
-        style={{ backgroundImage: `url('${content.image}')` }}
-        title={content.image_alt_text}
+        style={{ backgroundImage: `url('${image}')` }}
+        title={image_alt_text}
       >
         <div className='my-[-2rem] flex h-full flex-col justify-between rounded-[2.5rem] bg-neutral-3 py-8 text-center text-neutral-8 shadow-md transition-all lg:col-span-7 lg:px-6 lg:py-16 dark:bg-neutral-7 dark:text-neutral-2'>
           <div>
@@ -33,11 +39,11 @@ const BulletStatsCard: React.FC<Props> = ({ content }) => {
                 }}
                 className=''
               >
-                {content.heading}
+                {heading}
               </ReactMarkdown>
               <div className='mb-16 h-[2px] w-3/4 max-w-2xl bg-border-gradient'></div>
               <div className='px-12'>
-                {content.bold_text && (
+                {bold_text && (
                   <ReactMarkdown
                     className='markdown text-left lg:text-left'
                     components={{
@@ -54,7 +60,7 @@ const BulletStatsCard: React.FC<Props> = ({ content }) => {
                       },
                     }}
                   >
-                    {content.bold_text}
+                    {bold_text}
                   </ReactMarkdown>
                 )}
                 <ReactMarkdown
@@ -68,19 +74,14 @@ const BulletStatsCard: React.FC<Props> = ({ content }) => {
                     },
                   }}
                 >
-                  {content.body_text}
+                  {body_text}
                 </ReactMarkdown>
               </div>
             </div>
           </div>
-          {content.link_text && (
+          {link_text && (
             <div>
-              {content.link_url && (
-                <Button
-                  url={content.link_url}
-                  text={content.link_text}
-                ></Button>
-              )}
+              {link_url && <Button url={link_url} text={link_text}></Button>}
             </div>
           )}
         </div>
