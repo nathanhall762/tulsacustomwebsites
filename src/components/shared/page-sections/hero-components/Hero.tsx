@@ -13,7 +13,6 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ content }) => {
-  console.log(content);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   // useEffect(() => {
   //   const timer = setInterval(() => {
