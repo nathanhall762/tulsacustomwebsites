@@ -38,77 +38,94 @@ import ContactSection from '../components/shared/page-sections/input-components/
     }}
     client:idle
   />
-  <!-- <InfoCardList
-    body_text='At Tulsa Custom Websites, we specialize in digital marketing solutions to get your business seen by more potential customers:'
-    heading='Take Control of Your Corner of the Internet'
-    card={[
-      {
-        icon: 'mdi:wrench-outline',
-        heading: 'Professional Web Developement',
-        body_text:
-          'We deliver professional web development solutions that enhance your online presence and integrate with your scheduling, inventory, and CRM systems.',
-      },
-      {
-        icon: 'mdi:paintbrush-outline',
-        heading: 'Truly Custom Web Design',
-        body_text:
-          'We design modern and responsive websites tailored to your business, ensuring a perfect fit for your brand.',
-      },
-      {
-        icon: 'mdi:pencil-outline',
-        heading: 'Content Writing with SEO in Mind',
-        body_text:
-          'We create compelling content that boosts your search engine rankings and engages your audience.',
-      },
-      {
-        icon: 'mdi:graph-line',
-        heading: 'Website Support and Analytics',
-        body_text:
-          'We provide continuous support and analytics to help you make data-driven decisions, ensuring your website stays up-to-date and effective.',
-      },
-    ]}
+  <InfoCardList
+    content={{
+      body_text:
+        'At Tulsa Custom Websites, we specialize in digital marketing solutions to get your business seen by more potential customers:',
+      heading: 'Take Control of Your Corner of the Internet',
+      card: [
+        {
+          icon: 'mdi:wrench-outline',
+          heading: 'Professional Web Developement',
+          body_text:
+            'We deliver professional web development solutions that enhance your online presence and integrate with your scheduling, inventory, and CRM systems.',
+        },
+        {
+          icon: 'mdi:paintbrush-outline',
+          heading: 'Truly Custom Web Design',
+          body_text:
+            'We design modern and responsive websites tailored to your business, ensuring a perfect fit for your brand.',
+        },
+        {
+          icon: 'mdi:pencil-outline',
+          heading: 'Content Writing with SEO in Mind',
+          body_text:
+            'We create compelling content that boosts your search engine rankings and engages your audience.',
+        },
+        {
+          icon: 'mdi:graph-line',
+          heading: 'Website Support and Analytics',
+          body_text:
+            'We provide continuous support and analytics to help you make data-driven decisions, ensuring your website stays up-to-date and effective.',
+        },
+      ],
+    }}
     client:load
   />
   <ImageByCopy
-    heading='True Ownership, Total Control'
-    body_text='Unlike platforms like WordPress, Wix, and Squarespace, we offer you the chance to truly own your website. With no subscription to a website builder, you have complete control over the design and functionality. The only ongoing cost is a minimal server fee. By choosing us, you’re investing in a solution that offers flexibility, long-term cost savings, and complete ownership of your digital presence.'
-    image={scissorsImage.src}
-    image_alt_text=''
-    link_url='/our-work'
-    link_text='See Our Work'
-    reversed={true}
-    backgroundTexture='/wavy_lines.webp'
+    content={{
+      heading: 'True Ownership, Total Control',
+      body_text:
+        'Unlike platforms like WordPress, Wix, and Squarespace, we offer you the chance to truly own your website. With no subscription to a website builder, you have complete control over the design and functionality. The only ongoing cost is a minimal server fee. By choosing us, you’re investing in a solution that offers flexibility, long-term cost savings, and complete ownership of your digital presence.',
+      image: scissorsImage.src,
+      image_alt_text: '',
+      link_url: '/our-work',
+      link_text: 'See Our Work',
+      reversed: true,
+      backgroundTexture: '/wavy_lines.webp',
+    }}
   />
   <ImageByCopy
-    heading='Modern Technologies, Superior Experience'
-    body_text='We use modern and effective technologies to create your website from scratch, ensuring it’s tailored exactly to your needs. Your site will be unique, efficient, and scalable, providing a superior user experience and meeting all your business goals. Making edits to your content, changing your hero image, or updating your phone number shouldn’t require hiring a web developer. With our streamlined custom content management system, you can manage your content effortlessly, giving you the freedom to make updates whenever you need.'
-    image={cmsImage.src}
-    image_alt_text=''
-    link_url='#contact'
-    link_text='Start Building'
-    backgroundTexture='/hexagons.webp'
+    content={{
+      heading: 'Modern Technologies, Superior Experience',
+      body_text:
+        'We use modern and effective technologies to create your website from scratch, ensuring it’s tailored exactly to your needs. Your site will be unique, efficient, and scalable, providing a superior user experience and meeting all your business goals. Making edits to your content, changing your hero image, or updating your phone number shouldn’t require hiring a web developer. With our streamlined custom content management system, you can manage your content effortlessly, giving you the freedom to make updates whenever you need.',
+      image: cmsImage.src,
+      image_alt_text: '',
+      link_url: '#contact',
+      link_text: 'Start Building',
+      backgroundTexture: '/hexagons.webp',
+    }}
   />
   <ImageByCopy
-    heading='Fast Load Times, High Performance'
-    bold_text='40% of online users will abandon a website that takes longer than three seconds to load.'
-    body_text="That's why we prioritize fast load times and accessibility to help you reach your business objectives. Even with large photos, video, or user-interactive elements, your website will achieve high performance marks with the tools and methods we have learned over our years of experience. Everything in our design & development stack has been handpicked to make our sites faster than the competition."
-    image={clockImage.src}
-    image_alt_text=''
-    link_url='/our-work'
-    link_text='See Our Blazing Fast Sites'
-    reversed={true}
-    backgroundTexture='/waves.webp'
+    content={{
+      heading: 'Fast Load Times, High Performance',
+      bold_text:
+        '40% of online users will abandon a website that takes longer than three seconds to load.',
+      body_text:
+        "That's why we prioritize fast load times and accessibility to help you reach your business objectives. Even with large photos, video, or user-interactive elements, your website will achieve high performance marks with the tools and methods we have learned over our years of experience. Everything in our design & development stack has been handpicked to make our sites faster than the competition.",
+      image: clockImage.src,
+      image_alt_text: '',
+      link_url: '/our-work',
+      link_text: 'See Our Blazing Fast Sites',
+      reversed: true,
+      backgroundTexture: '/waves.webp',
+    }}
   />
-  TODO: add in this section -->
-  <!-- <TextImagecard heading='Soft Skills'/> -->
-  <!-- <BulletStatsCard
-    heading='Website Pricing for Any Budget'
-    body_text='From landing pages using our template components to full digital marketing packages and bespoke boutique sites with custom code, our design and development services cater to small businesses, bands, brands, and enterprises alike. * Creatives, Bands, and Brands * Small Businesses * Enterprises'
-    image={pricingImage.src}
-    image_alt_text=''
-    link_text='Get a Quote'
-    link_url='#contact'
-  /> -->
+  <!-- TODO: add in this section -->
+  <!-- <TextImagecard content={{ heading: 'Soft Skills' }} /> -->
+  <BulletStatsCard
+    content={{
+      heading: 'Website Pricing for Any Budget',
+      body_text:
+        'From landing pages using our template components to full digital marketing packages and bespoke boutique sites with custom code, our design and development services cater to small businesses, bands, brands, and enterprises alike. * Creatives, Bands, and Brands * Small Businesses * Enterprises',
+      image: pricingImage.src,
+      image_alt_text: '',
+      link_text: 'Get a Quote',
+      link_url: '#contact',
+    }}
+  />
+
   <Cta
     content={{
       cta: 'Ready to take the next step?',

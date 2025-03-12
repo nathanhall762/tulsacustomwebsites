@@ -122,33 +122,35 @@ const projects = [
   <TabListCards content={tabListCardsContent} />
   <PictureGallery images={picturegalleryContent} />
   <ProjectGallery galleryHeader={galleryHeader} projects={projects} />
-  <!-- <EuroProjectGallery
-    heading='Euro Project Gallery'
-    default_card={{
-      heading: 'Dummy Default Card Heading',
-      body_text: 'Dummy body text for the default card.',
-      image: 'https://via.placeholder.com/150',
-      alt_image_text: 'Dummy alt text for the default card image',
-      call_to_action_text: 'Dummy Call to Action',
-      call_to_action_link: '/dummy-link',
+  <EuroProjectGallery
+    content={{
+      heading: 'Euro Project Gallery',
+      default_card: {
+        heading: 'Dummy Default Card Heading',
+        body_text: 'Dummy body text for the default card.',
+        image: 'https://via.placeholder.com/150',
+        alt_image_text: 'Dummy alt text for the default card image',
+        call_to_action_text: 'Dummy Call to Action',
+        call_to_action_link: '/dummy-link',
+      },
+      cards: [
+        {
+          heading: 'Dummy Card 1 Heading',
+          body_text: 'Dummy body text for card 1.',
+          image: 'https://via.placeholder.com/150',
+          alt_image_text: 'Dummy alt text for card 1 image',
+          call_to_action_text: 'Dummy Call to Action 1',
+          call_to_action_link: '/dummy-link-1',
+        },
+        {
+          heading: 'Dummy Card 2 Heading',
+          body_text: 'Dummy body text for card 2.',
+          image: 'https://via.placeholder.com/150',
+          alt_image_text: 'Dummy alt text for card 2 image',
+          call_to_action_text: 'Dummy Call to Action 2',
+          call_to_action_link: '/dummy-link-2',
+        },
+      ],
     }}
-    cards={[
-      {
-        heading: 'Dummy Card 1 Heading',
-        body_text: 'Dummy body text for card 1.',
-        image: 'https://via.placeholder.com/150',
-        alt_image_text: 'Dummy alt text for card 1 image',
-        call_to_action_text: 'Dummy Call to Action 1',
-        call_to_action_link: '/dummy-link-1',
-      },
-      {
-        heading: 'Dummy Card 2 Heading',
-        body_text: 'Dummy body text for card 2.',
-        image: 'https://via.placeholder.com/150',
-        alt_image_text: 'Dummy alt text for card 2 image',
-        call_to_action_text: 'Dummy Call to Action 2',
-        call_to_action_link: '/dummy-link-2',
-      },
-    ]}
-  /> -->
+  />
 </BaseLayout>
