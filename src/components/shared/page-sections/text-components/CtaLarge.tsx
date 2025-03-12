@@ -2,24 +2,18 @@ import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import { useState, useEffect } from 'react';
 
 interface Props {
-  title: string;
-  subHeading: string;
-  phone: string;
-  address: string;
-  email: string;
-  names: string;
-  socials: { link: string; type: string }[];
+  content: {
+    title: string;
+    subHeading: string;
+    phone: string;
+    address: string;
+    email: string;
+    names: string;
+    socials: { link: string; type: string }[];
+  };
 }
 
-const ContactPage: React.FC<Props> = ({
-  title,
-  subHeading,
-  phone,
-  address,
-  email,
-  names,
-  socials,
-}) => {
+const ContactPage: React.FC<Props> = ({ content }) => {
   const [dotColor, setDotColor] = useState<string>('text-secondary-6');
 
   useEffect(() => {
@@ -46,15 +40,15 @@ const ContactPage: React.FC<Props> = ({
       <div className='w-[100%] rounded-3xl bg-border-gradient p-2'>
         <div className='rounded-2xl bg-neutral-9 px-12 py-16'>
           <h1 className='bg-border-gradient bg-clip-text pb-4 text-transparent'>
-            {title}
+            {content.title}
           </h1>
-          <p className='h1-sub pb-32 text-white-2'>{subHeading}</p>
+          <p className='h1-sub pb-32 text-white-2'>{content.subHeading}</p>
           <div className='flex flex-col items-center justify-center'>
             <a
-              href={`mailto:${email}`}
+              href={`mailto:${content.email}`}
               className='h2-sub text-wrap break-words pb-6 text-primary-6'
             >
-              {email}
+              {content.email}
             </a>
             <Icon
               className={`pb-6 text-3xl ${dotColor} transition-colors duration-md`}

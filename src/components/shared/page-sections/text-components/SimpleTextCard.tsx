@@ -1,17 +1,21 @@
 import ReactMarkdown from 'react-markdown';
 
 interface SimpleTextCardProps {
-  heading: string;
-  body_text: string;
-  link_text?: string;
-  link_url?: string;
+  content: {
+    heading: string;
+    body_text: string;
+    link_text?: string;
+    link_url?: string;
+  };
 }
 
 const SimpleTextCard: React.FC<SimpleTextCardProps> = ({
+  content: {
   heading: aboutTitle,
   body_text: aboutBody,
   link_text: linkText,
   link_url: linkUrl,
+  },
 }) => {
   return (
     <div className='flex bg-neutral-8 px-4 py-8 lg:py-16'>
@@ -28,7 +32,7 @@ const SimpleTextCard: React.FC<SimpleTextCardProps> = ({
           >
             {aboutTitle}
           </ReactMarkdown>
-          <div className='bg-primary-lt1 mb-8 h-[2px] w-full max-w-2xl'></div>
+          <div className='mb-8 h-[2px] w-full max-w-2xl bg-primary-lt1'></div>
           <ReactMarkdown
             className='markdown text-start text-lg text-neutral-2 lg:text-2xl'
             components={{
@@ -43,7 +47,7 @@ const SimpleTextCard: React.FC<SimpleTextCardProps> = ({
           {linkUrl && (
             <a
               href={linkUrl}
-              className='hover:text-primary-md1 pt-12 text-sm  underline underline-offset-4 transition-all duration-300 lg:pt-24 lg:text-2xl'
+              className='pt-12 text-sm underline  underline-offset-4 transition-all duration-300 hover:text-primary-md1 lg:pt-24 lg:text-2xl'
             >
               {linkText}
             </a>

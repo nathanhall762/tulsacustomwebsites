@@ -17,19 +17,25 @@ import logo from '../../media/Tulsa-Custom-Websites-1.webp';
 
 <BaseLayout title='text-components' metaDescription='text-components'>
   <SimpleTextCard
-    heading='Simple Text Card'
-    body_text="This is a card component that can be used to display information about a person or a company. It can be used to display a person's name, title, and a brief description of them. It can also be used to display information about a company, such as its name, location, and a brief description of what it does."
-    link_text='Learn More'
-    link_url='https://example.com'
+    content={{
+      heading: 'Simple Text Card',
+      body_text:
+        "This is a card component that can be used to display information about a person or a company. It can be used to display a person's name, title, and a brief description of them. It can also be used to display information about a company, such as its name, location, and a brief description of what it does.",
+      link_text: 'Learn More',
+      link_url: 'https://example.com',
+    }}
   />
-
-  <BulletStatsCard
+  <!-- <BulletStatsCard
     heading='Bullet Stats Card'
+    ,
     body_text='This is a card component that can be used to display a list of bullet points with accompanying statistics. It can be used to display information such as the number of employees at a company, the number of products a company sells, or the number of years a person has been in business.'
+    ,
     image='https://picsum.photos/1500/500'
+    ,
     image_alt_text='Placeholder Image'
-  />
-  <InfoCardList
+    ,
+  /> -->
+  <!-- <InfoCardList
     heading='Info Card List'
     body_text='This is a list of info cards that can be used to display various pieces of information.'
     card={[
@@ -54,9 +60,9 @@ import logo from '../../media/Tulsa-Custom-Websites-1.webp';
         body_text: 'This is the body text for card 4.',
       },
     ]}
-  />
+  /> -->
   <ComparisonSection />
-  <TextImagecard
+  <!-- <TextImagecard
     heading='Sample Heading'
     image='https://picsum.photos/250/250'
     image_alt_text='Placeholder Image'
@@ -64,38 +70,39 @@ import logo from '../../media/Tulsa-Custom-Websites-1.webp';
     link_url='https://example.com'
     link_text='Learn More'
     reversed={false}
-  />
+  /> -->
   <TabListCards
     client:visible
-    heading='Sample Heading'
-    default_card={{
-      heading: 'Default Card Heading',
-      body_text: 'This is the body text for the default card.',
-      image: 'https://picsum.photos/750/350',
-      alt_image_text: 'Placeholder Image',
-      call_to_action_text: 'Learn More',
-      call_to_action_link: 'https://example.com',
+    content={{
+      heading: 'Sample Heading',
+      default_card: {
+        heading: 'Default Card Heading',
+        body_text: 'This is the body text for the default card.',
+        image: 'https://picsum.photos/750/350',
+        alt_image_text: 'Placeholder Image',
+        call_to_action_text: 'Learn More',
+        call_to_action_link: 'https://example.com',
+      },
+      cards: [
+        {
+          heading: 'Card 1 Heading',
+          body_text: 'This is the body text for card 1.',
+          image: 'https://picsum.photos/650/250',
+          alt_image_text: 'Placeholder Image',
+          call_to_action_text: 'Learn More',
+          call_to_action_link: 'https://example.com',
+        },
+        {
+          heading: 'Card 2 Heading',
+          body_text: 'This is the body text for card 2.',
+          image: 'https://picsum.photos/550/250',
+          alt_image_text: 'Placeholder Image',
+          call_to_action_text: 'Learn More',
+          call_to_action_link: 'https://example.com',
+        },
+      ],
     }}
-    cards={[
-      {
-        heading: 'Card 1 Heading',
-        body_text: 'This is the body text for card 1.',
-        image: 'https://picsum.photos/650/250',
-        alt_image_text: 'Placeholder Image',
-        call_to_action_text: 'Learn More',
-        call_to_action_link: 'https://example.com',
-      },
-      {
-        heading: 'Card 2 Heading',
-        body_text: 'This is the body text for card 2.',
-        image: 'https://picsum.photos/550/250',
-        alt_image_text: 'Placeholder Image',
-        call_to_action_text: 'Learn More',
-        call_to_action_link: 'https://example.com',
-      },
-    ]}
   />
-
   <ReviewCards
     heading='Customer Reviews'
     reviews={[
@@ -179,25 +186,33 @@ import logo from '../../media/Tulsa-Custom-Websites-1.webp';
   />
   <Accordion
     client:visible
-    heading='Accordion'
-    question_and_answer={[
-      {
-        question: 'What is the meaning of life?',
-        answer: '42',
-      },
-      {
-        question: 'What is the airspeed velocity of an unladen swallow?',
-        answer: 'African or European?',
-      },
-      {
-        question: 'What is the best color?',
-        answer: 'Blue',
-      },
-    ]}
+    content={{
+      heading: 'Accordion',
+      question_and_answer: [
+        {
+          question: 'What is the meaning of life?',
+          answer: '42',
+        },
+        {
+          question: 'What is the airspeed velocity of an unladen swallow?',
+          answer: 'African or European?',
+        },
+        {
+          question: 'What is the best color?',
+          answer: 'Blue',
+        },
+      ],
+    }}
   />
-
-  <Cta cta='Cta' button_text='Click Here' url='/contact' image={logo.src} />
-  <ContactPage
+  <Cta
+    content={{
+      cta: 'Cta',
+      button_text: 'Click Here',
+      url: '/contact',
+      image: logo.src,
+    }}
+  />
+  <!-- <ContactPage
     title='Contact Us'
     subHeading="We'd love to hear from you"
     phone='123-456-7890'
@@ -209,10 +224,11 @@ import logo from '../../media/Tulsa-Custom-Websites-1.webp';
       { link: 'https://twitter.com', type: 'Twitter' },
       { link: 'https://linkedin.com', type: 'LinkedIn' },
     ]}
-  />
+  /> -->
   <Testimonial
-    heading='Customer Testimonials'
-    body={`
+    content={{
+      heading: 'Customer Testimonials',
+      body: `
 ### John Doe
 > "This product has changed my life! The quality is outstanding and the customer service is top-notch. Highly recommend to everyone."
 
@@ -221,9 +237,9 @@ import logo from '../../media/Tulsa-Custom-Websites-1.webp';
 
 ### Sam Wilson
 > "Good value for the price. The product works as advertised and the support team was very responsive to my inquiries."
-  `}
+	`,
+    }}
   />
-
   <ProjectPageInfo
     title='Project Title'
     description='This is a description of the project.'

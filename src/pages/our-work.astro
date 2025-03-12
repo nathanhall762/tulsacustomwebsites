@@ -20,10 +20,12 @@ import Cta from '../components/shared/page-sections/text-components/Cta';
 
 <Layout title={'Our Work'} metaDescription={'Complete Gallery of Our Work'}>
   <Sidekick
-    heading='Our Work'
-    image={codePicture.src}
-    subheading='Check it out'
-    call_to_action_text='Hire Us!'
+    content={{
+      heading: 'Our Work',
+      image: codePicture.src,
+      subheading: 'Check it out',
+      call_to_action_text: 'Hire Us!',
+    }}
   />
   <ProjectGallery
     galleryHeader='Our Work'
@@ -46,12 +48,13 @@ import Cta from '../components/shared/page-sections/text-components/Cta';
     ]}
   />
   <Cta
-    cta='Ready to take the next step?'
-    button_text='Hire Us!'
-    url='#contact'
-    image={logo.src}
+    content={{
+      cta: 'Ready to take the next step?',
+      button_text: 'Hire Us!',
+      url: '#contact',
+      image: logo.src,
+    }}
   />
-
   <ContactSection
     heading='Contact Tulsa Custom Websites'
     businessEmail='hello@tulsacustomwebsites.com'

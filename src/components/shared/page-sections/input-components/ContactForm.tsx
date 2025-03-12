@@ -10,8 +10,7 @@ interface FormData {
 }
 
 interface FormProps {
-  heading: string;
-  body: string;
+  content: { heading: string; body: string };
 }
 
 const isValidEmail = (email: string): boolean => {
@@ -24,7 +23,7 @@ const isValidPhoneNumber = (phone: string): boolean => {
   return phoneRegex.test(phone.replace(/\D/g, ''));
 };
 
-const Form: React.FC<FormProps> = ({ heading, body }) => {
+const Form: React.FC<FormProps> = ({ content }) => {
   const [step, setStep] = useState<number>(1);
   const [formData, setFormData] = useState<FormData>({
     body: '',
@@ -61,8 +60,10 @@ const Form: React.FC<FormProps> = ({ heading, body }) => {
             className='flex size-full flex-col justify-between gap-4 py-4 text-neutral-9 lg:px-8'
           >
             <div>
-              <h2 className='text-center text-neutral-9'>{heading}</h2>
-              <p className='h3-sub mb-20 text-[2rem] text-neutral-9'>{body}</p>
+              <h2 className='text-center text-neutral-9'>{content.heading}</h2>
+              <p className='h3-sub mb-20 text-[2rem] text-neutral-9'>
+                {content.body}
+              </p>
               <div className='mb-20 lg:px-[10%]'>
                 <Field
                   label='What do you want to build?'

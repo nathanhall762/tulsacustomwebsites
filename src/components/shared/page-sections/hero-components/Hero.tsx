@@ -3,20 +3,16 @@ import Button from '../../ui/Button';
 import Rainbow from '../../ui/Rainbow';
 
 interface HeroProps {
-  heading: string;
-  subheading: string;
-  images?: string[];
-  call_to_action_text?: string;
-  call_to_action_link?: string;
+  content: {
+    heading: string;
+    subheading: string;
+    images?: string[];
+    call_to_action_text?: string;
+    call_to_action_link?: string;
+  };
 }
 
-const Hero: React.FC<HeroProps> = ({
-  heading,
-  subheading,
-  images,
-  call_to_action_text,
-  call_to_action_link,
-}) => {
+const Hero: React.FC<HeroProps> = ({ content }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   // useEffect(() => {
   //   const timer = setInterval(() => {
@@ -71,11 +67,11 @@ const Hero: React.FC<HeroProps> = ({
             Websites
           </h1>
           <p className='h1-sub text-shadow-outline pb-24 text-[2rem] tracking-wide text-neutral-2 lg:pb-24 lg:text-left'>
-            {subheading}
+            {content.subheading}
           </p>
           <div className='lg:items-left flex flex-col items-center justify-center gap-4 lg:flex-row lg:justify-start lg:gap-16 lg:pb-24'>
             <a href='#contact' className=''>
-              <Button text={call_to_action_text ?? ''} url='#contact' />
+              <Button text={content.call_to_action_text ?? ''} url='#contact' />
             </a>
             {/* <p className='text-base text-neutral-2 lg:text-lg'>
               <a href='tel:9189407800'>Call: (918) 940-7800</a>

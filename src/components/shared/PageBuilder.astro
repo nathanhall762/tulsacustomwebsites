@@ -22,29 +22,29 @@ const { pageData } = Astro.props;
     pageData.map((item: Item) => {
       switch (item.type) {
         case 'hero':
-          return <Hero {...item.value} client:idle />;
+          return <Hero content={item.value} client:idle />;
         case 'sidekick':
-          return <Sidekick {...item.value} />;
+          return <Sidekick content={item.value} />;
         case 'simple_text_card':
-          return <SimpleTextCard {...item.value} />;
+          return <SimpleTextCard content={item.value} />;
         case 'info_card_list':
-          return <InfoCardList {...item.value} />;
+          return <InfoCardList content={item.value} />;
         case 'bullet_stats_card':
-          return <BulletStatsCard {...item.value} />;
-        case 'tab_list_cards':
-          return <EuroProjectGallery {...item.value} client:visible />;
+          return <BulletStatsCard content={item.value} />;
+        // case 'tab_list_cards':
+        //   return <EuroProjectGallery content={item.value} client:visible />;
         case 'text_image_card':
-          return <TextImagecard {...item.value} />;
+          return <TextImagecard content={item.value} />;
         case 'accordion':
-          return <Accordion {...item.value} client:visible />;
+          return <Accordion content={item.value} client:visible />;
         case 'cta':
-          return <Cta {...item.value} />;
+          return <Cta content={item.value} />;
         case 'cta_large':
-          return <CtaLarge {...item.value} />;
+          return <CtaLarge content={item.value} />;
         case 'image_by_copy':
-          return <ImageByCopy {...item.value} />;
+          return <ImageByCopy content={item.value} />;
         case 'testimonial':
-          return <Testimonial {...item.value} />;
+          return <Testimonial content={item.value} />;
         default:
           return null;
       }

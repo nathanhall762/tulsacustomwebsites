@@ -29,14 +29,16 @@ import ContactSection from '../components/shared/page-sections/input-components/
   metaDescription={'Custom website design and building out of Tulsa Oklahoma'}
 >
   <Hero
-    heading='Tulsa Custom Websites'
-    images={[zarnImage.src]}
-    subheading='Modern Website Design & Development for Any Budget'
-    call_to_action_text='Hire Us!'
-    call_to_action_link='#contact'
+    content={{
+      heading: 'Tulsa Custom Websites',
+      images: [zarnImage.src],
+      subheading: 'Modern Website Design & Development for Any Budget',
+      call_to_action_text: 'Hire Us!',
+      call_to_action_link: '#contact',
+    }}
     client:idle
   />
-  <InfoCardList
+  <!-- <InfoCardList
     body_text='At Tulsa Custom Websites, we specialize in digital marketing solutions to get your business seen by more potential customers:'
     heading='Take Control of Your Corner of the Internet'
     card={[
@@ -97,7 +99,7 @@ import ContactSection from '../components/shared/page-sections/input-components/
     reversed={true}
     backgroundTexture='/waves.webp'
   />
-  <!-- TODO: add in this section -->
+  TODO: add in this section -->
   <!-- <TextImagecard heading='Soft Skills'/> -->
   <!-- <BulletStatsCard
     heading='Website Pricing for Any Budget'
@@ -108,12 +110,13 @@ import ContactSection from '../components/shared/page-sections/input-components/
     link_url='#contact'
   /> -->
   <Cta
-    cta='Ready to take the next step?'
-    button_text='Hire Us!'
-    url='#contact'
-    image={logo.src}
+    content={{
+      cta: 'Ready to take the next step?',
+      button_text: 'Hire Us!',
+      url: '#contact',
+      image: logo.src,
+    }}
   />
-
   <ContactSection
     heading='Contact Tulsa Custom Websites'
     businessEmail='hello@tulsacustomwebsites.com'
